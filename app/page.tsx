@@ -7,7 +7,7 @@ const apartments = [
   ["1 + fél szoba", "38–44 m²", "I–II. emelet", "Első otthonnak"],
   ["2 szoba", "52–61 m²", "I–III. emelet", "Pároknak tervezve"],
   ["3 szoba", "68–82 m²", "I–III. emelet", "Tágas családi tér"],
-  ["Penthouse", "96–118 m²", "IV. emelet", "Panorámás terasszal"],
+  ["Penthouse", "96–118 m²", "IV. emelet", "Tágas tetőterasszal"],
 ];
 
 function Brand({ light = false }: { light?: boolean }) {
@@ -46,8 +46,8 @@ export default function Home() {
     <section className="intro" id="projekt">
       <div><p className="kicker">A projektről</p><h2>Több mint lakóhely.<br/><em>Egy jól megtervezett élet.</em></h2></div>
       <div className="intro-copy">
-        <p>A Marek 5 egy kis léptékű, prémium szemléletű lakófejlesztés, ahol minden részlet a nyugodt hétköznapokat szolgálja. Világos otthonok, természetes anyagok és jövőálló műszaki megoldások.</p>
-        <ul><li>✓ Kortárs, időtálló építészeti karakter</li><li>✓ Energiahatékony gépészet és hőszigetelés</li><li>✓ Saját erkély vagy terasz minden lakáshoz</li></ul>
+        <p>A Marek 5 egy kis léptékű, prémium szemléletű lakófejlesztés, ahol minden részlet a nyugodt hétköznapokat szolgálja. Világos otthonok, természetes anyagok, jövőálló műszaki megoldások és egy parkosított belső kert központi tóval.</p>
+        <ul><li>✓ Kortárs, időtálló építészeti karakter</li><li>✓ Energiahatékony gépészet és hőszigetelés</li><li>✓ Tetőre telepített napelemek a közös terek, a parkvilágítás és a Smart Park energiaellátásának támogatására</li></ul>
         <a className="text-link" href="#elonyok">A részletek <span>→</span></a>
       </div>
       <div className="intro-image"><img src="/komarom/residence-sunset.png" alt="Modern lakóépületek parkosított környezetben naplementekor" className="cover" /></div>
@@ -64,7 +64,7 @@ export default function Home() {
     <section className="benefits" id="elonyok">
       <div className="section-heading"><p className="kicker">A Marek 5 előnyei</p><h2>Minőség, amit<br/><em>minden nap érez.</em></h2></div>
       <div className="benefit-grid">
-        {[["⌂","Átgondolt alaprajzok","Élhető terek, jó benapozás és kényelmes tárolás."],["⌁","Okosotthon-előkészítés","A világítás, árnyékolás és hőmérséklet jövőálló vezérlése."],["◇","Biztonságos környezet","Beléptetőrendszer, videókapu és zárt közösségi terek."],["✦","Prémium anyaghasználat","Időtálló burkolatok és gondosan összeválogatott részletek."]].map(([i,t,c],n) => <article key={t}><span className="number">0{n+1}</span><b className="benefit-icon">{i}</b><h3>{t}</h3><p>{c}</p></article>)}
+        {[["⌂","Átgondolt alaprajzok","Élhető terek, jó benapozás és kényelmes tárolás."],["⌁","Smart Home","A világítás, árnyékolás és hőmérséklet jövőálló vezérlése."],["◇","Smart Park","Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható."],["✦","Prémium anyaghasználat","Időtálló burkolatok és gondosan összeválogatott részletek."]].map(([i,t,c],n) => <article key={t}><span className="number">0{n+1}</span><b className="benefit-icon">{i}</b><h3>{t}</h3><p>{c}</p></article>)}
       </div>
     </section>
 
@@ -72,8 +72,8 @@ export default function Home() {
       <div className="gallery-heading"><div><p className="kicker light-text">Látványtervek</p><h2>Az otthon érzése,<br/><em>már az első pillanatban.</em></h2></div><p>A képek a projekt tervezett hangulatát és anyaghasználatát szemléltetik.</p></div>
       <div className="gallery-grid">
         <figure className="wide"><img src="/komarom/interiors.png" alt="Prémium lakás enteriőrjei" className="cover"/><figcaption>Világos, természetes enteriőrök</figcaption></figure>
-        <figure><img src="/komarom/smart-home.png" alt="Okosotthon-megoldásokkal felszerelt modern nappali" className="cover"/><figcaption>Jövőálló kényelem</figcaption></figure>
-        <figure className="full"><img src="/komarom/residence-sunset.png" alt="A lakópark átfogó külső látványterve" className="cover"/><figcaption>Parkosított, privát lakókörnyezet</figcaption></figure>
+        <figure><img src="/komarom/smart-home.png" alt="Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra" className="cover"/><figcaption>Smart Home · természetközeli kilátás</figcaption></figure>
+        <figure className="full"><img src="/komarom/smart-park.png" alt="Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással" className="cover"/><figcaption>Smart Park · intelligens zöld környezet</figcaption></figure>
       </div>
     </section>
 
