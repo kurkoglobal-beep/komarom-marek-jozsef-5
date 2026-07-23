@@ -6,6 +6,7 @@ Prémium ingatlanfejlesztési landing page a komáromi Marek József utca 5. pro
 
 - Sprint 1: prémium, reszponzív landing page elkészült
 - Sprint 2: projekt-infrastruktúra és dokumentáció elkészült
+- Sprint 6.1: verziózott Asset Library és DAM-szabályrendszer elkészült
 - Supabase: előkészítve, de nincs csatlakoztatva
 - Git: inicializálva
 - Produkciós build: ellenőrzött
@@ -23,7 +24,7 @@ Prémium ingatlanfejlesztési landing page a komáromi Marek József utca 5. pro
 
 ## Követelmények
 
-- Node.js 22.13 vagy újabb
+- Node.js 24.x
 - pnpm 11 vagy újabb
 
 ## Helyi fejlesztés
@@ -35,12 +36,6 @@ pnpm dev
 
 A fejlesztői oldal alapértelmezetten a `http://localhost:3000` címen indul.
 
-Standard Next.js fejlesztői környezethez:
-
-```bash
-pnpm dev:next
-```
-
 ## Ellenőrzések
 
 ```bash
@@ -48,12 +43,6 @@ pnpm typecheck
 pnpm lint
 pnpm test
 pnpm build
-```
-
-Vercel-kompatibilis Next.js build:
-
-```bash
-pnpm build:vercel
 ```
 
 ## Környezeti változók
@@ -77,15 +66,15 @@ A mezők szándékosan üresek. A projekt jelenleg nem kapcsolódik Supabase-pro
 
 ```text
 app/                  Next.js route-ok, layout és a jelenlegi landing page
+assets/               Verziózott, forrásminőségű Asset Library
+  asset-library.json  Géppel olvasható asset-katalógus és metaadatok
 components/           Újrafelhasználható UI-komponensek
 docs/                 Projekt- és architektúra-dokumentáció
 hooks/                Kliensoldali React hookok
 lib/                  Integrációk és megosztott segédfüggvények
   supabase/            Supabase konfigurációs váz
 public/
-  icons/               Statikus ikonok
-  images/              Általános képi tartalmak
-  komarom/             A landing page jelenlegi látványtervei
+  assets/              Verziózott, optimalizált webes assetek
 styles/                Későbbi megosztott stílusmodulok
 supabase/
   migrations/          Későbbi adatbázis-migrációk
@@ -93,7 +82,7 @@ types/                 Megosztott TypeScript-típusok
 tests/                 Automatizált ellenőrzések
 ```
 
-Az üres, jövőbeli mappák `.gitkeep` fájlt tartalmaznak, hogy Gitben is megmaradjanak.
+Az Asset Library használati és verziózási szabályait az `assets/README.md` és a `docs/ASSET_MANAGEMENT.md` rögzíti. Az üres, jövőbeli kategóriák `.gitkeep` fájlt tartalmaznak, hogy Gitben is megmaradjanak.
 
 ## Supabase előkészítés
 
@@ -123,9 +112,9 @@ Titkos kulcsot vagy `.env.local` fájlt tilos commitolni.
 
 Vercel telepítéshez importálja a GitHub repository-t, válassza a Next.js frameworköt, és használja:
 
-- Build command: `pnpm build:vercel`
+- Build command: `pnpm build`
 - Install command: `pnpm install --frozen-lockfile`
-- Node.js: 22.x
+- Node.js: 24.x
 
 A Supabase környezeti változókat csak a tényleges Supabase-projekt létrehozása után kell beállítani.
 

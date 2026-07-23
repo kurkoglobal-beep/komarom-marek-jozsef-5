@@ -32,7 +32,7 @@ export default function Home() {
     </header>
 
     <section className="hero">
-      <img src="/komarom/hero-night.png" alt="A Marek József utcai prémium lakópark esti látványterve" className="cover" />
+      <img src="/assets/hero/KMJ5_Hero_Night_v01.webp" alt="A Marek József utcai prémium lakópark esti látványterve" className="cover" />
       <div className="hero-shade" />
       <div className="hero-content">
         <p className="kicker light-text">Komárom · Marek József utca 5.</p>
@@ -50,7 +50,7 @@ export default function Home() {
         <ul><li>✓ Kortárs, időtálló építészeti karakter</li><li>✓ Energiahatékony gépészet és hőszigetelés</li><li>✓ Tetőre telepített napelemek a közös terek, a parkvilágítás és a Smart Park energiaellátásának támogatására</li></ul>
         <a className="text-link" href="#elonyok">A részletek <span>→</span></a>
       </div>
-      <div className="intro-image"><img src="/komarom/residence-sunset.png" alt="Modern lakóépületek parkosított környezetben naplementekor" className="cover" /></div>
+      <div className="intro-image"><img src="/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp" alt="Modern lakóépületek parkosított környezetben naplementekor" className="cover" /></div>
     </section>
 
     <section className="location" id="komarom">
@@ -71,9 +71,9 @@ export default function Home() {
     <section className="gallery" id="galeria">
       <div className="gallery-heading"><div><p className="kicker light-text">Látványtervek</p><h2>Az otthon érzése,<br/><em>már az első pillanatban.</em></h2></div><p>A képek a projekt tervezett hangulatát és anyaghasználatát szemléltetik.</p></div>
       <div className="gallery-grid">
-        <figure className="wide"><img src="/komarom/interiors.png" alt="Prémium lakás enteriőrjei" className="cover"/><figcaption>Világos, természetes enteriőrök</figcaption></figure>
-        <figure><img src="/komarom/smart-home.png" alt="Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra" className="cover"/><figcaption>Smart Home · természetközeli kilátás</figcaption></figure>
-        <figure className="full"><img src="/komarom/smart-park.png" alt="Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással" className="cover"/><figcaption>Smart Park · intelligens zöld környezet</figcaption></figure>
+        <figure className="wide"><img src="/assets/renders/interior/KMJ5_Interior_Collection_v01.webp" alt="Prémium lakás enteriőrjei" className="cover"/><figcaption>Világos, természetes enteriőrök</figcaption></figure>
+        <figure><img src="/assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.webp" alt="Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra" className="cover"/><figcaption>Smart Home · természetközeli kilátás</figcaption></figure>
+        <figure className="full"><img src="/assets/smart-park/KMJ5_SmartPark_CentralLake_v01.webp" alt="Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással" className="cover"/><figcaption>Smart Park · intelligens zöld környezet</figcaption></figure>
       </div>
     </section>
 

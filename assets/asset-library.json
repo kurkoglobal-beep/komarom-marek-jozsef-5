@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0",
+  "project": "KMJ5",
+  "projectName": "Komárom, Marek József utca 5.",
+  "updatedAt": "2026-07-23",
+  "assets": [
+    {
+      "id": "KMJ5-HERO-NIGHT-001",
+      "name": "KMJ5_Hero_Night",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "description": "A Marek 5 lakópark esti hero látványterve.",
+      "purpose": ["landing-page", "marketing"],
+      "relatedSprint": "Sprint 1",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_Night_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_Night_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-EXTERIOR-SUNSET-001",
+      "name": "KMJ5_Exterior_Sunset",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "description": "Parkosított lakóépületek külső látványterve naplementekor.",
+      "purpose": ["landing-page", "marketing", "sales"],
+      "relatedSprint": "Sprint 1",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_Exterior_Sunset_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-INTERIOR-COLLECTION-001",
+      "name": "KMJ5_Interior_Collection",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "description": "Prémium lakásenteriőrök összeállítása.",
+      "purpose": ["landing-page", "marketing", "sales"],
+      "relatedSprint": "Sprint 1",
+      "category": "renders/interior",
+      "sourcePath": "assets/renders/interior/KMJ5_Interior_Collection_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/renders/interior/KMJ5_Interior_Collection_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-SMART-HOME-LIVINGROOM-001",
+      "name": "KMJ5_SmartHome_Livingroom_ParkView",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "OpenAI ImageGen",
+      "description": "Smart Home nappali belső parkra és központi tóra néző kilátással.",
+      "purpose": ["landing-page", "marketing", "sales"],
+      "relatedSprint": "Sprint 6",
+      "category": "smart-home",
+      "sourcePath": "assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-SMART-PARK-CENTRAL-LAKE-001",
+      "name": "KMJ5_SmartPark_CentralLake",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "OpenAI ImageGen",
+      "description": "Smart Park központi tóval, napelemes ülőpaddal és intelligens park-infrastruktúrával.",
+      "purpose": ["landing-page", "marketing", "sales", "investor"],
+      "relatedSprint": "Sprint 6",
+      "category": "smart-park",
+      "sourcePath": "assets/smart-park/KMJ5_SmartPark_CentralLake_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/smart-park/KMJ5_SmartPark_CentralLake_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-SOCIAL-OG-001",
+      "name": "KMJ5_Social_OG",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "description": "Marek 5 közösségi megosztási és Open Graph előnézeti kép.",
+      "purpose": ["social-media", "open-graph"],
+      "relatedSprint": "Sprint 1",
+      "category": "social-media",
+      "sourcePath": "assets/social-media/KMJ5_Social_OG_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/social-media/KMJ5_Social_OG_v01.webp",
+          "format": "webp",
+          "width": 1730,
+          "height": 909,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-BRANDING-FAVICON-001",
+      "name": "KMJ5_Favicon",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Projektcsapat",
+      "description": "A Marek 5 webes faviconja.",
+      "purpose": ["branding", "web"],
+      "relatedSprint": "Sprint 1",
+      "category": "branding/favicon",
+      "sourcePath": "assets/branding/favicon/KMJ5_Favicon_v01.svg",
+      "renditions": [
+        {
+          "path": "public/assets/branding/favicon/KMJ5_Favicon_v01.svg",
+          "format": "svg",
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-ARCHIVE-TEMPLATE-FILE-001",
+      "name": "KMJ5_Archive_TemplateFileIcon",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Next.js starter",
+      "description": "Nem használt sablonikon, archiválva.",
+      "purpose": ["archive"],
+      "relatedSprint": "Sprint 6.1",
+      "category": "archive/template-assets",
+      "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateFileIcon_v01.svg",
+      "renditions": [],
+      "status": "archived"
+    },
+    {
+      "id": "KMJ5-ARCHIVE-TEMPLATE-GLOBE-001",
+      "name": "KMJ5_Archive_TemplateGlobeIcon",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Next.js starter",
+      "description": "Nem használt sablonikon, archiválva.",
+      "purpose": ["archive"],
+      "relatedSprint": "Sprint 6.1",
+      "category": "archive/template-assets",
+      "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateGlobeIcon_v01.svg",
+      "renditions": [],
+      "status": "archived"
+    },
+    {
+      "id": "KMJ5-ARCHIVE-TEMPLATE-WINDOW-001",
+      "name": "KMJ5_Archive_TemplateWindowIcon",
+      "version": "v01",
+      "createdAt": "2026-07-23",
+      "creator": "Next.js starter",
+      "description": "Nem használt sablonikon, archiválva.",
+      "purpose": ["archive"],
+      "relatedSprint": "Sprint 6.1",
+      "category": "archive/template-assets",
+      "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateWindowIcon_v01.svg",
+      "renditions": [],
+      "status": "archived"
+    }
+  ]
+}

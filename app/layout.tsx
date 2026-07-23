@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marek 5",
     description: "Prémium otthonok Komárom szívében",
-    images: [{ url: "/og.png", width: 1730, height: 909, alt: "Marek 5 – Prémium otthonok Komárom szívében" }],
+    images: [{ url: "/assets/social-media/KMJ5_Social_OG_v01.webp", width: 1730, height: 909, alt: "Marek 5 – Prémium otthonok Komárom szívében" }],
     locale: "hu_HU",
     type: "website",
   },
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Marek 5",
     description: "Prémium otthonok Komárom szívében",
-    images: ["/og.png"],
+    images: ["/assets/social-media/KMJ5_Social_OG_v01.webp"],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/assets/branding/favicon/KMJ5_Favicon_v01.svg",
+    shortcut: "/assets/branding/favicon/KMJ5_Favicon_v01.svg",
   },
 };
 
