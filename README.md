@@ -1,98 +1,145 @@
-# vinext-starter
+# Komárom – Marek József utca 5.
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Prémium ingatlanfejlesztési landing page a komáromi Marek József utca 5. projekthez. A jelenlegi verzió piaci validációs felület; úgy van felépítve, hogy később teljes értékesítési platformmá bővíthető legyen.
 
-## Prerequisites
+## Projektállapot
 
-- Node.js `>=22.13.0`
+- Sprint 1: prémium, reszponzív landing page elkészült
+- Sprint 2: projekt-infrastruktúra és dokumentáció elkészült
+- Supabase: előkészítve, de nincs csatlakoztatva
+- Git: inicializálva
+- Produkciós build: ellenőrzött
 
-## Quick Start
+## Technológia
+
+- Next.js 16, App Router
+- React 19
+- TypeScript, szigorú típusellenőrzéssel
+- Tailwind CSS 4
+- pnpm
+- vinext/Sites kompatibilis build
+- Vercel-kompatibilis Next.js build
+- Supabase-re előkészített konfiguráció
+
+## Követelmények
+
+- Node.js 22.13 vagy újabb
+- pnpm 11 vagy újabb
+
+## Helyi fejlesztés
 
 ```bash
-npm install
-npm run dev
-npm run build
+pnpm install
+pnpm dev
 ```
 
-This starter does not use `wrangler.jsonc`.
+A fejlesztői oldal alapértelmezetten a `http://localhost:3000` címen indul.
 
-## Included Shape
+Standard Next.js fejlesztői környezethez:
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+pnpm dev:next
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## Ellenőrzések
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
+```
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+Vercel-kompatibilis Next.js build:
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+```bash
+pnpm build:vercel
+```
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+## Környezeti változók
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+Másolja le a példafájlt:
 
-## Useful Commands
+```bash
+cp .env.example .env.local
+```
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+Előkészített változók:
 
-## Learn More
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+A mezők szándékosan üresek. A projekt jelenleg nem kapcsolódik Supabase-projekthez, és nem végez adatbázis-műveleteket.
+
+## Könyvtárstruktúra
+
+```text
+app/                  Next.js route-ok, layout és a jelenlegi landing page
+components/           Újrafelhasználható UI-komponensek
+docs/                 Projekt- és architektúra-dokumentáció
+hooks/                Kliensoldali React hookok
+lib/                  Integrációk és megosztott segédfüggvények
+  supabase/            Supabase konfigurációs váz
+public/
+  icons/               Statikus ikonok
+  images/              Általános képi tartalmak
+  komarom/             A landing page jelenlegi látványtervei
+styles/                Későbbi megosztott stílusmodulok
+supabase/
+  migrations/          Későbbi adatbázis-migrációk
+types/                 Megosztott TypeScript-típusok
+tests/                 Automatizált ellenőrzések
+```
+
+Az üres, jövőbeli mappák `.gitkeep` fájlt tartalmaznak, hogy Gitben is megmaradjanak.
+
+## Supabase előkészítés
+
+A `lib/supabase/config.ts` kizárólag a környezeti változók biztonságos kiolvasására szolgál. Supabase kliens, adatbázis-kapcsolat, autentikáció vagy migráció jelenleg nincs aktiválva.
+
+A tényleges integráció előtt:
+
+1. létre kell hozni egy külön Supabase-projektet;
+2. be kell állítani a helyi és hosztolt környezeti változókat;
+3. meg kell tervezni a lead/adatkezelési sémát;
+4. létre kell hozni az RLS-szabályokat;
+5. csak ezután szabad bekötni az érdeklődői űrlapot.
+
+## GitHub
+
+A repository GitHub-ra feltölthető. Javasolt lépések:
+
+1. hozzon létre egy üres `komarom-marek-jozsef-5` repository-t;
+2. állítsa be `origin` remote-ként;
+3. tolja fel a `main` branchet;
+4. kapcsolja be a branch protectiont és a pull request alapú fejlesztést;
+5. állítsa be a szükséges GitHub Actions ellenőrzéseket.
+
+Titkos kulcsot vagy `.env.local` fájlt tilos commitolni.
+
+## Vercel
+
+Vercel telepítéshez importálja a GitHub repository-t, válassza a Next.js frameworköt, és használja:
+
+- Build command: `pnpm build:vercel`
+- Install command: `pnpm install --frozen-lockfile`
+- Node.js: 22.x
+
+A Supabase környezeti változókat csak a tényleges Supabase-projekt létrehozása után kell beállítani.
+
+## Későbbi bővítési irányok
+
+- Supabase-alapú érdeklődőkezelés
+- lakásválasztó és készletkezelés
+- 3D modul és virtuális séta
+- online foglalás
+- befektetői modul
+- admin felület
+
+Ezek nem részei a jelenlegi sprintnek.
+
+## Licenc és tartalom
+
+A projekt képei jelenleg vizuális referencia- és validációs anyagok. Éles értékesítési használat előtt ellenőrizni kell a végleges képek, logók, szövegek és jogi dokumentumok felhasználási jogosultságát.

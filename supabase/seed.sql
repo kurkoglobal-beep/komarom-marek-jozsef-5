@@ -1,0 +1,2 @@
+-- Intentionally empty.
+-- Add development-only seed data after the Supabase schema is designed.
