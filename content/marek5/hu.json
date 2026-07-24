@@ -68,7 +68,46 @@
       }
     ],
     "imageSrc": "/assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.webp",
-    "imageAlt": "A Komárom Fejlesztési Terület integrált látványterve központi tóval, parkkal és háromszintes épületekkel"
+    "imageAlt": "A Komárom Fejlesztési Terület interaktív látványtérképe központi tóval, parkkal és háromszintes épületekkel",
+    "mapLabel": "A fejlesztési terület interaktív zónatérképe",
+    "mapCardLabel": "Fejlesztési zóna",
+    "hotspots": [
+      {
+        "icon": "▤",
+        "title": "Oktatási Campus",
+        "description": "Kortárs oktatási környezet a tudás, az együttműködés és a nemzetközi kapcsolatok számára.",
+        "x": 57,
+        "y": 39
+      },
+      {
+        "icon": "⌂",
+        "title": "Prémium Lakónegyed",
+        "description": "Parkkapcsolatos, emberléptékű otthonok az integrált fejlesztési koncepció részeként.",
+        "x": 79,
+        "y": 28
+      },
+      {
+        "icon": "◇",
+        "title": "Senior Living",
+        "description": "Biztonságos, kényelmes és aktív életvitelt támogató prémium környezet.",
+        "x": 88,
+        "y": 58
+      },
+      {
+        "icon": "✦",
+        "title": "Smart Park és Zöldövezet",
+        "description": "Központi tó, gazdag növényzet és intelligens park-infrastruktúra a közösség szolgálatában.",
+        "x": 42,
+        "y": 69
+      },
+      {
+        "icon": "↗",
+        "title": "Közlekedési Csomópont",
+        "description": "A gyalogos, kerékpáros és városi kapcsolatok összehangolt találkozási pontja.",
+        "x": 23,
+        "y": 51
+      }
+    ]
   },
   "location": {
     "kicker": "A terület",

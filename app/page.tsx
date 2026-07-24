@@ -32,6 +32,7 @@ export default function Home() {
   const [menu, setMenu] = useState(false);
   const [sent, setSent] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
+  const [activeHotspot, setActiveHotspot] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -102,9 +103,38 @@ export default function Home() {
           </article>)}
         </div>
       </div>
-      <figure className="development-visual">
-        <Image src={content.project.imageSrc} alt={content.project.imageAlt} fill sizes="(max-width: 1050px) 100vw, 48vw" className="cover" />
-      </figure>
+      <div className="development-map">
+        <figure className="development-visual">
+          <Image src={content.project.imageSrc} alt={content.project.imageAlt} fill sizes="(max-width: 1050px) 100vw, 48vw" className="cover" />
+          <div className="hotspot-layer" role="group" aria-label={content.project.mapLabel}>
+            {content.project.hotspots.map((hotspot, index) => <button
+              key={hotspot.title}
+              type="button"
+              className={`hotspot ${index === activeHotspot ? "active" : ""}`}
+              style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
+              aria-label={hotspot.title}
+              aria-pressed={index === activeHotspot}
+              aria-controls="development-hotspot-card"
+              onMouseEnter={() => setActiveHotspot(index)}
+              onFocus={() => setActiveHotspot(index)}
+              onClick={() => setActiveHotspot(index)}
+            ><span>{hotspot.icon}</span></button>)}
+          </div>
+          <figcaption className="hotspot-info-card" id="development-hotspot-card" aria-live="polite">
+            <span className="hotspot-card-icon" aria-hidden="true">{content.project.hotspots[activeHotspot].icon}</span>
+            <div><small>{content.project.mapCardLabel}</small><h3>{content.project.hotspots[activeHotspot].title}</h3><p>{content.project.hotspots[activeHotspot].description}</p></div>
+          </figcaption>
+        </figure>
+        <div className="hotspot-mobile-list" aria-label={content.project.mapLabel}>
+          {content.project.hotspots.map((hotspot, index) => <button
+            key={hotspot.title}
+            type="button"
+            className={index === activeHotspot ? "active" : ""}
+            aria-pressed={index === activeHotspot}
+            onClick={() => setActiveHotspot(index)}
+          ><span aria-hidden="true">{hotspot.icon}</span><strong>{hotspot.title}</strong><small>{hotspot.description}</small></button>)}
+        </div>
+      </div>
     </section>
 
     <section className="location" id="komarom">
