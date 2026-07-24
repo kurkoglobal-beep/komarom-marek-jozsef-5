@@ -41,16 +41,34 @@
     ]
   },
   "project": {
-    "kicker": "A fejlesztési területről",
-    "title": "Egy helyszín.",
-    "titleEmphasis": "Egymást erősítő funkciók.",
-    "description": "A Komárom Fejlesztési Terület egyetlen, integrált fejlesztési vízióban kapcsolja össze a prémium lakónegyedet, az Oktatási Campust, valamint a Senior Living és egészségügyi szolgáltatásokat.",
-    "highlights": [
-      "3,2 hektáros, egységesen kezelt fejlesztési terület",
-      "Három önálló karakterű, mégis összekapcsolódó pillér",
-      "Közös környezeti és infrastrukturális szemlélet"
+    "kicker": "Lokáció és környezet",
+    "title": "Kivételes Elhelyezkedés,",
+    "titleEmphasis": "Jövőbe Mutató Környezet",
+    "description": "A Komárom Fejlesztési Terület városi kapcsolatai, parkosított környezete és egységes infrastruktúrája hosszú távú keretet ad a három egymást erősítő fejlesztési pillérnek.",
+    "features": [
+      {
+        "icon": "⌖",
+        "title": "Stratégiai Lokáció",
+        "description": "Komárom városi és regionális kapcsolataihoz illeszkedő, jól elérhető fejlesztési terület."
+      },
+      {
+        "icon": "◇",
+        "title": "Zöldövezeti Integráció",
+        "description": "A központi park, a vízfelület és a gazdag növényzet a teljes koncepció közös alapja."
+      },
+      {
+        "icon": "↗",
+        "title": "Fejlődő Csomópont",
+        "description": "Egymást kiegészítő lakó-, oktatási és senior funkciók egyetlen hosszú távú vízióban."
+      },
+      {
+        "icon": "▦",
+        "title": "Teljes Körű Infrastruktúra",
+        "description": "Összehangolt közlekedési, közösségi és zöldinfrastruktúra a terület egészén."
+      }
     ],
-    "imageAlt": "A fejlesztési terület prémium lakónegyedi pillérének látványterve"
+    "imageSrc": "/assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.webp",
+    "imageAlt": "A Komárom Fejlesztési Terület integrált látványterve központi tóval, parkkal és háromszintes épületekkel"
   },
   "location": {
     "kicker": "A terület",

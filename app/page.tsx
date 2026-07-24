@@ -90,14 +90,21 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="intro" id="development-area">
-      <div><p className="kicker">{content.project.kicker}</p><h2>{content.project.title}<br/><em>{content.project.titleEmphasis}</em></h2></div>
-      <div className="intro-copy">
-        <p>{content.project.description}</p>
-        <ul>{content.project.highlights.map((highlight) => <li key={highlight}>✓ {highlight}</li>)}</ul>
-        <a className="text-link" href="#pillars">{messages.cta.details} <span>→</span></a>
+    <section className="development-area" id="development-area">
+      <div className="development-copy">
+        <p className="kicker">{content.project.kicker}</p>
+        <h2>{content.project.title}<br/><em>{content.project.titleEmphasis}</em></h2>
+        <p className="development-lead">{content.project.description}</p>
+        <div className="development-features">
+          {content.project.features.map((feature) => <article key={feature.title}>
+            <span className="development-icon" aria-hidden="true">{feature.icon}</span>
+            <div><h3>{feature.title}</h3><p>{feature.description}</p></div>
+          </article>)}
+        </div>
       </div>
-      <div className="intro-image"><img src="/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp" alt={content.project.imageAlt} className="cover" /></div>
+      <figure className="development-visual">
+        <Image src={content.project.imageSrc} alt={content.project.imageAlt} fill sizes="(max-width: 1050px) 100vw, 48vw" className="cover" />
+      </figure>
     </section>
 
     <section className="location" id="komarom">

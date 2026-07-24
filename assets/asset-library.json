@@ -137,6 +137,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-EXTERIOR-INTEGRATED-DEVELOPMENT-001",
+      "name": "KMJ5_Exterior_IntegratedDevelopment",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "Az integrált Komárom Fejlesztési Terület látványterve központi tóval, parkkal, közösségi épülettel és egységes háromszintes építészettel.",
+      "purpose": ["landing-page", "marketing", "investor"],
+      "relatedSprint": "Development area section",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.webp",
+          "format": "webp",
+          "width": 2560,
+          "height": 1440,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-INTERIOR-COLLECTION-001",
       "name": "KMJ5_Interior_Collection",
       "version": "v01",
