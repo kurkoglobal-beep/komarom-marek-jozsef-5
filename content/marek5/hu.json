@@ -130,14 +130,23 @@
   },
   "benefits": {
     "kicker": "Fejlesztési pillérek",
-    "title": "Három irány.",
-    "titleEmphasis": "Egy közös jövőkép.",
-    "items": [
-      { "icon": "⌂", "title": "Prémium lakónegyed", "description": "A fejlesztési terület lakófunkciója kortárs otthonokkal és parkosított környezettel." },
-      { "icon": "▤", "title": "Oktatási Campus", "description": "Az integrált koncepció oktatási pillérének kijelölt helye a fejlesztési területen." },
-      { "icon": "◇", "title": "Senior Living", "description": "Senior életviteli és kapcsolódó egészségügyi szolgáltatások számára tervezett fejlesztési pillér." },
-      { "icon": "✦", "title": "Közös környezet", "description": "A három pillért összekapcsoló zöldfelületi, közösségi és infrastrukturális szemlélet." }
+    "title": "Fejlesztési irányok",
+    "titleEmphasis": "és jövőkép.",
+    "imageAlt": "A Komárom Fejlesztési Terület négy integrált fejlesztési pillérének háromszintes épületekből álló izometrikus masterplan látványterve",
+    "facts": [
+      { "value": "3,2 ha", "label": "fejlesztési terület" },
+      { "value": "3 szint", "label": "megengedett maximum" },
+      { "value": "12 lakás", "label": "egy épületben" },
+      { "value": "24 lakás", "label": "egy páros tömbben" }
     ],
+    "mobileHint": "A masterplan oldalirányban felfedezhető.",
+    "items": [
+      { "icon": "⌂", "title": "Prémium lakónegyed", "description": "Öt–hat, ütemezetten megvalósítható páros lakótömb kortárs otthonokkal és parkosított környezetben." },
+      { "icon": "▤", "title": "Oktatási Campus", "description": "Nemzetközi szemléletű, háromszintes campus innovatív tanulási és együttműködési terekkel." },
+      { "icon": "◇", "title": "Senior Living", "description": "Akadálymentes, gondoskodó környezet wellnessfunkciókkal, közösségi terekkel és zöld udvarokkal." },
+      { "icon": "✦", "title": "Közös tér", "description": "A fejlesztés zöld szíve: többfunkciós közösségi központ, amfiteátrum és összekapcsolt park." }
+    ],
+    "footerLine": "Négy funkció. Egy egységes, emberléptékű fejlesztési vízió.",
     "residentialFeatures": [
       { "icon": "⌂", "title": "Átgondolt alaprajzok", "description": "Élhető terek, jó benapozás és kényelmes tárolás." },
       { "icon": "⌁", "title": "Smart Home", "description": "A világítás, árnyékolás és hőmérséklet jövőálló vezérlése." },

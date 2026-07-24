@@ -137,6 +137,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-MASTERPLAN-DEVELOPMENT-PILLARS-001",
+      "name": "KMJ5_Masterplan_DevelopmentPillars",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "A 3,2 hektáros Komárom Fejlesztési Terület négy integrált pillérének izometrikus masterplan koncepciója, kizárólag háromszintes épületekkel és ütemezhető páros lakótömbökkel.",
+      "purpose": ["landing-page", "masterplan", "marketing", "investor"],
+      "relatedSprint": "Development pillars redesign",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_Masterplan_DevelopmentPillars_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_Masterplan_DevelopmentPillars_v01.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-EXTERIOR-INTEGRATED-DEVELOPMENT-001",
       "name": "KMJ5_Exterior_IntegratedDevelopment",
       "version": "v01",

@@ -18,7 +18,7 @@ const nav = [
   [messages.navigation.gallery, "#gallery"],
   [messages.navigation.contact, "#contact"],
 ];
-const pillarAnchors = ["residential", "education-campus", "senior-living"] as const;
+const pillarAnchors = ["residential", "education-campus", "senior-living", "common-space"] as const;
 const heroIntervalMs = 8_000;
 
 function Brand({ light = false }: { light?: boolean }) {
@@ -209,10 +209,29 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="benefits" id="pillars">
-      <div className="section-heading"><p className="kicker">{content.benefits.kicker}</p><h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2></div>
-      <div className="benefit-grid">
-        {content.benefits.items.map((item, index) => <article id={pillarAnchors[index]} key={item.title} onMouseEnter={index < 3 ? () => setHeroIndex(index + 1) : undefined} onFocus={index < 3 ? () => setHeroIndex(index + 1) : undefined}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
+    <section className="pillars-showcase" id="pillars">
+      <div className="pillars-heading">
+        <p className="kicker light-text">{content.benefits.kicker}</p>
+        <h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2>
+      </div>
+      <dl className="pillar-facts">
+        {content.benefits.facts.map((fact) => <div key={fact.label}><dt>{fact.value}</dt><dd>{fact.label}</dd></div>)}
+      </dl>
+      <p className="pillar-mobile-hint">{content.benefits.mobileHint} <span aria-hidden="true">↔</span></p>
+      <div className="pillar-masterplan-scroll">
+        <figure className="pillar-masterplan">
+          <Image src="/assets/masterplan/KMJ5_Masterplan_DevelopmentPillars_v01.webp" alt={content.benefits.imageAlt} width={1672} height={941} sizes="(max-width: 760px) 880px, 86vw"/>
+          <span className="masterplan-scrim" aria-hidden="true"/>
+          <figcaption>{content.benefits.footerLine}</figcaption>
+        </figure>
+      </div>
+      <div className="pillar-cards">
+        {content.benefits.items.map((item, index) => <article id={pillarAnchors[index]} key={item.title} tabIndex={0} onMouseEnter={index < 3 ? () => setHeroIndex(index + 1) : undefined} onFocus={index < 3 ? () => setHeroIndex(index + 1) : undefined}>
+          <span className="pillar-number">0{index + 1}</span>
+          <b className="pillar-icon" aria-hidden="true">{item.icon}</b>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>)}
       </div>
     </section>
 
