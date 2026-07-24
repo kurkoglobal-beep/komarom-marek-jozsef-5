@@ -263,6 +263,71 @@
       }
     ]
   },
+  "seniorLiving": {
+    "kicker": "Senior Living",
+    "title": "Prémium életminőség",
+    "titleEmphasis": "és biztonság.",
+    "description": "Egy akadálymentes, emberközpontú lakókörnyezet, ahol az önálló, aktív mindennapokat diszkrét egészségügyi háttér, intelligens biztonság és valódi közösségi élet támogatja.",
+    "modeLabel": "Senior Living élménymódok",
+    "hotspotLabel": "A Senior Living interaktív terei",
+    "imageAlt": "Háromszintes, U alakú Senior Living épületegyüttes parkosított belső udvarral, szökőkúttal és sétáló lakókkal",
+    "modes": [
+      { "icon": "❧", "label": "Aktív életmód", "hotspotIndex": 0 },
+      { "icon": "♡", "label": "Smart Care & Health", "hotspotIndex": 1 }
+    ],
+    "hotspots": [
+      {
+        "icon": "❧",
+        "title": "Belső park",
+        "description": "Árnyékos, akadálymentes sétányok, pihenőkertek és biztonságos szabadtéri aktivitások a mindennapi feltöltődéshez.",
+        "x": 38,
+        "y": 63
+      },
+      {
+        "icon": "♡",
+        "title": "Orvosi szoba",
+        "description": "Diszkrét, helyben elérhető egészségügyi segítség, automatikus elesésérzékelés és intelligens lakásbiztonság.",
+        "x": 58,
+        "y": 46
+      },
+      {
+        "icon": "◎",
+        "title": "Wellness & Gyógytorna",
+        "description": "Prevenciós programok, fizioterápia és személyre szabható mozgásformák egy nyugodt wellnesskörnyezetben.",
+        "x": 72,
+        "y": 57
+      },
+      {
+        "icon": "◇",
+        "title": "Közösségi lounge",
+        "description": "Világos, otthonos találkozóhely klubprogramokhoz, közös étkezésekhez és tartalmas társasági élethez.",
+        "x": 84,
+        "y": 45
+      }
+    ],
+    "features": [
+      {
+        "icon": "♿",
+        "title": "Akadálymentesített terek",
+        "description": "Könnyű közlekedés, biztonságos kialakítás és kényelmes, küszöbmentes mindennapok."
+      },
+      {
+        "icon": "⌂",
+        "title": "Smart Home & Safety",
+        "description": "Okosotthon-megoldások, diszkrét vészjelzés és 24/7 biztonsági felügyelet."
+      },
+      {
+        "icon": "♡",
+        "title": "Egészségmegőrzés",
+        "description": "Preventív programok, wellness-szolgáltatások és professzionális egészségügyi támogatás."
+      },
+      {
+        "icon": "◎",
+        "title": "Közösségi élet",
+        "description": "Klubok, közös élmények és változatos programok az aktív, tartalmas mindennapokért."
+      }
+    ]
+  },
   "gallery": {
     "kicker": "Látványtervek",
     "title": "Az otthon érzése,",

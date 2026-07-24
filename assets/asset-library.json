@@ -443,6 +443,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-SENIOR-LIVING-COURTYARD-001",
+      "name": "KMJ5_SeniorLiving_Courtyard",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "Háromszintes, U alakú Senior Living épületegyüttes parkosított, akadálymentes belső udvarral és közösségi élettel.",
+      "purpose": ["landing-page", "senior-living", "interactive-experience"],
+      "relatedSprint": "Senior Living section",
+      "category": "senior-living",
+      "sourcePath": "assets/senior-living/KMJ5_SeniorLiving_Courtyard_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/senior-living/KMJ5_SeniorLiving_Courtyard_v01.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-BRANDING-FAVICON-001",
       "name": "KMJ5_Favicon",
       "version": "v01",

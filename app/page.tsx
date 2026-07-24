@@ -18,7 +18,7 @@ const nav = [
   [messages.navigation.gallery, "#gallery"],
   [messages.navigation.contact, "#contact"],
 ];
-const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living", "common-space"] as const;
+const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living-pillar", "common-space"] as const;
 const heroIntervalMs = 8_000;
 
 function Brand({ light = false }: { light?: boolean }) {
@@ -39,6 +39,8 @@ export default function Home() {
   const [masterplanZoom, setMasterplanZoom] = useState(1);
   const [activeCampusMode, setActiveCampusMode] = useState(0);
   const [activeCampusHotspot, setActiveCampusHotspot] = useState(0);
+  const [activeSeniorMode, setActiveSeniorMode] = useState(0);
+  const [activeSeniorHotspot, setActiveSeniorHotspot] = useState(0);
   const [locationVisible, setLocationVisible] = useState(false);
   const [locationTimes, setLocationTimes] = useState(() => content.location.places.map(() => 0));
 
@@ -90,6 +92,7 @@ export default function Home() {
   const selectedPlace = content.location.places[activePlace];
   const selectedResidentialBuilding = content.residentialMasterplan.buildings[activeResidentialBuilding];
   const selectedCampusHotspot = content.educationCampus.hotspots[activeCampusHotspot];
+  const selectedSeniorHotspot = content.seniorLiving.hotspots[activeSeniorHotspot];
   const routeControlX = (50 + selectedPlace.mapX) / 2;
   const routeControlY = Math.max(12, Math.min(55, selectedPlace.mapY) - 18);
   const routePath = `M 50 55 Q ${routeControlX} ${routeControlY} ${selectedPlace.mapX} ${selectedPlace.mapY}`;
@@ -385,6 +388,81 @@ export default function Home() {
           {content.educationCampus.features.map((feature) => <article key={feature.title}>
             <span aria-hidden="true">{feature.icon}</span>
             <div><h3>{feature.title}</h3><p>{feature.description}</p></div>
+          </article>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="senior-living-section" id="senior-living">
+      <div className="senior-heading">
+        <div>
+          <p className="kicker">{content.seniorLiving.kicker}</p>
+          <h2>{content.seniorLiving.title}<br/><em>{content.seniorLiving.titleEmphasis}</em></h2>
+        </div>
+        <p>{content.seniorLiving.description}</p>
+      </div>
+
+      <div className="senior-experience">
+        <div className="senior-mode-switcher" role="tablist" aria-label={content.seniorLiving.modeLabel}>
+          {content.seniorLiving.modes.map((mode, index) => <button
+            key={mode.label}
+            type="button"
+            role="tab"
+            aria-selected={activeSeniorMode === index}
+            className={activeSeniorMode === index ? "active" : ""}
+            onClick={() => {
+              setActiveSeniorMode(index);
+              setActiveSeniorHotspot(mode.hotspotIndex);
+            }}
+          ><span aria-hidden="true">{mode.icon}</span>{mode.label}</button>)}
+        </div>
+
+        <figure className="senior-visual">
+          <Image
+            src="/assets/senior-living/KMJ5_SeniorLiving_Courtyard_v01.webp"
+            alt={content.seniorLiving.imageAlt}
+            fill
+            sizes="(max-width: 760px) 100vw, 94vw"
+          />
+          <span className="senior-image-shade" aria-hidden="true"/>
+          <div className="senior-hotspots" role="group" aria-label={content.seniorLiving.hotspotLabel}>
+            {content.seniorLiving.hotspots.map((hotspot, index) => <button
+              key={hotspot.title}
+              type="button"
+              className={activeSeniorHotspot === index ? "active" : ""}
+              style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
+              aria-label={hotspot.title}
+              aria-pressed={activeSeniorHotspot === index}
+              onMouseEnter={() => setActiveSeniorHotspot(index)}
+              onFocus={() => setActiveSeniorHotspot(index)}
+              onClick={() => setActiveSeniorHotspot(index)}
+            ><span aria-hidden="true">{hotspot.icon}</span></button>)}
+          </div>
+          <figcaption className="senior-info-card" aria-live="polite">
+            <span className="senior-info-icon" aria-hidden="true">{selectedSeniorHotspot.icon}</span>
+            <div>
+              <small>{content.seniorLiving.modes[activeSeniorMode].label}</small>
+              <h3>{selectedSeniorHotspot.title}</h3>
+              <p>{selectedSeniorHotspot.description}</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <div className="senior-mobile-spaces" aria-label={content.seniorLiving.hotspotLabel}>
+          {content.seniorLiving.hotspots.map((hotspot, index) => <button
+            key={hotspot.title}
+            type="button"
+            className={activeSeniorHotspot === index ? "active" : ""}
+            aria-pressed={activeSeniorHotspot === index}
+            onClick={() => setActiveSeniorHotspot(index)}
+          ><span aria-hidden="true">{hotspot.icon}</span><strong>{hotspot.title}</strong><small>{hotspot.description}</small></button>)}
+        </div>
+
+        <div className="senior-feature-grid">
+          {content.seniorLiving.features.map((feature) => <article key={feature.title}>
+            <span aria-hidden="true">{feature.icon}</span>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
           </article>)}
         </div>
       </div>
