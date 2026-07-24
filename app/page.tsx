@@ -33,6 +33,9 @@ export default function Home() {
   const [sent, setSent] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
   const [activeHotspot, setActiveHotspot] = useState(0);
+  const [activePlace, setActivePlace] = useState(0);
+  const [locationVisible, setLocationVisible] = useState(false);
+  const [locationTimes, setLocationTimes] = useState(() => content.location.places.map(() => 0));
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -44,7 +47,45 @@ export default function Home() {
     return () => window.clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const section = document.getElementById("komarom");
+    if (!section) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setLocationVisible(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.22 });
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!locationVisible) return;
+
+    const targets = content.location.places.map((place) => place.minutes);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const duration = reduceMotion ? 0 : 1_250;
+    const startedAt = window.performance.now();
+    let animationFrame = 0;
+    const animate = (now: number) => {
+      const progress = duration === 0 ? 1 : Math.min((now - startedAt) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setLocationTimes(targets.map((target) => Math.round(target * eased)));
+      if (progress < 1) animationFrame = window.requestAnimationFrame(animate);
+    };
+    animationFrame = window.requestAnimationFrame(animate);
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [locationVisible]);
+
   function submit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true); e.currentTarget.reset(); }
+
+  const selectedPlace = content.location.places[activePlace];
+  const routeControlX = (50 + selectedPlace.mapX) / 2;
+  const routeControlY = Math.max(12, Math.min(55, selectedPlace.mapY) - 18);
+  const routePath = `M 50 55 Q ${routeControlX} ${routeControlY} ${selectedPlace.mapX} ${selectedPlace.mapY}`;
 
   return <main className="site" id="top">
     <header className="header">
@@ -139,10 +180,33 @@ export default function Home() {
 
     <section className="location" id="komarom">
       <div className="location-copy"><p className="kicker light-text">{content.location.kicker}</p><h2>{content.location.title}<br/><em>{content.location.titleEmphasis}</em></h2><p>{content.location.description}</p></div>
-      <div className="location-grid">
-        {content.location.places.map((place) => <article key={place.name}><b>{place.icon}</b><div><strong>{place.name}</strong><span>{place.time}</span></div></article>)}
+      <div className="location-grid" role="group" aria-label={content.location.placesLabel}>
+        {content.location.places.map((place, index) => <button
+          type="button"
+          key={place.name}
+          className={index === activePlace ? "active" : ""}
+          aria-pressed={index === activePlace}
+          onMouseEnter={() => setActivePlace(index)}
+          onFocus={() => setActivePlace(index)}
+          onClick={() => setActivePlace(index)}
+        ><b aria-hidden="true">{place.icon}</b><div><strong>{place.name}</strong><span><span className="location-count">{locationTimes[index]}</span> {content.location.timeUnit}</span></div><i>→</i></button>)}
       </div>
-      <div className="map"><div className="map-grid"/><div className="river"/><span className="map-pin"><b>⌖</b>{content.location.mapAddress}<small>{content.location.mapCity}</small></span></div>
+      <div className="map" role="img" aria-label={content.location.mapAriaLabel}>
+        <div className="map-grid"/>
+        <div className="river"/>
+        <div className="isochrones" aria-hidden="true">
+          {content.location.isochrones.map((zone, index) => <span key={zone} className={`isochrone zone-${index}`}><small>{zone}</small></span>)}
+        </div>
+        <svg className="route-map" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path key={`glow-${selectedPlace.name}`} className="route-glow" d={routePath}/>
+          <path key={selectedPlace.name} className="route-line" d={routePath}/>
+        </svg>
+        <span className={`destination-marker ${selectedPlace.mapX > 70 ? "align-right" : ""}`} style={{ left: `${selectedPlace.mapX}%`, top: `${selectedPlace.mapY}%` }}>
+          <b aria-hidden="true">{selectedPlace.icon}</b><span>{selectedPlace.name}<small>{selectedPlace.minutes} {content.location.timeUnit}</small></span>
+        </span>
+        <span className="map-pin"><b aria-hidden="true">⌖</b>{content.location.mapAddress}<small>{content.location.mapCity}</small></span>
+        <span className="map-legend">{content.location.routeLegend}: <strong>{selectedPlace.name}</strong></span>
+      </div>
     </section>
 
     <section className="benefits" id="pillars">

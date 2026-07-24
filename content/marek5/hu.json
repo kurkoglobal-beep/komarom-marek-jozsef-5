@@ -114,14 +114,19 @@
     "title": "Komáromban.",
     "titleEmphasis": "Regionális kapcsolatokkal.",
     "description": "A fejlesztési terület Komárom városi környezetéhez és regionális kapcsolataihoz illeszkedve ad helyet a három egymást erősítő fejlesztési pillérnek.",
+    "placesLabel": "Regionális célpontok",
+    "timeUnit": "perc",
     "places": [
-      { "icon": "≈", "name": "Duna-part", "time": "3 perc" },
-      { "icon": "▥", "name": "Belváros", "time": "5 perc" },
-      { "icon": "↝", "name": "Vasútállomás", "time": "7 perc" },
-      { "icon": "⌖", "name": "Budapest", "time": "45 perc" }
+      { "icon": "≈", "name": "Duna-part", "minutes": 3, "mapX": 35, "mapY": 25 },
+      { "icon": "▥", "name": "Belváros", "minutes": 5, "mapX": 68, "mapY": 30 },
+      { "icon": "↝", "name": "Vasútállomás", "minutes": 7, "mapX": 25, "mapY": 72 },
+      { "icon": "⌖", "name": "Budapest", "minutes": 45, "mapX": 86, "mapY": 68 }
     ],
     "mapAddress": "Marek József utca 5.",
-    "mapCity": "Komárom"
+    "mapCity": "Komárom",
+    "mapAriaLabel": "Stilizált regionális térkép a Marek József utca 5. és a kiválasztott célpont közötti útvonallal",
+    "routeLegend": "Aktív kapcsolat",
+    "isochrones": ["5 perc", "15 perc", "45 perc"]
   },
   "benefits": {
     "kicker": "Fejlesztési pillérek",
