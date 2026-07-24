@@ -23,16 +23,17 @@ async function render() {
   );
 }
 
-test("server-renders the Marek 5 landing page", async () => {
+test("server-renders the integrated Komárom development landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Marek 5 Komárom – Prémium otthonok<\/title>/i);
-  assert.match(html, /Új otthon/);
-  assert.match(html, /Marek József utca 5/);
-  assert.match(html, /Lakástípusok/);
-  assert.match(html, /Tájékoztatást kérek/);
+  assert.match(html, /<title>Komárom Fejlesztési Terület<\/title>/i);
+  assert.match(html, /Három jövőformáló pillér/);
+  assert.match(html, /Oktatási Campus/);
+  assert.match(html, /Senior Living/);
+  assert.doesNotMatch(html, /Lakástípusok/);
+  assert.doesNotMatch(html, /Lakások felfedezése/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });

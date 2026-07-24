@@ -47,7 +47,7 @@ export default function Home() {
         <p className="kicker light-text">{content.hero.kicker}</p>
         <h1>{content.hero.title}<br/><em>{content.hero.titleEmphasis}</em></h1>
         <p>{content.hero.description}</p>
-        <div className="hero-actions"><a className="button gold" href="#lakasok">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#development-area">{messages.cta.learnProject} <span>↓</span></a></div>
+        <div className="hero-actions"><a className="button gold" href="#development-area">{messages.cta.exploreDevelopmentConcept} <span>→</span></a><a className="text-link light-link" href="#pillars">{messages.cta.details} <span>↓</span></a></div>
       </div>
       <div className="hero-meta">{content.hero.features.map((feature) => <span key={feature}>{feature}</span>)}</div>
     </section>
@@ -86,10 +86,10 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="apartments" id="lakasok">
+    {content.visibility.showResidentialSalesDetails && <section className="apartments" id="residential-sales">
       <div className="apartments-top"><div><p className="kicker">{content.apartments.kicker}</p><h2>{content.apartments.title}<br/><em>{content.apartments.titleEmphasis}</em></h2></div><p>{content.apartments.description}</p></div>
       <div className="apartment-list">{content.apartments.items.map((apartment, index) => <article key={apartment.rooms}><span className="ap-index">0{index + 1}</span><div><h3>{apartment.rooms}</h3><p>{apartment.note}</p></div><strong>{apartment.area}</strong><span>{apartment.level}</span><a href="#erdeklodes" aria-label={interpolate(messages.accessibility.inquiryFor, { unit: apartment.rooms })}>›</a></article>)}</div>
-    </section>
+    </section>}
 
     <section className="interest" id="erdeklodes">
       <div className="interest-copy"><p className="kicker light-text">{content.interest.kicker}</p><h2>{content.interest.title}<br/><em>{content.interest.titleEmphasis}</em></h2><p>{content.interest.description}</p><div className="privacy"><b>◇</b><span>{content.interest.privacy}</span></div></div>

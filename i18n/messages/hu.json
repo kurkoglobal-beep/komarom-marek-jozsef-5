@@ -33,7 +33,8 @@
     "newInquiry": "Új érdeklődés küldése",
     "requestAppointment": "Időpontot kérek",
     "viewApartments": "Lakások megtekintése",
-    "contactSales": "Kapcsolat az értékesítéssel"
+    "contactSales": "Kapcsolat az értékesítéssel",
+    "exploreDevelopmentConcept": "A fejlesztési koncepció megismerése"
   },
   "status": {
     "comingSoon": "Hamarosan",

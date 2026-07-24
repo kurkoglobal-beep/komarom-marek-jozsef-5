@@ -1,5 +1,6 @@
 {
   "_meta": { "locale": "hu", "translationStatus": "source", "fallbackLocale": null },
+  "visibility": { "showResidentialSalesDetails": false },
   "brand": { "name": "KOMÁROM", "tagline": "FEJLESZTÉSI TERÜLET" },
   "seo": {
     "title": "Komárom Fejlesztési Terület",
@@ -86,7 +87,8 @@
     "kicker": "Elsőként értesülni",
     "title": "Legyen az elsők között,",
     "titleEmphasis": "akik hazatalálnak.",
-    "description": "Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.",
+    "description": "Kérjen tájékoztatást a fejlesztési koncepcióról és a kapcsolódási lehetőségekről.",
+    "residentialSalesDescription": "Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.",
     "privacy": "Adatait kizárólag a projekttel kapcsolatos tájékoztatásra használjuk."
   },
   "contact": {
