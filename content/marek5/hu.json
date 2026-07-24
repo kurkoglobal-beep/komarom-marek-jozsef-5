@@ -17,22 +17,22 @@
     "features": ["Prémium lakónegyed", "Oktatási Campus", "Senior Living"]
   },
   "project": {
-    "kicker": "A projektről",
-    "title": "Több mint lakóhely.",
-    "titleEmphasis": "Egy jól megtervezett élet.",
-    "description": "A Marek 5 egy kis léptékű, prémium szemléletű lakófejlesztés, ahol minden részlet a nyugodt hétköznapokat szolgálja. Világos otthonok, természetes anyagok, jövőálló műszaki megoldások és egy parkosított belső kert központi tóval.",
+    "kicker": "A fejlesztési területről",
+    "title": "Egy helyszín.",
+    "titleEmphasis": "Egymást erősítő funkciók.",
+    "description": "A Komárom Fejlesztési Terület egyetlen, integrált fejlesztési vízióban kapcsolja össze a prémium lakónegyedet, az Oktatási Campust, valamint a Senior Living és egészségügyi szolgáltatásokat.",
     "highlights": [
-      "Kortárs, időtálló építészeti karakter",
-      "Energiahatékony gépészet és hőszigetelés",
-      "Tetőre telepített napelemek a közös terek, a parkvilágítás és a Smart Park energiaellátásának támogatására"
+      "3,2 hektáros, egységesen kezelt fejlesztési terület",
+      "Három önálló karakterű, mégis összekapcsolódó pillér",
+      "Közös környezeti és infrastrukturális szemlélet"
     ],
-    "imageAlt": "Modern lakóépületek parkosított környezetben naplementekor"
+    "imageAlt": "A fejlesztési terület prémium lakónegyedi pillérének látványterve"
   },
   "location": {
-    "kicker": "Miért Komárom?",
-    "title": "Közel mindenhez.",
-    "titleEmphasis": "Mégis otthon.",
-    "description": "Komárom egyszerre kínál kisvárosi nyugalmat és kiváló regionális kapcsolatokat. A Duna-part, a belváros és a mindennapi szolgáltatások percek alatt elérhetők.",
+    "kicker": "A terület",
+    "title": "Komáromban.",
+    "titleEmphasis": "Regionális kapcsolatokkal.",
+    "description": "A fejlesztési terület Komárom városi környezetéhez és regionális kapcsolataihoz illeszkedve ad helyet a három egymást erősítő fejlesztési pillérnek.",
     "places": [
       { "icon": "≈", "name": "Duna-part", "time": "3 perc" },
       { "icon": "▥", "name": "Belváros", "time": "5 perc" },
