@@ -6,7 +6,13 @@
     "benefits": "Előnyök",
     "gallery": "Galéria",
     "apartments": "Lakások",
-    "masterplan": "Masterplan"
+    "masterplan": "Masterplan",
+    "developmentArea": "A terület",
+    "pillars": "Fejlesztési pillérek",
+    "residential": "Lakónegyed",
+    "educationCampus": "Oktatási Campus",
+    "seniorLiving": "Senior Living",
+    "contact": "Kapcsolat"
   },
   "common": {
     "menu": "Menü",

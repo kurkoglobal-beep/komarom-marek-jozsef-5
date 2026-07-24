@@ -6,7 +6,13 @@
     "benefits": "Benefits",
     "gallery": "Gallery",
     "apartments": "Apartments",
-    "masterplan": "Masterplan"
+    "masterplan": "Masterplan",
+    "developmentArea": "The area",
+    "pillars": "Development pillars",
+    "residential": "Residential quarter",
+    "educationCampus": "Education Campus",
+    "seniorLiving": "Senior Living",
+    "contact": "Contact"
   },
   "common": {
     "menu": "Menu",

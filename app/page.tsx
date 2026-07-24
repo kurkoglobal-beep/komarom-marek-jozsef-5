@@ -9,12 +9,15 @@ import {
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
-  [messages.navigation.project, "#projekt"],
-  [messages.navigation.city, "#komarom"],
-  [messages.navigation.benefits, "#elonyok"],
-  [messages.navigation.gallery, "#galeria"],
-  [messages.navigation.apartments, "#lakasok"],
+  [messages.navigation.developmentArea, "#development-area"],
+  [messages.navigation.pillars, "#pillars"],
+  [messages.navigation.residential, "#residential"],
+  [messages.navigation.educationCampus, "#education-campus"],
+  [messages.navigation.seniorLiving, "#senior-living"],
+  [messages.navigation.gallery, "#gallery"],
+  [messages.navigation.contact, "#contact"],
 ];
+const pillarAnchors = ["residential", "education-campus", "senior-living"] as const;
 
 function Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
@@ -44,17 +47,17 @@ export default function Home() {
         <p className="kicker light-text">{content.hero.kicker}</p>
         <h1>{content.hero.title}<br/><em>{content.hero.titleEmphasis}</em></h1>
         <p>{content.hero.description}</p>
-        <div className="hero-actions"><a className="button gold" href="#lakasok">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#projekt">{messages.cta.learnProject} <span>↓</span></a></div>
+        <div className="hero-actions"><a className="button gold" href="#lakasok">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#development-area">{messages.cta.learnProject} <span>↓</span></a></div>
       </div>
       <div className="hero-meta">{content.hero.features.map((feature) => <span key={feature}>{feature}</span>)}</div>
     </section>
 
-    <section className="intro" id="projekt">
+    <section className="intro" id="development-area">
       <div><p className="kicker">{content.project.kicker}</p><h2>{content.project.title}<br/><em>{content.project.titleEmphasis}</em></h2></div>
       <div className="intro-copy">
         <p>{content.project.description}</p>
         <ul>{content.project.highlights.map((highlight) => <li key={highlight}>✓ {highlight}</li>)}</ul>
-        <a className="text-link" href="#elonyok">{messages.cta.details} <span>→</span></a>
+        <a className="text-link" href="#pillars">{messages.cta.details} <span>→</span></a>
       </div>
       <div className="intro-image"><img src="/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp" alt={content.project.imageAlt} className="cover" /></div>
     </section>
@@ -67,14 +70,14 @@ export default function Home() {
       <div className="map"><div className="map-grid"/><div className="river"/><span className="map-pin"><b>⌖</b>{content.location.mapAddress}<small>{content.location.mapCity}</small></span></div>
     </section>
 
-    <section className="benefits" id="elonyok">
+    <section className="benefits" id="pillars">
       <div className="section-heading"><p className="kicker">{content.benefits.kicker}</p><h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2></div>
       <div className="benefit-grid">
-        {content.benefits.items.map((item, index) => <article key={item.title}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
+        {content.benefits.items.map((item, index) => <article id={pillarAnchors[index]} key={item.title}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
       </div>
     </section>
 
-    <section className="gallery" id="galeria">
+    <section className="gallery" id="gallery">
       <div className="gallery-heading"><div><p className="kicker light-text">{content.gallery.kicker}</p><h2>{content.gallery.title}<br/><em>{content.gallery.titleEmphasis}</em></h2></div><p>{content.gallery.description}</p></div>
       <div className="gallery-grid">
         <figure className="wide"><img src="/assets/renders/interior/KMJ5_Interior_Collection_v01.webp" alt={content.gallery.items[0].alt} className="cover"/><figcaption>{content.gallery.items[0].caption}</figcaption></figure>
@@ -102,7 +105,7 @@ export default function Home() {
       </form>}
     </section>
 
-    <section className="contact" id="kapcsolat">
+    <section className="contact" id="contact">
       <Brand/><div><p className="kicker">{messages.common.contact}</p><a href={`mailto:${content.contact.email}`}>{content.contact.email}</a><a href={`tel:${content.contact.phoneHref}`}>{content.contact.phoneDisplay}</a></div><div><p className="kicker">{messages.common.salesPoint}</p><address>{content.contact.postalCode} {content.contact.city}<br/>{content.contact.street}</address></div><a className="button dark" href="#erdeklodes">{messages.cta.requestAppointment} <span>→</span></a>
     </section>
     <footer><span>{content.contact.copyright}</span><div><a href="#">{messages.common.privacy}</a><a href="#">{messages.common.imprint}</a></div><a href="#top">{messages.common.backToTop} ↑</a></footer>
