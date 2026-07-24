@@ -78,6 +78,8 @@
     "mainNavigation": "Fő navigáció",
     "menu": "Menü",
     "inquiryFor": "Érdeklődés: {unit}",
+    "heroCarousel": "Hero képgaléria",
+    "selectHeroSlide": "{slide}. kép kiválasztása: {title}",
     "selectBuilding": "Épület kiválasztása",
     "openBuildingDetails": "Épület részleteinek megnyitása",
     "closeBuildingDetails": "Épület részleteinek bezárása"

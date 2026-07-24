@@ -10,12 +10,35 @@
     "openGraphLocale": "hu_HU"
   },
   "hero": {
-    "imageAlt": "A Komárom Fejlesztési Terület lakónegyedi pillérének esti látványterve",
     "kicker": "Komárom · Integrált fejlesztési vízió",
-    "title": "Egy terület.",
-    "titleEmphasis": "Három jövőformáló pillér.",
-    "description": "Egyetlen, 3,2 hektáros integrált fejlesztési terület: prémium lakónegyed, Oktatási Campus, valamint Senior Living és egészségügyi szolgáltatások.",
-    "features": ["Prémium lakónegyed", "Oktatási Campus", "Senior Living"]
+    "title": "Komárom Fejlesztési Terület",
+    "description": [
+      "Egy helyszín.",
+      "Három egymást erősítő fejlesztési pillér.",
+      "A jövő integrált városfejlesztési koncepciója."
+    ],
+    "slides": [
+      {
+        "src": "/assets/hero/KMJ5_Hero_DevelopmentMaster_v01.webp",
+        "label": "Integrált fejlesztési terület",
+        "alt": "A Komárom Fejlesztési Terület integrált víziója központi parkkal, tóval és háromszintes épületekkel"
+      },
+      {
+        "src": "/assets/hero/KMJ5_Hero_Residential_v01.webp",
+        "label": "Lakónegyed",
+        "alt": "Prémium lakónegyed háromszintes épületekkel, családokkal, központi parkkal és tóval"
+      },
+      {
+        "src": "/assets/hero/KMJ5_Hero_EducationCampus_v01.webp",
+        "label": "Oktatási Campus",
+        "alt": "Nemzetközi színvonalú, háromszintes Oktatási Campus parkosított környezetben"
+      },
+      {
+        "src": "/assets/hero/KMJ5_Hero_SeniorLiving_v01.webp",
+        "label": "Senior Living",
+        "alt": "Prémium Senior Living környezet wellness pavilonnal, parkkal és vízfelülettel"
+      }
+    ]
   },
   "project": {
     "kicker": "A fejlesztési területről",

@@ -2,8 +2,96 @@
   "schemaVersion": "1.0",
   "project": "KMJ5",
   "projectName": "Komárom, Marek József utca 5.",
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-24",
   "assets": [
+    {
+      "id": "KMJ5-HERO-DEVELOPMENT-MASTER-001",
+      "name": "KMJ5_Hero_DevelopmentMaster",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "Az integrált Komárom Fejlesztési Terület emberi szemmagasságú master hero látványterve központi parkkal és tóval.",
+      "purpose": ["landing-page", "marketing", "investor"],
+      "relatedSprint": "Hero redesign",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_DevelopmentMaster_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_DevelopmentMaster_v01.webp",
+          "format": "webp",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-RESIDENTIAL-001",
+      "name": "KMJ5_Hero_Residential",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "A lakónegyedi pillér emberi szemmagasságú hero látványterve családokkal, parkkal és központi tóval.",
+      "purpose": ["landing-page", "marketing", "investor"],
+      "relatedSprint": "Hero redesign",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_Residential_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_Residential_v01.webp",
+          "format": "webp",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-EDUCATION-CAMPUS-001",
+      "name": "KMJ5_Hero_EducationCampus",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "A parkosított, nemzetközi színvonalú Oktatási Campus emberi szemmagasságú hero látványterve.",
+      "purpose": ["landing-page", "marketing", "investor"],
+      "relatedSprint": "Hero redesign",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_EducationCampus_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_EducationCampus_v01.webp",
+          "format": "webp",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-SENIOR-LIVING-001",
+      "name": "KMJ5_Hero_SeniorLiving",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "A Senior Living pillér emberi szemmagasságú hero látványterve wellness pavilonnal, parkkal és vízfelülettel.",
+      "purpose": ["landing-page", "marketing", "investor"],
+      "relatedSprint": "Hero redesign",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_SeniorLiving_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_SeniorLiving_v01.webp",
+          "format": "webp",
+          "width": 3840,
+          "height": 2160,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
     {
       "id": "KMJ5-HERO-NIGHT-001",
       "name": "KMJ5_Hero_Night",

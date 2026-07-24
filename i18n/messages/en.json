@@ -78,6 +78,8 @@
     "mainNavigation": "Main navigation",
     "menu": "Menu",
     "inquiryFor": "Enquiry: {unit}",
+    "heroCarousel": "Hero image gallery",
+    "selectHeroSlide": "Select image {slide}: {title}",
     "selectBuilding": "Select a building",
     "openBuildingDetails": "Open building details",
     "closeBuildingDetails": "Close building details"

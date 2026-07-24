@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import Image from "next/image";
+import { FormEvent, useEffect, useState } from "react";
 import {
   defaultLocale,
   getTranslations,
@@ -18,6 +19,7 @@ const nav = [
   [messages.navigation.contact, "#contact"],
 ];
 const pillarAnchors = ["residential", "education-campus", "senior-living"] as const;
+const heroIntervalMs = 8_000;
 
 function Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
@@ -29,6 +31,18 @@ function Brand({ light = false }: { light?: boolean }) {
 export default function Home() {
   const [menu, setMenu] = useState(false);
   const [sent, setSent] = useState(false);
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const interval = window.setInterval(() => {
+      setHeroIndex((current) => (current + 1) % content.hero.slides.length);
+    }, heroIntervalMs);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   function submit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true); e.currentTarget.reset(); }
 
   return <main className="site" id="top">
@@ -41,15 +55,39 @@ export default function Home() {
     </header>
 
     <section className="hero">
-      <img src="/assets/hero/KMJ5_Hero_Night_v01.webp" alt={content.hero.imageAlt} className="cover" />
+      <div className="hero-media" role="img" aria-label={content.hero.slides[heroIndex].alt}>
+        {content.hero.slides.map((slide, index) => (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt=""
+            fill
+            sizes="100vw"
+            preload={index === 0}
+            loading={index === 0 || index === heroIndex ? undefined : "lazy"}
+            className={`hero-slide ${index === heroIndex ? "active" : ""}`}
+          />
+        ))}
+      </div>
       <div className="hero-shade" />
       <div className="hero-content">
         <p className="kicker light-text">{content.hero.kicker}</p>
-        <h1>{content.hero.title}<br/><em>{content.hero.titleEmphasis}</em></h1>
-        <p>{content.hero.description}</p>
-        <div className="hero-actions"><a className="button gold" href="#development-area">{messages.cta.exploreDevelopmentConcept} <span>→</span></a><a className="text-link light-link" href="#pillars">{messages.cta.details} <span>↓</span></a></div>
+        <h1>{content.hero.title}</h1>
+        <p className="hero-description">{content.hero.description.map((line) => <span key={line}>{line}</span>)}</p>
+        <div className="hero-actions"><a className="button gold" href="#project-contact">{messages.cta.partnerConsultation} <span>→</span></a><a className="text-link light-link" href="#development-area">{messages.cta.exploreDevelopmentConcept} <span>↓</span></a></div>
+        <div className="hero-indicators" role="group" aria-label={messages.accessibility.heroCarousel}>
+          {content.hero.slides.map((slide, index) => (
+            <button
+              key={slide.src}
+              type="button"
+              className={index === heroIndex ? "active" : ""}
+              aria-current={index === heroIndex ? "true" : undefined}
+              aria-label={interpolate(messages.accessibility.selectHeroSlide, { slide: `${index + 1}`, title: slide.label })}
+              onClick={() => setHeroIndex(index)}
+            />
+          ))}
+        </div>
       </div>
-      <div className="hero-meta">{content.hero.features.map((feature) => <span key={feature}>{feature}</span>)}</div>
     </section>
 
     <section className="intro" id="development-area">
@@ -73,7 +111,7 @@ export default function Home() {
     <section className="benefits" id="pillars">
       <div className="section-heading"><p className="kicker">{content.benefits.kicker}</p><h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2></div>
       <div className="benefit-grid">
-        {content.benefits.items.map((item, index) => <article id={pillarAnchors[index]} key={item.title}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
+        {content.benefits.items.map((item, index) => <article id={pillarAnchors[index]} key={item.title} onMouseEnter={index < 3 ? () => setHeroIndex(index + 1) : undefined} onFocus={index < 3 ? () => setHeroIndex(index + 1) : undefined}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
       </div>
     </section>
 
