@@ -43,10 +43,16 @@
     "mapCity": "Komárom"
   },
   "benefits": {
-    "kicker": "A Marek 5 előnyei",
-    "title": "Minőség, amit",
-    "titleEmphasis": "minden nap érez.",
+    "kicker": "Fejlesztési pillérek",
+    "title": "Három irány.",
+    "titleEmphasis": "Egy közös jövőkép.",
     "items": [
+      { "icon": "⌂", "title": "Prémium lakónegyed", "description": "A fejlesztési terület lakófunkciója kortárs otthonokkal és parkosított környezettel." },
+      { "icon": "▤", "title": "Oktatási Campus", "description": "Az integrált koncepció oktatási pillérének kijelölt helye a fejlesztési területen." },
+      { "icon": "◇", "title": "Senior Living", "description": "Senior életviteli és kapcsolódó egészségügyi szolgáltatások számára tervezett fejlesztési pillér." },
+      { "icon": "✦", "title": "Közös környezet", "description": "A három pillért összekapcsoló zöldfelületi, közösségi és infrastrukturális szemlélet." }
+    ],
+    "residentialFeatures": [
       { "icon": "⌂", "title": "Átgondolt alaprajzok", "description": "Élhető terek, jó benapozás és kényelmes tárolás." },
       { "icon": "⌁", "title": "Smart Home", "description": "A világítás, árnyékolás és hőmérséklet jövőálló vezérlése." },
       { "icon": "◇", "title": "Smart Park", "description": "Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható." },
