@@ -1,19 +1,25 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import {
+  defaultLocale,
+  getTranslations,
+  interpolate,
+} from "@/lib/i18n";
 
-const nav = [["Projekt", "#projekt"], ["Komárom", "#komarom"], ["Előnyök", "#elonyok"], ["Galéria", "#galeria"], ["Lakások", "#lakasok"]];
-const apartments = [
-  ["1 + fél szoba", "38–44 m²", "I–II. emelet", "Első otthonnak"],
-  ["2 szoba", "52–61 m²", "I–III. emelet", "Pároknak tervezve"],
-  ["3 szoba", "68–82 m²", "I–III. emelet", "Tágas családi tér"],
-  ["Penthouse", "96–118 m²", "IV. emelet", "Tágas tetőterasszal"],
+const { content, messages } = getTranslations(defaultLocale);
+const nav = [
+  [messages.navigation.project, "#projekt"],
+  [messages.navigation.city, "#komarom"],
+  [messages.navigation.benefits, "#elonyok"],
+  [messages.navigation.gallery, "#galeria"],
+  [messages.navigation.apartments, "#lakasok"],
 ];
 
 function Brand({ light = false }: { light?: boolean }) {
-  return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label="Marek 5 kezdőlap">
+  return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
     <span className="brand-mark"><b>M</b><b>5</b></span>
-    <span><strong>MAREK 5</strong><small>KOMÁROM · PRÉMIUM OTTHONOK</small></span>
+    <span><strong>{content.brand.name}</strong><small>{content.brand.tagline}</small></span>
   </a>;
 }
 
@@ -25,80 +31,80 @@ export default function Home() {
   return <main className="site" id="top">
     <header className="header">
       <Brand light />
-      <nav className="desktop-nav" aria-label="Fő navigáció">{nav.map(([t,h]) => <a key={h} href={h}>{t}</a>)}</nav>
-      <a className="button gold header-cta" href="#erdeklodes">Érdekel a projekt</a>
-      <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label="Menü">{menu ? "×" : "☰"}</button>
-      {menu && <nav className="mobile-nav">{nav.map(([t,h]) => <a key={h} href={h} onClick={() => setMenu(false)}>{t}<span>→</span></a>)}<a href="#erdeklodes" onClick={() => setMenu(false)}>Érdekel a projekt<span>→</span></a></nav>}
+      <nav className="desktop-nav" aria-label={messages.accessibility.mainNavigation}>{nav.map(([text, href]) => <a key={href} href={href}>{text}</a>)}</nav>
+      <a className="button gold header-cta" href="#erdeklodes">{messages.cta.interestProject}</a>
+      <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label={messages.accessibility.menu}>{menu ? "×" : "☰"}</button>
+      {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#erdeklodes" onClick={() => setMenu(false)}>{messages.cta.interestProject}<span>→</span></a></nav>}
     </header>
 
     <section className="hero">
-      <img src="/assets/hero/KMJ5_Hero_Night_v01.webp" alt="A Marek József utcai prémium lakópark esti látványterve" className="cover" />
+      <img src="/assets/hero/KMJ5_Hero_Night_v01.webp" alt={content.hero.imageAlt} className="cover" />
       <div className="hero-shade" />
       <div className="hero-content">
-        <p className="kicker light-text">Komárom · Marek József utca 5.</p>
-        <h1>Új otthon.<br/><em>Új minőség.</em></h1>
-        <p>Prémium, energiahatékony lakások Komárom szívében — időtálló építészet, átgondolt terek, magasabb életminőség.</p>
-        <div className="hero-actions"><a className="button gold" href="#lakasok">Lakások felfedezése <span>→</span></a><a className="text-link light-link" href="#projekt">Ismerje meg a projektet <span>↓</span></a></div>
+        <p className="kicker light-text">{content.hero.kicker}</p>
+        <h1>{content.hero.title}<br/><em>{content.hero.titleEmphasis}</em></h1>
+        <p>{content.hero.description}</p>
+        <div className="hero-actions"><a className="button gold" href="#lakasok">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#projekt">{messages.cta.learnProject} <span>↓</span></a></div>
       </div>
-      <div className="hero-meta"><span>Értékálló építészet</span><span>Okos otthonok</span><span>Zöld környezet</span></div>
+      <div className="hero-meta">{content.hero.features.map((feature) => <span key={feature}>{feature}</span>)}</div>
     </section>
 
     <section className="intro" id="projekt">
-      <div><p className="kicker">A projektről</p><h2>Több mint lakóhely.<br/><em>Egy jól megtervezett élet.</em></h2></div>
+      <div><p className="kicker">{content.project.kicker}</p><h2>{content.project.title}<br/><em>{content.project.titleEmphasis}</em></h2></div>
       <div className="intro-copy">
-        <p>A Marek 5 egy kis léptékű, prémium szemléletű lakófejlesztés, ahol minden részlet a nyugodt hétköznapokat szolgálja. Világos otthonok, természetes anyagok, jövőálló műszaki megoldások és egy parkosított belső kert központi tóval.</p>
-        <ul><li>✓ Kortárs, időtálló építészeti karakter</li><li>✓ Energiahatékony gépészet és hőszigetelés</li><li>✓ Tetőre telepített napelemek a közös terek, a parkvilágítás és a Smart Park energiaellátásának támogatására</li></ul>
-        <a className="text-link" href="#elonyok">A részletek <span>→</span></a>
+        <p>{content.project.description}</p>
+        <ul>{content.project.highlights.map((highlight) => <li key={highlight}>✓ {highlight}</li>)}</ul>
+        <a className="text-link" href="#elonyok">{messages.cta.details} <span>→</span></a>
       </div>
-      <div className="intro-image"><img src="/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp" alt="Modern lakóépületek parkosított környezetben naplementekor" className="cover" /></div>
+      <div className="intro-image"><img src="/assets/renders/exterior/KMJ5_Exterior_Sunset_v01.webp" alt={content.project.imageAlt} className="cover" /></div>
     </section>
 
     <section className="location" id="komarom">
-      <div className="location-copy"><p className="kicker light-text">Miért Komárom?</p><h2>Közel mindenhez.<br/><em>Mégis otthon.</em></h2><p>Komárom egyszerre kínál kisvárosi nyugalmat és kiváló regionális kapcsolatokat. A Duna-part, a belváros és a mindennapi szolgáltatások percek alatt elérhetők.</p></div>
+      <div className="location-copy"><p className="kicker light-text">{content.location.kicker}</p><h2>{content.location.title}<br/><em>{content.location.titleEmphasis}</em></h2><p>{content.location.description}</p></div>
       <div className="location-grid">
-        {[["≈","Duna-part","3 perc"],["▥","Belváros","5 perc"],["↝","Vasútállomás","7 perc"],["⌖","Budapest","45 perc"]].map(([i,t,s]) => <article key={t}><b>{i}</b><div><strong>{t}</strong><span>{s}</span></div></article>)}
+        {content.location.places.map((place) => <article key={place.name}><b>{place.icon}</b><div><strong>{place.name}</strong><span>{place.time}</span></div></article>)}
       </div>
-      <div className="map"><div className="map-grid"/><div className="river"/><span className="map-pin"><b>⌖</b>Marek József utca 5.<small>Komárom</small></span></div>
+      <div className="map"><div className="map-grid"/><div className="river"/><span className="map-pin"><b>⌖</b>{content.location.mapAddress}<small>{content.location.mapCity}</small></span></div>
     </section>
 
     <section className="benefits" id="elonyok">
-      <div className="section-heading"><p className="kicker">A Marek 5 előnyei</p><h2>Minőség, amit<br/><em>minden nap érez.</em></h2></div>
+      <div className="section-heading"><p className="kicker">{content.benefits.kicker}</p><h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2></div>
       <div className="benefit-grid">
-        {[["⌂","Átgondolt alaprajzok","Élhető terek, jó benapozás és kényelmes tárolás."],["⌁","Smart Home","A világítás, árnyékolás és hőmérséklet jövőálló vezérlése."],["◇","Smart Park","Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható."],["✦","Prémium anyaghasználat","Időtálló burkolatok és gondosan összeválogatott részletek."]].map(([i,t,c],n) => <article key={t}><span className="number">0{n+1}</span><b className="benefit-icon">{i}</b><h3>{t}</h3><p>{c}</p></article>)}
+        {content.benefits.items.map((item, index) => <article key={item.title}><span className="number">0{index + 1}</span><b className="benefit-icon">{item.icon}</b><h3>{item.title}</h3><p>{item.description}</p></article>)}
       </div>
     </section>
 
     <section className="gallery" id="galeria">
-      <div className="gallery-heading"><div><p className="kicker light-text">Látványtervek</p><h2>Az otthon érzése,<br/><em>már az első pillanatban.</em></h2></div><p>A képek a projekt tervezett hangulatát és anyaghasználatát szemléltetik.</p></div>
+      <div className="gallery-heading"><div><p className="kicker light-text">{content.gallery.kicker}</p><h2>{content.gallery.title}<br/><em>{content.gallery.titleEmphasis}</em></h2></div><p>{content.gallery.description}</p></div>
       <div className="gallery-grid">
-        <figure className="wide"><img src="/assets/renders/interior/KMJ5_Interior_Collection_v01.webp" alt="Prémium lakás enteriőrjei" className="cover"/><figcaption>Világos, természetes enteriőrök</figcaption></figure>
-        <figure><img src="/assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.webp" alt="Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra" className="cover"/><figcaption>Smart Home · természetközeli kilátás</figcaption></figure>
-        <figure className="full"><img src="/assets/smart-park/KMJ5_SmartPark_CentralLake_v01.webp" alt="Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással" className="cover"/><figcaption>Smart Park · intelligens zöld környezet</figcaption></figure>
+        <figure className="wide"><img src="/assets/renders/interior/KMJ5_Interior_Collection_v01.webp" alt={content.gallery.items[0].alt} className="cover"/><figcaption>{content.gallery.items[0].caption}</figcaption></figure>
+        <figure><img src="/assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.webp" alt={content.gallery.items[1].alt} className="cover"/><figcaption>{content.gallery.items[1].caption}</figcaption></figure>
+        <figure className="full"><img src="/assets/smart-park/KMJ5_SmartPark_CentralLake_v01.webp" alt={content.gallery.items[2].alt} className="cover"/><figcaption>{content.gallery.items[2].caption}</figcaption></figure>
       </div>
     </section>
 
     <section className="apartments" id="lakasok">
-      <div className="apartments-top"><div><p className="kicker">Lakástípusok</p><h2>Találja meg az<br/><em>Ön ritmusához illőt.</em></h2></div><p>A kínálat jelenleg tájékoztató jellegű. A részletes alaprajzok és az aktuális elérhetőség hamarosan érkeznek.</p></div>
-      <div className="apartment-list">{apartments.map(([r,a,l,n],i) => <article key={r}><span className="ap-index">0{i+1}</span><div><h3>{r}</h3><p>{n}</p></div><strong>{a}</strong><span>{l}</span><a href="#erdeklodes" aria-label={`Érdeklődés: ${r}`}>›</a></article>)}</div>
+      <div className="apartments-top"><div><p className="kicker">{content.apartments.kicker}</p><h2>{content.apartments.title}<br/><em>{content.apartments.titleEmphasis}</em></h2></div><p>{content.apartments.description}</p></div>
+      <div className="apartment-list">{content.apartments.items.map((apartment, index) => <article key={apartment.rooms}><span className="ap-index">0{index + 1}</span><div><h3>{apartment.rooms}</h3><p>{apartment.note}</p></div><strong>{apartment.area}</strong><span>{apartment.level}</span><a href="#erdeklodes" aria-label={interpolate(messages.accessibility.inquiryFor, { unit: apartment.rooms })}>›</a></article>)}</div>
     </section>
 
     <section className="interest" id="erdeklodes">
-      <div className="interest-copy"><p className="kicker light-text">Elsőként értesülni</p><h2>Legyen az elsők között,<br/><em>akik hazatalálnak.</em></h2><p>Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.</p><div className="privacy"><b>◇</b><span>Adatait kizárólag a projekttel kapcsolatos tájékoztatásra használjuk.</span></div></div>
-      {sent ? <div className="success" role="status"><b>✓</b><h3>Köszönjük az érdeklődést!</h3><p>Hamarosan felvesszük Önnel a kapcsolatot.</p><button onClick={() => setSent(false)}>Új érdeklődés küldése</button></div> :
+      <div className="interest-copy"><p className="kicker light-text">{content.interest.kicker}</p><h2>{content.interest.title}<br/><em>{content.interest.titleEmphasis}</em></h2><p>{content.interest.description}</p><div className="privacy"><b>◇</b><span>{content.interest.privacy}</span></div></div>
+      {sent ? <div className="success" role="status"><b>✓</b><h3>{messages.forms.successTitle}</h3><p>{messages.forms.successMessage}</p><button onClick={() => setSent(false)}>{messages.cta.newInquiry}</button></div> :
       <form className="form" onSubmit={submit}>
-        <label><span>Név</span><input name="name" autoComplete="name" required placeholder="Az Ön neve"/></label>
-        <label><span>E-mail-cím</span><input name="email" type="email" autoComplete="email" required placeholder="nev@pelda.hu"/></label>
-        <label><span>Telefonszám</span><input name="phone" type="tel" autoComplete="tel" placeholder="+36 30 123 4567"/></label>
-        <label><span>Érdeklődés tárgya</span><select name="interest" defaultValue=""><option value="" disabled>Válasszon</option><option>Saját otthon</option><option>Befektetési lehetőség</option><option>Általános tájékoztatás</option></select></label>
-        <label className="consent"><input type="checkbox" required/><span>Elfogadom az adatkezelési tájékoztatót.</span></label>
-        <button className="button gold" type="submit">Tájékoztatást kérek <span>→</span></button>
-        <small>Az űrlap elkülönített, Supabase-kompatibilis adatmodellt használhat a következő integrációs fázisban.</small>
+        <label><span>{messages.forms.name}</span><input name="name" autoComplete="name" required placeholder={messages.forms.namePlaceholder}/></label>
+        <label><span>{messages.forms.email}</span><input name="email" type="email" autoComplete="email" required placeholder={messages.forms.emailPlaceholder}/></label>
+        <label><span>{messages.forms.phone}</span><input name="phone" type="tel" autoComplete="tel" placeholder={messages.forms.phonePlaceholder}/></label>
+        <label><span>{messages.forms.subject}</span><select name="interest" defaultValue=""><option value="" disabled>{messages.forms.select}</option><option>{messages.forms.ownHome}</option><option>{messages.forms.investment}</option><option>{messages.forms.generalInformation}</option></select></label>
+        <label className="consent"><input type="checkbox" required/><span>{messages.forms.consent}</span></label>
+        <button className="button gold" type="submit">{messages.cta.requestInformation} <span>→</span></button>
+        <small>{messages.forms.integrationNote}</small>
       </form>}
     </section>
 
     <section className="contact" id="kapcsolat">
-      <Brand/><div><p className="kicker">Kapcsolat</p><a href="mailto:hello@marek5.hu">hello@marek5.hu</a><a href="tel:+36301234567">+36 30 123 4567</a></div><div><p className="kicker">Értékesítési pont</p><address>2900 Komárom<br/>Marek József utca 5.</address></div><a className="button dark" href="#erdeklodes">Időpontot kérek <span>→</span></a>
+      <Brand/><div><p className="kicker">{messages.common.contact}</p><a href={`mailto:${content.contact.email}`}>{content.contact.email}</a><a href={`tel:${content.contact.phoneHref}`}>{content.contact.phoneDisplay}</a></div><div><p className="kicker">{messages.common.salesPoint}</p><address>{content.contact.postalCode} {content.contact.city}<br/>{content.contact.street}</address></div><a className="button dark" href="#erdeklodes">{messages.cta.requestAppointment} <span>→</span></a>
     </section>
-    <footer><span>© 2026 Marek 5 Komárom</span><div><a href="#">Adatkezelés</a><a href="#">Impresszum</a></div><a href="#top">Vissza az elejére ↑</a></footer>
+    <footer><span>{content.contact.copyright}</span><div><a href="#">{messages.common.privacy}</a><a href="#">{messages.common.imprint}</a></div><a href="#top">{messages.common.backToTop} ↑</a></footer>
   </main>;
 }

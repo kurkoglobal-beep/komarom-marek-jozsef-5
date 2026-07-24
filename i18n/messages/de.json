@@ -1,0 +1,87 @@
+{
+  "_meta": { "locale": "de", "translationStatus": "ready" },
+  "navigation": {
+    "project": "Projekt",
+    "city": "Komárom",
+    "benefits": "Vorteile",
+    "gallery": "Galerie",
+    "apartments": "Wohnungen",
+    "masterplan": "Masterplan"
+  },
+  "common": {
+    "menu": "Menü",
+    "contact": "Kontakt",
+    "salesPoint": "Verkaufsstelle",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "backToTop": "Nach oben",
+    "loading": "Wird geladen…",
+    "noData": "Keine Daten verfügbar."
+  },
+  "cta": {
+    "interestProject": "Ich bin interessiert",
+    "discoverApartments": "Wohnungen entdecken",
+    "learnProject": "Projekt kennenlernen",
+    "details": "Details",
+    "requestInformation": "Informationen anfordern",
+    "newInquiry": "Neue Anfrage senden",
+    "requestAppointment": "Termin anfragen",
+    "viewApartments": "Wohnungen ansehen",
+    "contactSales": "Vertrieb kontaktieren"
+  },
+  "status": {
+    "comingSoon": "Demnächst",
+    "available": "Verfügbar",
+    "temporarilyReserved": "Vorübergehend reserviert",
+    "reserved": "Reserviert",
+    "sold": "Verkauft",
+    "notForSale": "Nicht zum Verkauf"
+  },
+  "forms": {
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "name@beispiel.de",
+    "phone": "Telefonnummer",
+    "phonePlaceholder": "+36 30 123 4567",
+    "subject": "Thema der Anfrage",
+    "select": "Auswählen",
+    "ownHome": "Eigenes Zuhause",
+    "investment": "Investitionsmöglichkeit",
+    "generalInformation": "Allgemeine Informationen",
+    "consent": "Ich akzeptiere die Datenschutzhinweise.",
+    "successTitle": "Vielen Dank für Ihr Interesse!",
+    "successMessage": "Wir werden Sie in Kürze kontaktieren.",
+    "integrationNote": "Das Formular kann in der nächsten Integrationsphase ein separates, Supabase-kompatibles Datenmodell verwenden."
+  },
+  "errors": {
+    "generic": "Ein unerwarteter Fehler ist aufgetreten.",
+    "required": "Dieses Feld ist erforderlich."
+  },
+  "accessibility": {
+    "home": "Marek 5 Startseite",
+    "mainNavigation": "Hauptnavigation",
+    "menu": "Menü",
+    "inquiryFor": "Anfrage: {unit}",
+    "selectBuilding": "Gebäude auswählen",
+    "openBuildingDetails": "Gebäudedetails öffnen",
+    "closeBuildingDetails": "Gebäudedetails schließen"
+  },
+  "masterplan": {
+    "title": "Interaktiver Masterplan",
+    "subtitle": "Entdecken Sie die Gebäude und die Umgebung von Marek 5.",
+    "selectBuilding": "Gebäude auswählen",
+    "viewBuilding": "Gebäude ansehen",
+    "availableUnits": "Verfügbare Wohnungen",
+    "floorCount": "Anzahl der Etagen",
+    "unitCount": "Anzahl der Wohnungen",
+    "layers": "Ebenen",
+    "overview": "Übersicht",
+    "smartPark": "Smart Park",
+    "parking": "Parken",
+    "orientation": "Ausrichtung",
+    "closePanel": "Panel schließen",
+    "noData": "Für dieses Gebäude sind noch keine Daten verfügbar.",
+    "loading": "Masterplan wird geladen…"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "_meta": { "locale": "sk", "translationStatus": "ready" },
+  "navigation": {
+    "project": "Projekt",
+    "city": "Komárno",
+    "benefits": "Výhody",
+    "gallery": "Galéria",
+    "apartments": "Byty",
+    "masterplan": "Generel"
+  },
+  "common": {
+    "menu": "Menu",
+    "contact": "Kontakt",
+    "salesPoint": "Predajné miesto",
+    "privacy": "Ochrana údajov",
+    "imprint": "Právne informácie",
+    "backToTop": "Späť hore",
+    "loading": "Načítava sa…",
+    "noData": "Nie sú dostupné žiadne údaje."
+  },
+  "cta": {
+    "interestProject": "Mám záujem",
+    "discoverApartments": "Preskúmať byty",
+    "learnProject": "Spoznajte projekt",
+    "details": "Podrobnosti",
+    "requestInformation": "Požiadať o informácie",
+    "newInquiry": "Odoslať nový dopyt",
+    "requestAppointment": "Požiadať o termín",
+    "viewApartments": "Zobraziť byty",
+    "contactSales": "Kontaktovať predaj"
+  },
+  "status": {
+    "comingSoon": "Už čoskoro",
+    "available": "Dostupné",
+    "temporarilyReserved": "Dočasne rezervované",
+    "reserved": "Rezervované",
+    "sold": "Predané",
+    "notForSale": "Nie je na predaj"
+  },
+  "forms": {
+    "name": "Meno",
+    "namePlaceholder": "Vaše meno",
+    "email": "E-mailová adresa",
+    "emailPlaceholder": "meno@priklad.sk",
+    "phone": "Telefónne číslo",
+    "phonePlaceholder": "+421 900 123 456",
+    "subject": "Predmet záujmu",
+    "select": "Vyberte",
+    "ownHome": "Vlastné bývanie",
+    "investment": "Investičná príležitosť",
+    "generalInformation": "Všeobecné informácie",
+    "consent": "Súhlasím s informáciami o ochrane osobných údajov.",
+    "successTitle": "Ďakujeme za váš záujem!",
+    "successMessage": "Čoskoro vás budeme kontaktovať.",
+    "integrationNote": "Formulár môže v ďalšej integračnej fáze používať samostatný dátový model kompatibilný so Supabase."
+  },
+  "errors": {
+    "generic": "Vyskytla sa neočakávaná chyba.",
+    "required": "Toto pole je povinné."
+  },
+  "accessibility": {
+    "home": "Domovská stránka Marek 5",
+    "mainNavigation": "Hlavná navigácia",
+    "menu": "Menu",
+    "inquiryFor": "Dopyt: {unit}",
+    "selectBuilding": "Vybrať budovu",
+    "openBuildingDetails": "Otvoriť podrobnosti budovy",
+    "closeBuildingDetails": "Zavrieť podrobnosti budovy"
+  },
+  "masterplan": {
+    "title": "Interaktívny generel",
+    "subtitle": "Preskúmajte budovy a okolie projektu Marek 5.",
+    "selectBuilding": "Vyberte budovu",
+    "viewBuilding": "Zobraziť budovu",
+    "availableUnits": "Dostupné byty",
+    "floorCount": "Počet podlaží",
+    "unitCount": "Počet bytov",
+    "layers": "Vrstvy",
+    "overview": "Prehľad",
+    "smartPark": "Smart Park",
+    "parking": "Parkovanie",
+    "orientation": "Orientácia",
+    "closePanel": "Zavrieť panel",
+    "noData": "Pre túto budovu zatiaľ nie sú dostupné údaje.",
+    "loading": "Načítava sa generel…"
+  }
+}

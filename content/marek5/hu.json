@@ -1,0 +1,95 @@
+{
+  "_meta": { "locale": "hu", "translationStatus": "source", "fallbackLocale": null },
+  "brand": { "name": "MAREK 5", "tagline": "KOMÁROM · PRÉMIUM OTTHONOK" },
+  "seo": {
+    "title": "Marek 5 Komárom – Prémium otthonok",
+    "description": "Modern, energiahatékony otthonok Komárom szívében, a Marek József utca 5. szám alatt.",
+    "socialDescription": "Prémium otthonok Komárom szívében",
+    "socialImageAlt": "Marek 5 – Prémium otthonok Komárom szívében",
+    "openGraphLocale": "hu_HU"
+  },
+  "hero": {
+    "imageAlt": "A Marek József utcai prémium lakópark esti látványterve",
+    "kicker": "Komárom · Marek József utca 5.",
+    "title": "Új otthon.",
+    "titleEmphasis": "Új minőség.",
+    "description": "Prémium, energiahatékony lakások Komárom szívében — időtálló építészet, átgondolt terek, magasabb életminőség.",
+    "features": ["Értékálló építészet", "Okos otthonok", "Zöld környezet"]
+  },
+  "project": {
+    "kicker": "A projektről",
+    "title": "Több mint lakóhely.",
+    "titleEmphasis": "Egy jól megtervezett élet.",
+    "description": "A Marek 5 egy kis léptékű, prémium szemléletű lakófejlesztés, ahol minden részlet a nyugodt hétköznapokat szolgálja. Világos otthonok, természetes anyagok, jövőálló műszaki megoldások és egy parkosított belső kert központi tóval.",
+    "highlights": [
+      "Kortárs, időtálló építészeti karakter",
+      "Energiahatékony gépészet és hőszigetelés",
+      "Tetőre telepített napelemek a közös terek, a parkvilágítás és a Smart Park energiaellátásának támogatására"
+    ],
+    "imageAlt": "Modern lakóépületek parkosított környezetben naplementekor"
+  },
+  "location": {
+    "kicker": "Miért Komárom?",
+    "title": "Közel mindenhez.",
+    "titleEmphasis": "Mégis otthon.",
+    "description": "Komárom egyszerre kínál kisvárosi nyugalmat és kiváló regionális kapcsolatokat. A Duna-part, a belváros és a mindennapi szolgáltatások percek alatt elérhetők.",
+    "places": [
+      { "icon": "≈", "name": "Duna-part", "time": "3 perc" },
+      { "icon": "▥", "name": "Belváros", "time": "5 perc" },
+      { "icon": "↝", "name": "Vasútállomás", "time": "7 perc" },
+      { "icon": "⌖", "name": "Budapest", "time": "45 perc" }
+    ],
+    "mapAddress": "Marek József utca 5.",
+    "mapCity": "Komárom"
+  },
+  "benefits": {
+    "kicker": "A Marek 5 előnyei",
+    "title": "Minőség, amit",
+    "titleEmphasis": "minden nap érez.",
+    "items": [
+      { "icon": "⌂", "title": "Átgondolt alaprajzok", "description": "Élhető terek, jó benapozás és kényelmes tárolás." },
+      { "icon": "⌁", "title": "Smart Home", "description": "A világítás, árnyékolás és hőmérséklet jövőálló vezérlése." },
+      { "icon": "◇", "title": "Smart Park", "description": "Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható." },
+      { "icon": "✦", "title": "Prémium anyaghasználat", "description": "Időtálló burkolatok és gondosan összeválogatott részletek." }
+    ]
+  },
+  "gallery": {
+    "kicker": "Látványtervek",
+    "title": "Az otthon érzése,",
+    "titleEmphasis": "már az első pillanatban.",
+    "description": "A képek a projekt tervezett hangulatát és anyaghasználatát szemléltetik.",
+    "items": [
+      { "alt": "Prémium lakás enteriőrjei", "caption": "Világos, természetes enteriőrök" },
+      { "alt": "Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra", "caption": "Smart Home · természetközeli kilátás" },
+      { "alt": "Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással", "caption": "Smart Park · intelligens zöld környezet" }
+    ]
+  },
+  "apartments": {
+    "kicker": "Lakástípusok",
+    "title": "Találja meg az",
+    "titleEmphasis": "Ön ritmusához illőt.",
+    "description": "A kínálat jelenleg tájékoztató jellegű. A részletes alaprajzok és az aktuális elérhetőség hamarosan érkeznek.",
+    "items": [
+      { "rooms": "1 + fél szoba", "area": "38–44 m²", "level": "I–II. emelet", "note": "Első otthonnak" },
+      { "rooms": "2 szoba", "area": "52–61 m²", "level": "I–III. emelet", "note": "Pároknak tervezve" },
+      { "rooms": "3 szoba", "area": "68–82 m²", "level": "I–III. emelet", "note": "Tágas családi tér" },
+      { "rooms": "Penthouse", "area": "96–118 m²", "level": "IV. emelet", "note": "Tágas tetőterasszal" }
+    ]
+  },
+  "interest": {
+    "kicker": "Elsőként értesülni",
+    "title": "Legyen az elsők között,",
+    "titleEmphasis": "akik hazatalálnak.",
+    "description": "Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.",
+    "privacy": "Adatait kizárólag a projekttel kapcsolatos tájékoztatásra használjuk."
+  },
+  "contact": {
+    "email": "hello@marek5.hu",
+    "phoneDisplay": "+36 30 123 4567",
+    "phoneHref": "+36301234567",
+    "postalCode": "2900",
+    "city": "Komárom",
+    "street": "Marek József utca 5.",
+    "copyright": "© 2026 Marek 5 Komárom"
+  }
+}

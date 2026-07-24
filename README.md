@@ -82,6 +82,17 @@ types/                 Megosztott TypeScript-típusok
 tests/                 Automatizált ellenőrzések
 ```
 
+## Lokalizáció és tartalomszerkesztés
+
+A közös felületi szövegek a `i18n/messages/` mappában, a Marek 5 marketing- és projekttartalmai pedig külön, a `content/marek5/` mappában találhatók. A magyar források:
+
+- általános UI: `i18n/messages/hu.json`;
+- projekt- és marketingszöveg: `content/marek5/hu.json`.
+
+Az előkészített nyelvek: magyar (`hu`), angol (`en`), szlovák (`sk`) és német (`de`). Az általános UI és a Masterplan előkészítő kulcsai mind a négy nyelven rendelkezésre állnak. A hosszabb idegen nyelvű Marek 5 tartalom egyelőre explicit magyar fallbacket használ; publikálás előtt szakfordítás szükséges. A jelenlegi landing oldal továbbra is magyar, mert korábban sem volt nyelvváltó vagy locale-alapú útvonal.
+
+Új fordításnál a megfelelő JSON-fájl értékeit kell kitölteni, a kulcsok átnevezése nélkül. Kulcsot csak a kód megfelelő módosításával szabad átnevezni, és minden támogatott nyelvet egyszerre kell frissíteni. Mentéskor ügyelni kell az érvényes JSON-szintaxisra. Ellenőrzés: `pnpm i18n:validate`.
+
 Az Asset Library használati és verziózási szabályait az `assets/README.md` és a `docs/ASSET_MANAGEMENT.md` rögzíti. Az üres, jövőbeli kategóriák `.gitkeep` fájlt tartalmaznak, hogy Gitben is megmaradjanak.
 
 ## Supabase előkészítés

@@ -1,0 +1,87 @@
+{
+  "_meta": { "locale": "hu", "translationStatus": "source" },
+  "navigation": {
+    "project": "Projekt",
+    "city": "Komárom",
+    "benefits": "Előnyök",
+    "gallery": "Galéria",
+    "apartments": "Lakások",
+    "masterplan": "Masterplan"
+  },
+  "common": {
+    "menu": "Menü",
+    "contact": "Kapcsolat",
+    "salesPoint": "Értékesítési pont",
+    "privacy": "Adatkezelés",
+    "imprint": "Impresszum",
+    "backToTop": "Vissza az elejére",
+    "loading": "Betöltés…",
+    "noData": "Nincs elérhető adat."
+  },
+  "cta": {
+    "interestProject": "Érdekel a projekt",
+    "discoverApartments": "Lakások felfedezése",
+    "learnProject": "Ismerje meg a projektet",
+    "details": "A részletek",
+    "requestInformation": "Tájékoztatást kérek",
+    "newInquiry": "Új érdeklődés küldése",
+    "requestAppointment": "Időpontot kérek",
+    "viewApartments": "Lakások megtekintése",
+    "contactSales": "Kapcsolat az értékesítéssel"
+  },
+  "status": {
+    "comingSoon": "Hamarosan",
+    "available": "Elérhető",
+    "temporarilyReserved": "Ideiglenesen foglalt",
+    "reserved": "Foglalt",
+    "sold": "Eladva",
+    "notForSale": "Nem értékesíthető"
+  },
+  "forms": {
+    "name": "Név",
+    "namePlaceholder": "Az Ön neve",
+    "email": "E-mail-cím",
+    "emailPlaceholder": "nev@pelda.hu",
+    "phone": "Telefonszám",
+    "phonePlaceholder": "+36 30 123 4567",
+    "subject": "Érdeklődés tárgya",
+    "select": "Válasszon",
+    "ownHome": "Saját otthon",
+    "investment": "Befektetési lehetőség",
+    "generalInformation": "Általános tájékoztatás",
+    "consent": "Elfogadom az adatkezelési tájékoztatót.",
+    "successTitle": "Köszönjük az érdeklődést!",
+    "successMessage": "Hamarosan felvesszük Önnel a kapcsolatot.",
+    "integrationNote": "Az űrlap elkülönített, Supabase-kompatibilis adatmodellt használhat a következő integrációs fázisban."
+  },
+  "errors": {
+    "generic": "Váratlan hiba történt.",
+    "required": "Kötelező mező."
+  },
+  "accessibility": {
+    "home": "Marek 5 kezdőlap",
+    "mainNavigation": "Fő navigáció",
+    "menu": "Menü",
+    "inquiryFor": "Érdeklődés: {unit}",
+    "selectBuilding": "Épület kiválasztása",
+    "openBuildingDetails": "Épület részleteinek megnyitása",
+    "closeBuildingDetails": "Épület részleteinek bezárása"
+  },
+  "masterplan": {
+    "title": "Interaktív helyszínrajz",
+    "subtitle": "Fedezze fel a Marek 5 épületeit és környezetét.",
+    "selectBuilding": "Válasszon épületet",
+    "viewBuilding": "Épület megtekintése",
+    "availableUnits": "Elérhető lakások",
+    "floorCount": "Emeletek száma",
+    "unitCount": "Lakások száma",
+    "layers": "Rétegek",
+    "overview": "Áttekintés",
+    "smartPark": "Smart Park",
+    "parking": "Parkolás",
+    "orientation": "Tájolás",
+    "closePanel": "Panel bezárása",
+    "noData": "Ehhez az épülethez még nincs elérhető adat.",
+    "loading": "Helyszínrajz betöltése…"
+  }
+}
