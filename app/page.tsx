@@ -18,7 +18,7 @@ const nav = [
   [messages.navigation.gallery, "#gallery"],
   [messages.navigation.contact, "#contact"],
 ];
-const pillarAnchors = ["residential", "education-campus", "senior-living", "common-space"] as const;
+const pillarAnchors = ["residential-pillar", "education-campus", "senior-living", "common-space"] as const;
 const heroIntervalMs = 8_000;
 
 function Brand({ light = false }: { light?: boolean }) {
@@ -34,6 +34,9 @@ export default function Home() {
   const [heroIndex, setHeroIndex] = useState(0);
   const [activeHotspot, setActiveHotspot] = useState(0);
   const [activePlace, setActivePlace] = useState(0);
+  const [activeResidentialBuilding, setActiveResidentialBuilding] = useState(0);
+  const [residentialPhase, setResidentialPhase] = useState<"all" | "1" | "2">("all");
+  const [masterplanZoom, setMasterplanZoom] = useState(1);
   const [locationVisible, setLocationVisible] = useState(false);
   const [locationTimes, setLocationTimes] = useState(() => content.location.places.map(() => 0));
 
@@ -83,6 +86,7 @@ export default function Home() {
   function submit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true); e.currentTarget.reset(); }
 
   const selectedPlace = content.location.places[activePlace];
+  const selectedResidentialBuilding = content.residentialMasterplan.buildings[activeResidentialBuilding];
   const routeControlX = (50 + selectedPlace.mapX) / 2;
   const routeControlY = Math.max(12, Math.min(55, selectedPlace.mapY) - 18);
   const routePath = `M 50 55 Q ${routeControlX} ${routeControlY} ${selectedPlace.mapX} ${selectedPlace.mapY}`;
@@ -232,6 +236,76 @@ export default function Home() {
           <h3>{item.title}</h3>
           <p>{item.description}</p>
         </article>)}
+      </div>
+    </section>
+
+    <section className="residential-masterplan-section" id="residential">
+      <div className="residential-masterplan-heading">
+        <div><p className="kicker">{content.residentialMasterplan.kicker}</p><h2>{content.residentialMasterplan.title}<br/><em>{content.residentialMasterplan.titleEmphasis}</em></h2></div>
+        <p>{content.residentialMasterplan.description}</p>
+      </div>
+      <div className="residential-explorer">
+        <div className="residential-map-panel">
+          <div className="res-map-viewport" role="group" aria-label={content.residentialMasterplan.mapAriaLabel}>
+            <div className="res-map-image-layer" style={{ transform: `scale(${masterplanZoom})` }}>
+              <Image src="/assets/masterplan/KMJ5_Residential_InteractiveMasterplan_v01.webp" alt="" fill sizes="(max-width: 980px) 100vw, 58vw"/>
+              {content.residentialMasterplan.buildings.map((building, index) => {
+                const filtered = residentialPhase !== "all" && residentialPhase !== building.phase;
+                return <button
+                  key={building.id}
+                  className={`res-building-marker ${index === activeResidentialBuilding ? "active" : ""} ${filtered ? "filtered" : ""}`}
+                  style={{ left: `${building.x}%`, top: `${building.y}%` }}
+                  aria-label={`${building.id} ${content.residentialMasterplan.buildingLabel}`}
+                  aria-pressed={index === activeResidentialBuilding}
+                  disabled={filtered}
+                  onMouseEnter={() => !filtered && setActiveResidentialBuilding(index)}
+                  onFocus={() => !filtered && setActiveResidentialBuilding(index)}
+                  onClick={() => setActiveResidentialBuilding(index)}
+                ><span>{building.id}</span></button>;
+              })}
+            </div>
+            <div className="res-building-card" aria-live="polite">
+              <span>{selectedResidentialBuilding.id} {content.residentialMasterplan.buildingLabel}</span>
+              <strong>{selectedResidentialBuilding.units} · {content.residentialMasterplan.floorLabel}</strong>
+              <div>{content.residentialMasterplan.features.map((feature, index) => <small key={feature}><b aria-hidden="true">{["⌂", "⌁", "☀", "≈"][index]}</b>{feature}</small>)}</div>
+            </div>
+            <div className="res-map-controls">
+              <button type="button" aria-label={content.residentialMasterplan.zoomIn} onClick={() => setMasterplanZoom((zoom) => Math.min(1.18, zoom + .06))}>+</button>
+              <button type="button" aria-label={content.residentialMasterplan.zoomOut} onClick={() => setMasterplanZoom((zoom) => Math.max(1, zoom - .06))}>−</button>
+              <button type="button" aria-label={content.residentialMasterplan.resetView} onClick={() => setMasterplanZoom(1)}>⌾</button>
+            </div>
+            <div className="res-phase-filter" aria-label={content.residentialMasterplan.phaseFilter}>
+              <span>{content.residentialMasterplan.phaseFilter}</span>
+              {([
+                ["all", content.residentialMasterplan.allPhases],
+                ["1", content.residentialMasterplan.phaseOne],
+                ["2", content.residentialMasterplan.phaseTwo],
+              ] as const).map(([value, label]) => <button key={value} type="button" className={residentialPhase === value ? "active" : ""} aria-pressed={residentialPhase === value} onClick={() => setResidentialPhase(value)}>{label}</button>)}
+            </div>
+          </div>
+        </div>
+
+        <article className="apartment-detail-panel">
+          <header>
+            <div><p>{selectedResidentialBuilding.id}-2.01 <span>|</span> {content.residentialMasterplan.apartment.title}</p><small>{content.residentialMasterplan.apartment.floor}</small></div>
+            <span>{content.residentialMasterplan.apartment.counter}</span>
+          </header>
+          <div className="apartment-floorplan">
+            <Image src="/assets/floorplans/KMJ5_A201_Floorplan_v01.webp" alt={content.residentialMasterplan.apartment.floorplanAlt} width={455} height={530} sizes="(max-width: 980px) 90vw, 36vw"/>
+          </div>
+          <p className="apartment-area-formula">{content.residentialMasterplan.apartment.areaFormula}</p>
+          <div className="apartment-secondary">
+            <div className="apartment-axon">
+              <Image src="/assets/apartments/type-a/KMJ5_A201_Axonometric_v01.webp" alt={content.residentialMasterplan.apartment.axonometricAlt} width={410} height={370} sizes="(max-width: 620px) 86vw, 24vw"/>
+            </div>
+            <dl>{content.residentialMasterplan.apartment.specs.map((spec) => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl>
+          </div>
+          <div className="apartment-gallery">{content.residentialMasterplan.apartment.gallery.map((item) => <figure key={item.src}><Image src={item.src} alt={item.alt} fill sizes="(max-width: 620px) 28vw, 12vw"/></figure>)}</div>
+          <div className="apartment-actions">
+            <a className="button dark" href="#project-contact">{content.residentialMasterplan.apartment.cta} <span>→</span></a>
+            <a className="floorplan-download" href="/assets/documents/KMJ5_Residential_GroundFloorPlan_v01.pdf" download>{content.residentialMasterplan.apartment.download} <span>↓</span></a>
+          </div>
+        </article>
       </div>
     </section>
 

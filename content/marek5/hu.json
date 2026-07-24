@@ -154,6 +154,54 @@
       { "icon": "✦", "title": "Prémium anyaghasználat", "description": "Időtálló burkolatok és gondosan összeválogatott részletek." }
     ]
   },
+  "residentialMasterplan": {
+    "kicker": "Prémium lakónegyed",
+    "title": "Interactive",
+    "titleEmphasis": "Masterplan.",
+    "description": "Fedezze fel a tóparti lakónegyed épületeit, majd tekintse meg a kiválasztott lakás részletes alaprajzát és enteriőr koncepcióját.",
+    "mapAriaLabel": "Interaktív tóparti masterplan öt választható épülettel",
+    "buildingLabel": "épület",
+    "floorLabel": "3 emelet",
+    "pendingLabel": "Pontosítás alatt",
+    "features": ["Smart Home", "EV-töltés", "Napenergia", "Tóparti kapcsolat"],
+    "phaseFilter": "Fázis szűrő",
+    "allPhases": "Összes",
+    "phaseOne": "I. ütem",
+    "phaseTwo": "II. ütem",
+    "zoomIn": "Masterplan nagyítása",
+    "zoomOut": "Masterplan kicsinyítése",
+    "resetView": "Masterplan alaphelyzet",
+    "buildings": [
+      { "id": "A", "units": "28 lakás", "phase": "1", "x": 50, "y": 37 },
+      { "id": "B", "units": "Pontosítás alatt", "phase": "1", "x": 69, "y": 17 },
+      { "id": "C", "units": "Pontosítás alatt", "phase": "1", "x": 34, "y": 35 },
+      { "id": "D", "units": "Pontosítás alatt", "phase": "2", "x": 12, "y": 42 },
+      { "id": "E", "units": "Pontosítás alatt", "phase": "2", "x": 82, "y": 47 }
+    ],
+    "apartment": {
+      "id": "A-2.01",
+      "title": "2 szobás lakás",
+      "floor": "2. emelet",
+      "counter": "01 / 12",
+      "floorplanAlt": "Az A-2.01 lakás berendezett kétdimenziós alaprajza",
+      "axonometricAlt": "Az A-2.01 lakás berendezett axonometrikus nézete",
+      "areaFormula": "54,00 m² + 8,50 m² erkély = 62,50 m²",
+      "specs": [
+        { "label": "Nettó alapterület", "value": "54,00 m²" },
+        { "label": "Erkély", "value": "8,50 m²" },
+        { "label": "Összesen", "value": "62,50 m²" },
+        { "label": "Tájolás", "value": "Tóra néző" },
+        { "label": "Technológia", "value": "Smart Home előkészítés" }
+      ],
+      "gallery": [
+        { "src": "/assets/apartments/type-a/KMJ5_A201_Livingroom_v01.webp", "alt": "Tóra néző nappali meleg tölgy burkolatokkal" },
+        { "src": "/assets/apartments/type-a/KMJ5_A201_Bedroom_v01.webp", "alt": "Prémium hálószoba rejtett LED-világítással" },
+        { "src": "/assets/apartments/type-a/KMJ5_A201_Bathroom_v01.webp", "alt": "Bézs kőhatású burkolattal kialakított fürdőszoba" }
+      ],
+      "cta": "Érdeklődés a lakásról",
+      "download": "Alaprajz letöltése PDF"
+    }
+  },
   "gallery": {
     "kicker": "Látványtervek",
     "title": "Az otthon érzése,",

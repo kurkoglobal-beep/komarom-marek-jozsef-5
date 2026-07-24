@@ -137,6 +137,158 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-MASTERPLAN-RESIDENTIAL-INTERACTIVE-001",
+      "name": "KMJ5_Residential_InteractiveMasterplan",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen / projekttervek alapján",
+      "description": "A prémium lakónegyed interaktív épületválasztójának tóparti, háromszintes masterplan látványterve.",
+      "purpose": ["landing-page", "masterplan", "sales"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_Residential_InteractiveMasterplan_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_Residential_InteractiveMasterplan_v01.webp",
+          "format": "webp",
+          "width": 872,
+          "height": 865,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-FLOORPLAN-A201-001",
+      "name": "KMJ5_A201_Floorplan",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "Projektcsapat / látványtervi feldolgozás",
+      "description": "Az A-2.01 kétszobás lakás berendezett alaprajzi vizualizációja.",
+      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "floorplans",
+      "sourcePath": "assets/floorplans/KMJ5_A201_Floorplan_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/floorplans/KMJ5_A201_Floorplan_v01.webp",
+          "format": "webp",
+          "width": 455,
+          "height": 530,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-APARTMENT-A201-AXONOMETRIC-001",
+      "name": "KMJ5_A201_Axonometric",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "Projektcsapat / látványtervi feldolgozás",
+      "description": "Az A-2.01 lakás berendezett axonometrikus belső nézete.",
+      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "apartments/type-a",
+      "sourcePath": "assets/apartments/type-a/KMJ5_A201_Axonometric_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/apartments/type-a/KMJ5_A201_Axonometric_v01.webp",
+          "format": "webp",
+          "width": 410,
+          "height": 370,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-APARTMENT-A201-LIVINGROOM-001",
+      "name": "KMJ5_A201_Livingroom",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "Projektcsapat / látványtervi feldolgozás",
+      "description": "Az A-2.01 lakás tóra néző nappali-étkező-konyha enteriőrje.",
+      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "apartments/type-a",
+      "sourcePath": "assets/apartments/type-a/KMJ5_A201_Livingroom_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/apartments/type-a/KMJ5_A201_Livingroom_v01.webp",
+          "format": "webp",
+          "width": 814,
+          "height": 498,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-APARTMENT-A201-BEDROOM-001",
+      "name": "KMJ5_A201_Bedroom",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "Projektcsapat / látványtervi feldolgozás",
+      "description": "Az A-2.01 lakás meleg tölgy és textil anyaghasználatú hálószobája.",
+      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "apartments/type-a",
+      "sourcePath": "assets/apartments/type-a/KMJ5_A201_Bedroom_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/apartments/type-a/KMJ5_A201_Bedroom_v01.webp",
+          "format": "webp",
+          "width": 330,
+          "height": 347,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-APARTMENT-A201-BATHROOM-001",
+      "name": "KMJ5_A201_Bathroom",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "Projektcsapat / látványtervi feldolgozás",
+      "description": "Az A-2.01 lakás bézs kőhatású burkolattal tervezett fürdőszobája.",
+      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "apartments/type-a",
+      "sourcePath": "assets/apartments/type-a/KMJ5_A201_Bathroom_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/apartments/type-a/KMJ5_A201_Bathroom_v01.webp",
+          "format": "webp",
+          "width": 306,
+          "height": 347,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-DOCUMENT-RESIDENTIAL-GROUND-FLOOR-001",
+      "name": "KMJ5_Residential_GroundFloorPlan",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "HRSZ. 136 / Projektcsapat",
+      "description": "A lakóépület hivatalos földszinti tervlapja PDF-formátumban.",
+      "purpose": ["document", "floorplan", "download"],
+      "relatedSprint": "Residential interactive masterplan",
+      "category": "documents",
+      "sourcePath": "assets/documents/KMJ5_Residential_GroundFloorPlan_v01.pdf",
+      "renditions": [
+        {
+          "path": "public/assets/documents/KMJ5_Residential_GroundFloorPlan_v01.pdf",
+          "format": "pdf",
+          "purpose": "web-download"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-MASTERPLAN-DEVELOPMENT-PILLARS-001",
       "name": "KMJ5_Masterplan_DevelopmentPillars",
       "version": "v01",
