@@ -59,7 +59,7 @@
     "required": "Kötelező mező."
   },
   "accessibility": {
-    "home": "Marek 5 kezdőlap",
+    "home": "Komárom Fejlesztési Terület kezdőlap",
     "mainNavigation": "Fő navigáció",
     "menu": "Menü",
     "inquiryFor": "Érdeklődés: {unit}",

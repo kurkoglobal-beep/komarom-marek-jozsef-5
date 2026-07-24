@@ -18,7 +18,7 @@ const nav = [
 
 function Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
-    <span className="brand-mark"><b>M</b><b>5</b></span>
+    <span className="brand-mark"><b>K</b><b>F</b></span>
     <span><strong>{content.brand.name}</strong><small>{content.brand.tagline}</small></span>
   </a>;
 }

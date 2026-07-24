@@ -1,20 +1,20 @@
 {
   "_meta": { "locale": "hu", "translationStatus": "source", "fallbackLocale": null },
-  "brand": { "name": "MAREK 5", "tagline": "KOMÁROM · PRÉMIUM OTTHONOK" },
+  "brand": { "name": "KOMÁROM", "tagline": "FEJLESZTÉSI TERÜLET" },
   "seo": {
-    "title": "Marek 5 Komárom – Prémium otthonok",
-    "description": "Modern, energiahatékony otthonok Komárom szívében, a Marek József utca 5. szám alatt.",
-    "socialDescription": "Prémium otthonok Komárom szívében",
-    "socialImageAlt": "Marek 5 – Prémium otthonok Komárom szívében",
+    "title": "Komárom Fejlesztési Terület",
+    "description": "Egy 3,2 hektáros integrált fejlesztési terület Komáromban, prémium lakónegyeddel, Oktatási Campusszal, valamint Senior Living és egészségügyi szolgáltatásokkal.",
+    "socialDescription": "Integrált fejlesztési terület három egymást erősítő pillérrel Komáromban.",
+    "socialImageAlt": "A Komárom Fejlesztési Terület bemutatása",
     "openGraphLocale": "hu_HU"
   },
   "hero": {
-    "imageAlt": "A Marek József utcai prémium lakópark esti látványterve",
-    "kicker": "Komárom · Marek József utca 5.",
-    "title": "Új otthon.",
-    "titleEmphasis": "Új minőség.",
-    "description": "Prémium, energiahatékony lakások Komárom szívében — időtálló építészet, átgondolt terek, magasabb életminőség.",
-    "features": ["Értékálló építészet", "Okos otthonok", "Zöld környezet"]
+    "imageAlt": "A Komárom Fejlesztési Terület lakónegyedi pillérének esti látványterve",
+    "kicker": "Komárom · Integrált fejlesztési vízió",
+    "title": "Egy terület.",
+    "titleEmphasis": "Három jövőformáló pillér.",
+    "description": "Egyetlen, 3,2 hektáros integrált fejlesztési terület: prémium lakónegyed, Oktatási Campus, valamint Senior Living és egészségügyi szolgáltatások.",
+    "features": ["Prémium lakónegyed", "Oktatási Campus", "Senior Living"]
   },
   "project": {
     "kicker": "A projektről",
@@ -90,6 +90,6 @@
     "postalCode": "2900",
     "city": "Komárom",
     "street": "Marek József utca 5.",
-    "copyright": "© 2026 Marek 5 Komárom"
+    "copyright": "© 2026 Komárom Fejlesztési Terület"
   }
 }
