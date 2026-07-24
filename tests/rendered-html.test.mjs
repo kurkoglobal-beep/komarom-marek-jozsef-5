@@ -45,6 +45,11 @@ test("server-renders the integrated Komárom development landing page", async ()
   assert.match(html, /Smart Care &amp; Health/);
   assert.match(html, /Wellness &amp; Gyógytorna/);
   assert.match(html, /KMJ5_SeniorLiving_Courtyard_v01\.webp/);
+  assert.match(html, /Befektetési potenciál/);
+  assert.match(html, /Befektetési modell/);
+  assert.match(html, /Pontosítás alatt/);
+  assert.match(html, /nem minősül pénzügyi ajánlatnak vagy hozamígéretnek/);
+  assert.doesNotMatch(html, /12[–-]15%|6[–-]8%/);
   assert.doesNotMatch(html, /Lakástípusok/);
   assert.doesNotMatch(html, /Lakások felfedezése/);
   assert.match(html, /value="development-partnership"/);

@@ -328,6 +328,51 @@
       }
     ]
   },
+  "investment": {
+    "kicker": "Befektetési potenciál",
+    "title": "Hozam",
+    "titleEmphasis": "és értékállóság.",
+    "description": "Áttekinthető, adatvezérelt felület a fejlesztési terület hosszú távú potenciáljának és ütemezésének szemléltetésére. A pénzügyi feltételek beruházói jóváhagyás alatt állnak.",
+    "kpis": [
+      { "icon": "↗", "value": "Pontosítás alatt", "label": "Várható éves tőkenövekmény" },
+      { "icon": "%", "value": "Pontosítás alatt", "label": "Becsült éves bérleti hozam" },
+      { "icon": "◇", "value": "3,2 ha", "label": "Összközművesített fejlesztési terület" },
+      { "icon": "⌁", "value": "ESG szemlélet", "label": "Zöld energia és alacsony környezeti terhelés" }
+    ],
+    "calculator": {
+      "eyebrow": "Interaktív szcenárió",
+      "title": "Befektetési modell",
+      "status": "Szemléltető kalkuláció",
+      "amountLabel": "Befektetett összeg",
+      "amountUnit": "Mrd Ft",
+      "categoryLabel": "Kategória",
+      "categories": ["Lakónegyed", "Senior Living", "Commercial"],
+      "horizonLabel": "Időtáv",
+      "yearUnit": "év",
+      "yearShort": "év",
+      "appreciationLabel": "Szemléltetett értéknövekedési pálya",
+      "rentalLabel": "Szemléltetett kumulált bevételi pálya",
+      "chartAriaLabel": "Interaktív szemléltető oszlopdiagram a kiválasztott befektetési kategória és időtáv alapján",
+      "disclaimer": "A diagram kizárólag vizuális szcenárió, nem minősül pénzügyi ajánlatnak vagy hozamígéretnek."
+    },
+    "teaser": {
+      "eyebrow": "Befektetői dokumentáció",
+      "title": "Befektetői Teaser & Pénzügyi Modell",
+      "description": "A részletes dokumentáció és a beruházó által jóváhagyott pénzügyi modell előkészítés alatt áll.",
+      "cta": "Befektetői tárgyalás foglalása",
+      "download": "Dokumentáció hamarosan"
+    },
+    "roadmap": {
+      "eyebrow": "Transzparens fejlesztési ütemterv",
+      "title": "Négy egymásra épülő fejlesztési fázis",
+      "phases": [
+        { "title": "Infrastruktúra", "description": "Közművek, utak és zöld hálózat előkészítése." },
+        { "title": "Lakónegyed & Közösségi tér", "description": "A lakófunkció és a közös környezet ütemezett kialakítása." },
+        { "title": "Senior Living", "description": "Prémium életminőséget támogató, gondoskodó környezet." },
+        { "title": "Oktatási Campus", "description": "Nemzetközi szemléletű tudás- és innovációs központ." }
+      ]
+    }
+  },
   "gallery": {
     "kicker": "Látványtervek",
     "title": "Az otthon érzése,",
