@@ -18,6 +18,7 @@
     "menu": "Menü",
     "contact": "Kapcsolat",
     "salesPoint": "Értékesítési pont",
+    "projectContact": "Projektkapcsolat",
     "privacy": "Adatkezelés",
     "imprint": "Impresszum",
     "backToTop": "Vissza az elejére",
@@ -34,7 +35,9 @@
     "requestAppointment": "Időpontot kérek",
     "viewApartments": "Lakások megtekintése",
     "contactSales": "Kapcsolat az értékesítéssel",
-    "exploreDevelopmentConcept": "A fejlesztési koncepció megismerése"
+    "exploreDevelopmentConcept": "A fejlesztési koncepció megismerése",
+    "partnerConsultation": "Partneri egyeztetés",
+    "contactProject": "Kapcsolatfelvétel"
   },
   "status": {
     "comingSoon": "Hamarosan",
@@ -56,6 +59,11 @@
     "ownHome": "Saját otthon",
     "investment": "Befektetési lehetőség",
     "generalInformation": "Általános tájékoztatás",
+    "developmentPartnership": "Fejlesztési partnerség",
+    "educationPartnership": "Oktatási partnerség",
+    "seniorLivingPartnership": "Senior Living partnerség",
+    "residentialInterest": "Lakónegyedi érdeklődés",
+    "other": "Egyéb",
     "consent": "Elfogadom az adatkezelési tájékoztatót.",
     "successTitle": "Köszönjük az érdeklődést!",
     "successMessage": "Hamarosan felvesszük Önnel a kapcsolatot.",

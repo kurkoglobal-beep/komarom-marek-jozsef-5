@@ -18,6 +18,7 @@
     "menu": "Menü",
     "contact": "Kontakt",
     "salesPoint": "Verkaufsstelle",
+    "projectContact": "Projektkontakt",
     "privacy": "Datenschutz",
     "imprint": "Impressum",
     "backToTop": "Nach oben",
@@ -34,7 +35,9 @@
     "requestAppointment": "Termin anfragen",
     "viewApartments": "Wohnungen ansehen",
     "contactSales": "Vertrieb kontaktieren",
-    "exploreDevelopmentConcept": "Entwicklungskonzept kennenlernen"
+    "exploreDevelopmentConcept": "Entwicklungskonzept kennenlernen",
+    "partnerConsultation": "Partnergespräch",
+    "contactProject": "Kontakt aufnehmen"
   },
   "status": {
     "comingSoon": "Demnächst",
@@ -56,6 +59,11 @@
     "ownHome": "Eigenes Zuhause",
     "investment": "Investitionsmöglichkeit",
     "generalInformation": "Allgemeine Informationen",
+    "developmentPartnership": "Entwicklungspartnerschaft",
+    "educationPartnership": "Bildungspartnerschaft",
+    "seniorLivingPartnership": "Senior-Living-Partnerschaft",
+    "residentialInterest": "Interesse am Wohnquartier",
+    "other": "Sonstiges",
     "consent": "Ich akzeptiere die Datenschutzhinweise.",
     "successTitle": "Vielen Dank für Ihr Interesse!",
     "successMessage": "Wir werden Sie in Kürze kontaktieren.",

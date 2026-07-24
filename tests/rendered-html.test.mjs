@@ -35,5 +35,9 @@ test("server-renders the integrated Komárom development landing page", async ()
   assert.match(html, /Senior Living/);
   assert.doesNotMatch(html, /Lakástípusok/);
   assert.doesNotMatch(html, /Lakások felfedezése/);
+  assert.match(html, /value="development-partnership"/);
+  assert.match(html, /value="education-partnership"/);
+  assert.match(html, /value="senior-living-partnership"/);
+  assert.match(html, /value="residential-interest"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });

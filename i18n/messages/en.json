@@ -18,6 +18,7 @@
     "menu": "Menu",
     "contact": "Contact",
     "salesPoint": "Sales office",
+    "projectContact": "Project contact",
     "privacy": "Privacy",
     "imprint": "Legal notice",
     "backToTop": "Back to top",
@@ -34,7 +35,9 @@
     "requestAppointment": "Request an appointment",
     "viewApartments": "View apartments",
     "contactSales": "Contact sales",
-    "exploreDevelopmentConcept": "Explore the development concept"
+    "exploreDevelopmentConcept": "Explore the development concept",
+    "partnerConsultation": "Partner consultation",
+    "contactProject": "Get in touch"
   },
   "status": {
     "comingSoon": "Coming soon",
@@ -56,6 +59,11 @@
     "ownHome": "A home of my own",
     "investment": "Investment opportunity",
     "generalInformation": "General information",
+    "developmentPartnership": "Development partnership",
+    "educationPartnership": "Education partnership",
+    "seniorLivingPartnership": "Senior Living partnership",
+    "residentialInterest": "Residential interest",
+    "other": "Other",
     "consent": "I accept the privacy notice.",
     "successTitle": "Thank you for your interest!",
     "successMessage": "We will contact you shortly.",

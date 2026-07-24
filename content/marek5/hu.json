@@ -84,11 +84,13 @@
     ]
   },
   "interest": {
-    "kicker": "Elsőként értesülni",
-    "title": "Legyen az elsők között,",
-    "titleEmphasis": "akik hazatalálnak.",
+    "kicker": "Kapcsolatfelvétel",
+    "title": "Kapcsolódjunk",
+    "titleEmphasis": "a fejlesztési vízióhoz.",
     "description": "Kérjen tájékoztatást a fejlesztési koncepcióról és a kapcsolódási lehetőségekről.",
     "residentialSalesDescription": "Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.",
+    "residentialKicker": "Elsőként értesülni",
+    "residentialTitle": "Legyen az elsők között, akik hazatalálnak.",
     "privacy": "Adatait kizárólag a projekttel kapcsolatos tájékoztatásra használjuk."
   },
   "contact": {

@@ -18,6 +18,7 @@
     "menu": "Menu",
     "contact": "Kontakt",
     "salesPoint": "Predajné miesto",
+    "projectContact": "Kontakt pre projekt",
     "privacy": "Ochrana údajov",
     "imprint": "Právne informácie",
     "backToTop": "Späť hore",
@@ -34,7 +35,9 @@
     "requestAppointment": "Požiadať o termín",
     "viewApartments": "Zobraziť byty",
     "contactSales": "Kontaktovať predaj",
-    "exploreDevelopmentConcept": "Spoznať koncepciu rozvoja"
+    "exploreDevelopmentConcept": "Spoznať koncepciu rozvoja",
+    "partnerConsultation": "Partnerská konzultácia",
+    "contactProject": "Kontaktovať nás"
   },
   "status": {
     "comingSoon": "Už čoskoro",
@@ -56,6 +59,11 @@
     "ownHome": "Vlastné bývanie",
     "investment": "Investičná príležitosť",
     "generalInformation": "Všeobecné informácie",
+    "developmentPartnership": "Rozvojové partnerstvo",
+    "educationPartnership": "Vzdelávacie partnerstvo",
+    "seniorLivingPartnership": "Partnerstvo Senior Living",
+    "residentialInterest": "Záujem o obytnú štvrť",
+    "other": "Iné",
     "consent": "Súhlasím s informáciami o ochrane osobných údajov.",
     "successTitle": "Ďakujeme za váš záujem!",
     "successMessage": "Čoskoro vás budeme kontaktovať.",
