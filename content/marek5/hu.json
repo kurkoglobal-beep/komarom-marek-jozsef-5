@@ -202,6 +202,67 @@
       "download": "Alaprajz letöltése PDF"
     }
   },
+  "educationCampus": {
+    "kicker": "Oktatási Campus",
+    "title": "A jövő",
+    "titleEmphasis": "tudásközpontja.",
+    "description": "Egy emberléptékű, háromszintes campus, ahol az oktatás, a kutatás és a vállalkozói együttműködés a nap különböző szakaszaiban ugyanazokat a rugalmas tereket tölti meg élettel.",
+    "timelineLabel": "A Smart Campus napszakai",
+    "hotspotLabel": "A campus interaktív terei",
+    "imageAlt": "Háromszintes fa- és üvegszerkezetű oktatási campus metszeti látványa tantermekkel, átriummal, könyvtárral és innovációs laborokkal",
+    "modes": [
+      { "time": "09:00", "label": "Oktatás", "icon": "◇" },
+      { "time": "14:00", "label": "Coworking", "icon": "◎" },
+      { "time": "18:00", "label": "Innováció", "icon": "✦" }
+    ],
+    "hotspots": [
+      {
+        "icon": "◇",
+        "title": "Hibrid tanulási stúdió",
+        "description": "Rugalmasan alakítható tantermek digitális együttműködési eszközökkel és személyes tanulási helyzetekkel.",
+        "x": 23,
+        "y": 38
+      },
+      {
+        "icon": "◎",
+        "title": "Központi átrium és coworking",
+        "description": "Kétszintes közösségi tér könyvtárral, fókuszfülkékkel és informális találkozási pontokkal.",
+        "x": 50,
+        "y": 58
+      },
+      {
+        "icon": "✦",
+        "title": "STEM & Innovációs labor",
+        "description": "Rugalmas kutatási terek, AI-támogatott tanulási pontok és intelligens energiafelügyelet.",
+        "x": 78,
+        "y": 58
+      },
+      {
+        "icon": "☀",
+        "title": "Zöld tető és energiaközpont",
+        "description": "Napelemekkel, biodiverz növényzettel és szabadtéri tanulási terasszal kialakított tetőkert.",
+        "x": 70,
+        "y": 18
+      }
+    ],
+    "features": [
+      {
+        "icon": "▤",
+        "title": "Smart Education",
+        "description": "Digitális tanulási környezet, hibrid oktatás és személyre szabott fejlődési utak."
+      },
+      {
+        "icon": "⌁",
+        "title": "Öko-Építészet",
+        "description": "Fenntartható anyagok, intelligens energiarendszerek és élhető, zöld terek."
+      },
+      {
+        "icon": "↗",
+        "title": "Startup Inkubáció",
+        "description": "Mentorálás, prototípus-laborok és szakmai kapcsolatok egy inspiráló ökoszisztémában."
+      }
+    ]
+  },
   "gallery": {
     "kicker": "Látványtervek",
     "title": "Az otthon érzése,",

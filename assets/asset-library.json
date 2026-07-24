@@ -421,6 +421,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-EDUCATION-CAMPUS-CUTAWAY-001",
+      "name": "KMJ5_EducationCampus_Cutaway",
+      "version": "v01",
+      "createdAt": "2026-07-24",
+      "creator": "OpenAI ImageGen",
+      "description": "Háromszintes, fa- és üvegszerkezetű Smart Campus metszeti látvány tantermekkel, központi átriummal, coworking könyvtárral és STEM laborokkal.",
+      "purpose": ["landing-page", "education-campus", "interactive-simulator"],
+      "relatedSprint": "Education Campus section",
+      "category": "education-campus",
+      "sourcePath": "assets/education-campus/KMJ5_EducationCampus_Cutaway_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/education-campus/KMJ5_EducationCampus_Cutaway_v01.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-BRANDING-FAVICON-001",
       "name": "KMJ5_Favicon",
       "version": "v01",

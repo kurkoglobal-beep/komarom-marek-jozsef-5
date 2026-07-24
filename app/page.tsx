@@ -18,7 +18,7 @@ const nav = [
   [messages.navigation.gallery, "#gallery"],
   [messages.navigation.contact, "#contact"],
 ];
-const pillarAnchors = ["residential-pillar", "education-campus", "senior-living", "common-space"] as const;
+const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living", "common-space"] as const;
 const heroIntervalMs = 8_000;
 
 function Brand({ light = false }: { light?: boolean }) {
@@ -37,6 +37,8 @@ export default function Home() {
   const [activeResidentialBuilding, setActiveResidentialBuilding] = useState(0);
   const [residentialPhase, setResidentialPhase] = useState<"all" | "1" | "2">("all");
   const [masterplanZoom, setMasterplanZoom] = useState(1);
+  const [activeCampusMode, setActiveCampusMode] = useState(0);
+  const [activeCampusHotspot, setActiveCampusHotspot] = useState(0);
   const [locationVisible, setLocationVisible] = useState(false);
   const [locationTimes, setLocationTimes] = useState(() => content.location.places.map(() => 0));
 
@@ -87,6 +89,7 @@ export default function Home() {
 
   const selectedPlace = content.location.places[activePlace];
   const selectedResidentialBuilding = content.residentialMasterplan.buildings[activeResidentialBuilding];
+  const selectedCampusHotspot = content.educationCampus.hotspots[activeCampusHotspot];
   const routeControlX = (50 + selectedPlace.mapX) / 2;
   const routeControlY = Math.max(12, Math.min(55, selectedPlace.mapY) - 18);
   const routePath = `M 50 55 Q ${routeControlX} ${routeControlY} ${selectedPlace.mapX} ${selectedPlace.mapY}`;
@@ -306,6 +309,84 @@ export default function Home() {
             <a className="floorplan-download" href="/assets/documents/KMJ5_Residential_GroundFloorPlan_v01.pdf" download>{content.residentialMasterplan.apartment.download} <span>↓</span></a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section className="education-campus-section" id="education-campus">
+      <div className="campus-heading">
+        <div>
+          <p className="kicker">{content.educationCampus.kicker}</p>
+          <h2>{content.educationCampus.title}<br/><em>{content.educationCampus.titleEmphasis}</em></h2>
+        </div>
+        <p>{content.educationCampus.description}</p>
+      </div>
+
+      <div className="campus-simulator">
+        <div className="campus-timeline" role="tablist" aria-label={content.educationCampus.timelineLabel}>
+          {content.educationCampus.modes.map((mode, index) => <button
+            key={mode.time}
+            type="button"
+            role="tab"
+            aria-selected={activeCampusMode === index}
+            className={activeCampusMode === index ? "active" : ""}
+            onClick={() => {
+              setActiveCampusMode(index);
+              setActiveCampusHotspot(index);
+            }}
+          >
+            <span aria-hidden="true">{mode.icon}</span>
+            <strong>{mode.time}</strong>
+            <small>{mode.label}</small>
+          </button>)}
+        </div>
+
+        <figure className="campus-visual">
+          <Image
+            src="/assets/education-campus/KMJ5_EducationCampus_Cutaway_v01.webp"
+            alt={content.educationCampus.imageAlt}
+            fill
+            sizes="(max-width: 760px) 1160px, 94vw"
+          />
+          <span className="campus-image-shade" aria-hidden="true"/>
+          <div className="campus-hotspots" role="group" aria-label={content.educationCampus.hotspotLabel}>
+            {content.educationCampus.hotspots.map((hotspot, index) => <button
+              key={hotspot.title}
+              type="button"
+              className={activeCampusHotspot === index ? "active" : ""}
+              style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
+              aria-label={hotspot.title}
+              aria-pressed={activeCampusHotspot === index}
+              onMouseEnter={() => setActiveCampusHotspot(index)}
+              onFocus={() => setActiveCampusHotspot(index)}
+              onClick={() => setActiveCampusHotspot(index)}
+            ><span aria-hidden="true">{hotspot.icon}</span></button>)}
+          </div>
+          <figcaption className="campus-info-card" aria-live="polite">
+            <span className="campus-info-icon" aria-hidden="true">{selectedCampusHotspot.icon}</span>
+            <div>
+              <small>{content.educationCampus.modes[activeCampusMode].time} · {content.educationCampus.modes[activeCampusMode].label}</small>
+              <h3>{selectedCampusHotspot.title}</h3>
+              <p>{selectedCampusHotspot.description}</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <div className="campus-mobile-spaces" aria-label={content.educationCampus.hotspotLabel}>
+          {content.educationCampus.hotspots.map((hotspot, index) => <button
+            key={hotspot.title}
+            type="button"
+            className={activeCampusHotspot === index ? "active" : ""}
+            aria-pressed={activeCampusHotspot === index}
+            onClick={() => setActiveCampusHotspot(index)}
+          ><span aria-hidden="true">{hotspot.icon}</span><strong>{hotspot.title}</strong><small>{hotspot.description}</small></button>)}
+        </div>
+
+        <div className="campus-feature-grid">
+          {content.educationCampus.features.map((feature) => <article key={feature.title}>
+            <span aria-hidden="true">{feature.icon}</span>
+            <div><h3>{feature.title}</h3><p>{feature.description}</p></div>
+          </article>)}
+        </div>
       </div>
     </section>
 
