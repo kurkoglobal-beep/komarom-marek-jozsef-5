@@ -23,6 +23,13 @@ async function render() {
   );
 }
 
+async function renderPath(pathname) {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("sales-test", `${pathname}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  return worker.fetch(new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
+}
+
 test("server-renders the multi-audience Komárom residential website", async () => {
   const response = await render();
   assert.equal(response.status, 200);
@@ -63,4 +70,16 @@ test("server-renders the multi-audience Komárom residential website", async () 
   assert.match(html, /value="career"/);
   assert.match(html, /value="residential-interest"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
+});
+
+test("server-renders apartment finder and direct unit URL", async () => {
+  const finder = await renderPath("/lakasok?building=building-a&floor=2&rooms=2&status=available");
+  assert.equal(finder.status, 200);
+  assert.match(await finder.text(), /Találja meg az új otthonát/);
+  const detail = await renderPath("/lakasok/unit-a-201");
+  assert.equal(detail.status, 200);
+  const html = await detail.text();
+  assert.match(html, /A-2\.01/);
+  assert.match(html, /Érdeklődöm a lakásról/);
+  assert.match(html, /Statikus axonometrikus előnézet/);
 });

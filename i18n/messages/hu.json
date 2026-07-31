@@ -105,5 +105,12 @@
     "closePanel": "Panel bezárása",
     "noData": "Ehhez az épülethez még nincs elérhető adat.",
     "loading": "Helyszínrajz betöltése…"
+  },
+  "sales": {
+    "home": "Kezdőlap", "masterplan": "Masterplan", "apartments": "Lakások", "favorites": "Kedvencek", "contact": "Kapcsolat",
+    "finderTitle": "Találja meg az új otthonát", "finderLead": "Szűrje a lakásokat, vagy induljon el az interaktív masterplanből.", "filters": "Szűrők", "clearFilters": "Törlés", "results": "találat", "building": "Épület", "floor": "Emelet", "rooms": "Szobák", "area": "Nettó alapterület", "outdoor": "Erkély / terasz", "orientation": "Tájolás", "availability": "Státusz", "all": "Mind", "from": "Minimum", "to": "Maximum", "openUnit": "Lakás megnyitása", "addFavorite": "Kedvencekhez", "removeFavorite": "Eltávolítás a kedvencekből", "saved": "Mentve", "emptyFavorites": "Még nincs mentett lakása.", "emptyResults": "Nincs a feltételeknek megfelelő lakás.",
+    "masterplanTitle": "Válasszon három lépésben", "masterplanLead": "Épület, emelet, majd lakás. A nézet stabil 2D alapot használ.", "selectBuilding": "1. Épület", "selectFloor": "2. Emelet", "selectUnit": "3. Lakás", "staticPreview": "Statikus axonometrikus előnézet · 3D modell előkészítés alatt",
+    "unitDetails": "Lakásadatlap", "interiorArea": "Nettó lakótér", "terraceArea": "Erkély / terasz", "gardenArea": "Saját kert", "totalArea": "Összesített terület", "view": "Kilátás", "technology": "Technológia", "floorPlan": "Alaprajz", "axonometric": "Axonometrikus nézet", "interiors": "Belső látványképek", "brochure": "Lakás PDF letöltése", "inquiry": "Érdeklődöm a lakásról", "pricePending": "Ár pontosítás alatt", "backToResults": "Vissza a találatokhoz", "directLink": "Közvetlen lakáslink",
+    "offlineTitle": "Jelenleg nincs internetkapcsolat", "offlineLead": "A már megnyitott oldalakat továbbra is elérheti. Csatlakozás után frissítse az oldalt.", "retry": "Újrapróbálom"
   }
 }

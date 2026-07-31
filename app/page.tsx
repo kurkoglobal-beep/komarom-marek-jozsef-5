@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 import {
   defaultLocale,
@@ -30,6 +31,7 @@ function Brand({ light = false }: { light?: boolean }) {
 export default function Home() {
   const [menu, setMenu] = useState(false);
   const [sent, setSent] = useState(false);
+  const [enquiryUnit, setEnquiryUnit] = useState<{unitId:string;building:string;floor:string;unitName:string;sourceUrl:string} | null>(null);
   const [heroIndex, setHeroIndex] = useState(0);
   const [activeHotspot, setActiveHotspot] = useState(0);
   const [activePlace, setActivePlace] = useState(0);
@@ -54,6 +56,12 @@ export default function Home() {
     }, heroIntervalMs);
 
     return () => window.clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const unitId = params.get("unitId");
+    if (unitId) queueMicrotask(() => setEnquiryUnit({ unitId, building: params.get("building") ?? "", floor: params.get("floor") ?? "", unitName: params.get("unitName") ?? unitId, sourceUrl: window.location.href }));
   }, []);
 
   useEffect(() => {
@@ -103,9 +111,9 @@ export default function Home() {
     <header className="header">
       <Brand light />
       <nav className="desktop-nav" aria-label={messages.accessibility.mainNavigation}>{nav.map(([text, href]) => <a key={href} href={href}>{text}</a>)}</nav>
-      <a className="button gold header-cta" href="#apartment-finder">{messages.navigation.apartmentFinder}</a>
+      <Link className="button gold header-cta" href="/lakasok">{messages.navigation.apartmentFinder}</Link>
       <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label={messages.accessibility.menu}>{menu ? "×" : "☰"}</button>
-      {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#careers" onClick={() => setMenu(false)}>{messages.navigation.career}<span>→</span></a><a href="#apartment-finder" onClick={() => setMenu(false)}>{messages.navigation.apartmentFinder}<span>→</span></a></nav>}
+      {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#careers" onClick={() => setMenu(false)}>{messages.navigation.career}<span>→</span></a><Link href="/lakasok" onClick={() => setMenu(false)}>{messages.navigation.apartmentFinder}<span>→</span></Link></nav>}
     </header>
 
     <section className="hero">
@@ -128,7 +136,7 @@ export default function Home() {
         <p className="kicker light-text">{content.hero.kicker}</p>
         <h1>{content.hero.title}</h1>
         <p className="hero-description">{content.hero.description.map((line) => <span key={line}>{line}</span>)}</p>
-        <div className="hero-actions"><a className="button gold" href="#apartment-finder">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#residential">{messages.cta.learnProject} <span>↓</span></a></div>
+        <div className="hero-actions"><Link className="button gold" href="/lakasok">{messages.cta.discoverApartments} <span>→</span></Link><a className="text-link light-link" href="#residential">{messages.cta.learnProject} <span>↓</span></a></div>
         <div className="hero-indicators" role="group" aria-label={messages.accessibility.heroCarousel}>
           {content.hero.slides.map((slide, index) => (
             <button
@@ -583,6 +591,8 @@ export default function Home() {
       <div className="interest-copy"><p className="kicker light-text">{content.interest.kicker}</p><h2>{content.interest.title}<br/><em>{content.interest.titleEmphasis}</em></h2><p>{content.interest.description}</p><div className="privacy"><b>◇</b><span>{content.interest.privacy}</span></div></div>
       {sent ? <div className="success" role="status"><b>✓</b><h3>{messages.forms.successTitle}</h3><p>{messages.forms.successMessage}</p><button onClick={() => setSent(false)}>{messages.cta.newInquiry}</button></div> :
       <form className="form" onSubmit={submit}>
+        {enquiryUnit && <div className="enquiry-unit-summary"><small>Kiválasztott lakás</small><strong>{enquiryUnit.unitName}</strong><span>{enquiryUnit.building} épület · {enquiryUnit.floor}. emelet</span></div>}
+        <input type="hidden" name="unitId" value={enquiryUnit?.unitId ?? ""}/><input type="hidden" name="building" value={enquiryUnit?.building ?? ""}/><input type="hidden" name="floor" value={enquiryUnit?.floor ?? ""}/><input type="hidden" name="unitName" value={enquiryUnit?.unitName ?? ""}/><input type="hidden" name="sourceUrl" value={enquiryUnit?.sourceUrl ?? ""}/>
         <label><span>{messages.forms.name}</span><input name="name" autoComplete="name" required placeholder={messages.forms.namePlaceholder}/></label>
         <label><span>{messages.forms.email}</span><input name="email" type="email" autoComplete="email" required placeholder={messages.forms.emailPlaceholder}/></label>
         <label><span>{messages.forms.phone}</span><input name="phone" type="tel" autoComplete="tel" placeholder={messages.forms.phonePlaceholder}/></label>

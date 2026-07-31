@@ -399,7 +399,7 @@
   "website": {
     "audiencesLabel": "Kiemelt lehetőségek",
     "audiences": [
-      { "icon": "⌂", "eyebrow": "Otthont keresőknek", "title": "Lakások", "description": "Fedezze fel az épületeket, alaprajzokat és elérhető otthonokat.", "href": "#apartment-finder" },
+      { "icon": "⌂", "eyebrow": "Otthont keresőknek", "title": "Lakások", "description": "Fedezze fel az épületeket, alaprajzokat és elérhető otthonokat.", "href": "/lakasok" },
       { "icon": "↗", "eyebrow": "Hosszú távú szemlélet", "title": "Befektetőknek", "description": "Ismerje meg a fejlesztési modellt és az üzleti kapcsolódási pontokat.", "href": "#investment" },
       { "icon": "▦", "eyebrow": "Üzleti jelenlét", "title": "Bérlőknek", "description": "Kereskedelmi és irodai lehetőségek a lakónegyed szolgáltatási központjában.", "href": "#tenants" }
     ],
