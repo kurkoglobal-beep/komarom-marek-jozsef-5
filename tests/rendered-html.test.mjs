@@ -83,3 +83,36 @@ test("server-renders apartment finder and direct unit URL", async () => {
   assert.match(html, /Érdeklődöm a lakásról/);
   assert.match(html, /Statikus axonometrikus előnézet/);
 });
+
+test("keeps marketing and sales route boundaries available", async () => {
+  for (const [path, expected] of [
+    ["/projekt", /Fejlesztési irányok/],
+    ["/galeria", /Belső terek/],
+    ["/masterplan", /Válasszon három lépésben/],
+    ["/kedvencek", /Kedvencek/],
+  ]) {
+    const response = await renderPath(path);
+    assert.equal(response.status, 200, path);
+    assert.match(await response.text(), expected, path);
+  }
+});
+
+test("passes apartment context to the standalone contact route", async () => {
+  const response = await renderPath("/kapcsolat?unitId=unit-a-201&buildingId=building-a&floorId=floor-a-2&sourceUrl=%2Flakasok%2Funit-a-201&interest=residential-interest");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /name="unitId" value="unit-a-201"/);
+  assert.match(html, /name="buildingId" value="building-a"/);
+  assert.match(html, /name="floorId" value="floor-a-2"/);
+  assert.match(html, /name="sourceUrl" value="\/lakasok\/unit-a-201"/);
+  assert.match(html, /value="residential-interest" selected/);
+});
+
+test("uses the global and unit-specific not-found experiences", async () => {
+  const missingUnit = await renderPath("/lakasok/nem-letezo-lakas");
+  assert.equal(missingUnit.status, 404);
+  assert.match(await missingUnit.text(), /A lakás nem található/);
+  const missingPage = await renderPath("/nem-letezo-oldal");
+  assert.equal(missingPage.status, 404);
+  assert.match(await missingPage.text(), /A keresett oldal nem található/);
+});
