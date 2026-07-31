@@ -12,7 +12,12 @@
     "residential": "Residential quarter",
     "educationCampus": "Education Campus",
     "seniorLiving": "Senior Living",
-    "contact": "Contact"
+    "contact": "Contact",
+    "investors": "For investors",
+    "tenants": "For tenants",
+    "about": "About us",
+    "career": "Careers",
+    "apartmentFinder": "Apartment finder"
   },
   "common": {
     "menu": "Menu",

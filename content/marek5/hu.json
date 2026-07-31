@@ -1,21 +1,21 @@
 {
   "_meta": { "locale": "hu", "translationStatus": "source", "fallbackLocale": null },
   "visibility": { "showResidentialSalesDetails": false },
-  "brand": { "name": "KOMÁROM", "tagline": "FEJLESZTÉSI TERÜLET" },
+  "brand": { "name": "KOMÁROM", "tagline": "MAREK JÓZSEF UTCA 5." },
   "seo": {
-    "title": "Komárom Fejlesztési Terület",
-    "description": "Egy 3,2 hektáros integrált fejlesztési terület Komáromban, prémium lakónegyeddel, Oktatási Campusszal, valamint Senior Living és egészségügyi szolgáltatásokkal.",
-    "socialDescription": "Integrált fejlesztési terület három egymást erősítő pillérrel Komáromban.",
-    "socialImageAlt": "A Komárom Fejlesztési Terület bemutatása",
+    "title": "Komárom Marek József utca 5. | Prémium lakónegyed",
+    "description": "Új, emberléptékű prémium lakónegyed Komáromban parkosított környezettel, intelligens otthonokkal és üzleti szolgáltatásokkal.",
+    "socialDescription": "Kortárs otthonok, zöld környezet és hosszú távú érték Komáromban.",
+    "socialImageAlt": "A Komárom Marek József utca 5. prémium lakónegyed bemutatása",
     "openGraphLocale": "hu_HU"
   },
   "hero": {
-    "kicker": "Komárom · Integrált fejlesztési vízió",
-    "title": "Komárom Fejlesztési Terület",
+    "kicker": "Komárom · Marek József utca 5.",
+    "title": "Új otthonok. Élhető jövő.",
     "description": [
-      "Egy helyszín.",
-      "Három egymást erősítő fejlesztési pillér.",
-      "A jövő integrált városfejlesztési koncepciója."
+      "Prémium, háromszintes lakóépületek.",
+      "Központi park és intelligens környezet.",
+      "Egy új városi élettér Komáromban."
     ],
     "slides": [
       {
@@ -396,11 +396,56 @@
       { "rooms": "Penthouse", "area": "96–118 m²", "level": "IV. emelet", "note": "Tágas tetőterasszal" }
     ]
   },
+  "website": {
+    "audiencesLabel": "Kiemelt lehetőségek",
+    "audiences": [
+      { "icon": "⌂", "eyebrow": "Otthont keresőknek", "title": "Lakások", "description": "Fedezze fel az épületeket, alaprajzokat és elérhető otthonokat.", "href": "#apartment-finder" },
+      { "icon": "↗", "eyebrow": "Hosszú távú szemlélet", "title": "Befektetőknek", "description": "Ismerje meg a fejlesztési modellt és az üzleti kapcsolódási pontokat.", "href": "#investment" },
+      { "icon": "▦", "eyebrow": "Üzleti jelenlét", "title": "Bérlőknek", "description": "Kereskedelmi és irodai lehetőségek a lakónegyed szolgáltatási központjában.", "href": "#tenants" }
+    ],
+    "residential": {
+      "kicker": "A lakónegyed",
+      "title": "Emberléptékű építészet.",
+      "titleEmphasis": "Természetes életminőség.",
+      "description": "A Marek József utca 5. lakónegyed kortárs, legfeljebb háromszintes épületekkel, nagy üvegfelületekkel és parkosított közösségi környezettel teremt kiegyensúlyozott otthont. A lakófunkciókat kényelmi, közösségi és üzleti szolgáltatások egészítik ki.",
+      "cta": "Lakások felfedezése",
+      "values": [
+        { "title": "Kortárs otthonok", "description": "Jól alakítható alaprajzok, természetes fény és minőségi anyaghasználat." },
+        { "title": "Zöld középpont", "description": "Központi park, sétautak, vízfelület és gazdag növényzet a házak között." },
+        { "title": "Smart környezet", "description": "Intelligens otthonok, energiatudatos közös rendszerek és modern park-infrastruktúra." },
+        { "title": "Mindennapi kényelem", "description": "Helyben elérhető szolgáltatások és jól kapcsolódó városi infrastruktúra." }
+      ]
+    },
+    "tenants": {
+      "kicker": "Bérlőknek",
+      "title": "Üzleti terek.",
+      "titleEmphasis": "Élő közösségben.",
+      "description": "A lakónegyed szolgáltatási mixébe illeszkedő, rugalmasan alakítható kereskedelmi és irodai területek olyan vállalkozások számára, amelyek értéket adnak a mindennapi élethez.",
+      "cta": "Bérlői egyeztetést kérek",
+      "spaces": [
+        { "icon": "▣", "type": "Kereskedelem", "title": "Üzlethelyiségek", "description": "Utcai vagy közösségi térre nyíló egységek szolgáltatók, vendéglátás és mindennapi kereskedelem számára.", "facts": [{ "label": "Méret", "value": "Rugalmas kialakítás" }, { "label": "Státusz", "value": "Előzetes egyeztetés" }] },
+        { "icon": "▤", "type": "Munkahely", "title": "Irodák és stúdiók", "description": "Modern munkaterek helyi vállalkozásoknak, szakmai szolgáltatóknak és kisebb csapatoknak.", "facts": [{ "label": "Kialakítás", "value": "Moduláris terek" }, { "label": "Kapcsolat", "value": "Egyedi ajánlat" }] }
+      ]
+    },
+    "about": {
+      "kicker": "Rólunk",
+      "title": "Hosszú távra",
+      "titleEmphasis": "tervezünk értéket.",
+      "description": "A projekt mögött álló fejlesztői szemlélet célja olyan időtálló, fenntartható és emberközpontú városi környezet létrehozása, amely a lakók, a partnerek és Komárom számára egyaránt értéket teremt.",
+      "values": [
+        { "icon": "◇", "title": "Minőség", "description": "Átgondolt részletek az építészettől az üzemeltetésig." },
+        { "icon": "♧", "title": "Felelősség", "description": "Energiatudatos megoldások és hosszú távú környezeti szemlélet." },
+        { "icon": "◎", "title": "Közösség", "description": "Élhető terek, amelyek támogatják a természetes találkozásokat." }
+      ]
+    },
+    "careers": { "kicker": "Karrier", "title": "Építsük együtt Komárom új lakónegyedét.", "description": "Nyitott pozícióink és szakmai együttműködési lehetőségeink folyamatosan bővülnek. Küldje el bemutatkozását, ha szívesen kapcsolódna a projekthez.", "cta": "Bemutatkozás küldése", "emailSubject": "Karrier – Komárom Marek József utca 5." },
+    "form": { "commercialTenancy": "Üzlethelyiség bérlése", "officeTenancy": "Iroda bérlése", "career": "Karrier" }
+  },
   "interest": {
     "kicker": "Kapcsolatfelvétel",
-    "title": "Kapcsolódjunk",
-    "titleEmphasis": "a fejlesztési vízióhoz.",
-    "description": "Kérjen tájékoztatást a fejlesztési koncepcióról és a kapcsolódási lehetőségekről.",
+    "title": "Találjuk meg",
+    "titleEmphasis": "az Ön lehetőségét.",
+    "description": "Kérjen személyre szabott tájékoztatást lakásvásárlásról, befektetésről vagy üzleti bérleti lehetőségekről.",
     "residentialSalesDescription": "Kérjen személyre szabott tájékoztatást a lakásokról, az induló árakról és az értékesítés kezdetéről.",
     "residentialKicker": "Elsőként értesülni",
     "residentialTitle": "Legyen az elsők között, akik hazatalálnak.",

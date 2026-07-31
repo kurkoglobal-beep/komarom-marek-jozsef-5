@@ -12,7 +12,12 @@
     "residential": "Wohnquartier",
     "educationCampus": "Bildungscampus",
     "seniorLiving": "Senior Living",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "investors": "Für Investoren",
+    "tenants": "Für Mieter",
+    "about": "Über uns",
+    "career": "Karriere",
+    "apartmentFinder": "Wohnungsfinder"
   },
   "common": {
     "menu": "Menü",

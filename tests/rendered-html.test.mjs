@@ -23,16 +23,18 @@ async function render() {
   );
 }
 
-test("server-renders the integrated Komárom development landing page", async () => {
+test("server-renders the multi-audience Komárom residential website", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Komárom Fejlesztési Terület<\/title>/i);
-  assert.match(html, /Fejlesztési irányok/);
-  assert.match(html, /Oktatási Campus/);
-  assert.match(html, /Senior Living/);
+  assert.match(html, /<title>Komárom Marek József utca 5\. \| Prémium lakónegyed<\/title>/i);
+  assert.match(html, /Új otthonok\. Élhető jövő\./);
+  assert.match(html, /Befektetőknek/);
+  assert.match(html, /Bérlőknek/);
+  assert.match(html, /Lakáskereső/);
+  assert.match(html, /Emberléptékű építészet/);
   assert.match(html, /Interactive/);
   assert.match(html, /A-2\.01/);
   assert.match(html, /KMJ5_Residential_GroundFloorPlan_v01\.pdf/);
@@ -51,10 +53,14 @@ test("server-renders the integrated Komárom development landing page", async ()
   assert.match(html, /nem minősül pénzügyi ajánlatnak vagy hozamígéretnek/);
   assert.doesNotMatch(html, /12[–-]15%|6[–-]8%/);
   assert.doesNotMatch(html, /Lakástípusok/);
-  assert.doesNotMatch(html, /Lakások felfedezése/);
-  assert.match(html, /value="development-partnership"/);
-  assert.match(html, /value="education-partnership"/);
-  assert.match(html, /value="senior-living-partnership"/);
+  assert.match(html, /Lakások felfedezése/);
+  assert.match(html, /Üzlethelyiségek/);
+  assert.match(html, /Irodák és stúdiók/);
+  assert.match(html, /Hosszú távra/);
+  assert.match(html, /Építsük együtt Komárom új lakónegyedét/);
+  assert.match(html, /value="commercial-tenancy"/);
+  assert.match(html, /value="office-tenancy"/);
+  assert.match(html, /value="career"/);
   assert.match(html, /value="residential-interest"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });

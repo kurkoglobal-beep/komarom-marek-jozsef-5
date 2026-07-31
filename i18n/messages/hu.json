@@ -12,7 +12,12 @@
     "residential": "Lakónegyed",
     "educationCampus": "Oktatási Campus",
     "seniorLiving": "Senior Living",
-    "contact": "Kapcsolat"
+    "contact": "Kapcsolat",
+    "investors": "Befektetőknek",
+    "tenants": "Bérlőknek",
+    "about": "Rólunk",
+    "career": "Karrier",
+    "apartmentFinder": "Lakáskereső"
   },
   "common": {
     "menu": "Menü",

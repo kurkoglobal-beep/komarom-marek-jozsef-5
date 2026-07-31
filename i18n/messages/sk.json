@@ -12,7 +12,12 @@
     "residential": "Obytná štvrť",
     "educationCampus": "Vzdelávací kampus",
     "seniorLiving": "Senior Living",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "investors": "Pre investorov",
+    "tenants": "Pre nájomcov",
+    "about": "O nás",
+    "career": "Kariéra",
+    "apartmentFinder": "Vyhľadávač bytov"
   },
   "common": {
     "menu": "Menu",

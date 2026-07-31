@@ -11,11 +11,10 @@ import {
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
   [messages.navigation.developmentArea, "#development-area"],
-  [messages.navigation.pillars, "#pillars"],
   [messages.navigation.residential, "#residential"],
-  [messages.navigation.educationCampus, "#education-campus"],
-  [messages.navigation.seniorLiving, "#senior-living"],
-  [messages.navigation.gallery, "#gallery"],
+  [messages.navigation.investors, "#investment"],
+  [messages.navigation.tenants, "#tenants"],
+  [messages.navigation.about, "#about"],
   [messages.navigation.contact, "#contact"],
 ];
 const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living-pillar", "common-space"] as const;
@@ -104,9 +103,9 @@ export default function Home() {
     <header className="header">
       <Brand light />
       <nav className="desktop-nav" aria-label={messages.accessibility.mainNavigation}>{nav.map(([text, href]) => <a key={href} href={href}>{text}</a>)}</nav>
-      <a className="button gold header-cta" href="#contact">{messages.cta.contactProject}</a>
+      <a className="button gold header-cta" href="#apartment-finder">{messages.navigation.apartmentFinder}</a>
       <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label={messages.accessibility.menu}>{menu ? "×" : "☰"}</button>
-      {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#contact" onClick={() => setMenu(false)}>{messages.cta.contactProject}<span>→</span></a></nav>}
+      {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#careers" onClick={() => setMenu(false)}>{messages.navigation.career}<span>→</span></a><a href="#apartment-finder" onClick={() => setMenu(false)}>{messages.navigation.apartmentFinder}<span>→</span></a></nav>}
     </header>
 
     <section className="hero">
@@ -129,7 +128,7 @@ export default function Home() {
         <p className="kicker light-text">{content.hero.kicker}</p>
         <h1>{content.hero.title}</h1>
         <p className="hero-description">{content.hero.description.map((line) => <span key={line}>{line}</span>)}</p>
-        <div className="hero-actions"><a className="button gold" href="#project-contact">{messages.cta.partnerConsultation} <span>→</span></a><a className="text-link light-link" href="#development-area">{messages.cta.exploreDevelopmentConcept} <span>↓</span></a></div>
+        <div className="hero-actions"><a className="button gold" href="#apartment-finder">{messages.cta.discoverApartments} <span>→</span></a><a className="text-link light-link" href="#residential">{messages.cta.learnProject} <span>↓</span></a></div>
         <div className="hero-indicators" role="group" aria-label={messages.accessibility.heroCarousel}>
           {content.hero.slides.map((slide, index) => (
             <button
@@ -143,6 +142,12 @@ export default function Home() {
           ))}
         </div>
       </div>
+    </section>
+
+    <section className="audience-gateway" aria-label={content.website.audiencesLabel}>
+      {content.website.audiences.map((audience) => <a key={audience.title} href={audience.href}>
+        <span aria-hidden="true">{audience.icon}</span><div><small>{audience.eyebrow}</small><h2>{audience.title}</h2><p>{audience.description}</p></div><b aria-hidden="true">→</b>
+      </a>)}
     </section>
 
     <section className="development-area" id="development-area">
@@ -222,7 +227,12 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="pillars-showcase" id="pillars">
+    <section className="residential-overview" id="residential">
+      <div className="residential-overview-copy"><p className="kicker">{content.website.residential.kicker}</p><h2>{content.website.residential.title}<br/><em>{content.website.residential.titleEmphasis}</em></h2><p>{content.website.residential.description}</p><a className="text-link" href="#apartment-finder">{content.website.residential.cta} <span>→</span></a></div>
+      <div className="residential-values">{content.website.residential.values.map((value, index) => <article key={value.title}><span>0{index + 1}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</div>
+    </section>
+
+    <section className="pillars-showcase" id="pillars" hidden>
       <div className="pillars-heading">
         <p className="kicker light-text">{content.benefits.kicker}</p>
         <h2>{content.benefits.title}<br/><em>{content.benefits.titleEmphasis}</em></h2>
@@ -248,7 +258,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="residential-masterplan-section" id="residential">
+    <section className="residential-masterplan-section" id="apartment-finder">
       <div className="residential-masterplan-heading">
         <div><p className="kicker">{content.residentialMasterplan.kicker}</p><h2>{content.residentialMasterplan.title}<br/><em>{content.residentialMasterplan.titleEmphasis}</em></h2></div>
         <p>{content.residentialMasterplan.description}</p>
@@ -318,7 +328,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="education-campus-section" id="education-campus">
+    <section className="education-campus-section" id="education-campus" hidden>
       <div className="campus-heading">
         <div>
           <p className="kicker">{content.educationCampus.kicker}</p>
@@ -396,7 +406,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="senior-living-section" id="senior-living">
+    <section className="senior-living-section" id="senior-living" hidden>
       <div className="senior-heading">
         <div>
           <p className="kicker">{content.seniorLiving.kicker}</p>
@@ -540,6 +550,11 @@ export default function Home() {
       </div>
     </section>
 
+    <section className="tenant-section" id="tenants">
+      <div className="tenant-heading"><div><p className="kicker light-text">{content.website.tenants.kicker}</p><h2>{content.website.tenants.title}<br/><em>{content.website.tenants.titleEmphasis}</em></h2></div><p>{content.website.tenants.description}</p></div>
+      <div className="tenant-grid">{content.website.tenants.spaces.map((space) => <article key={space.title}><span aria-hidden="true">{space.icon}</span><small>{space.type}</small><h3>{space.title}</h3><p>{space.description}</p><dl>{space.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl><a href="#project-contact">{content.website.tenants.cta} <b>→</b></a></article>)}</div>
+    </section>
+
     <section className="gallery" id="gallery">
       <div className="gallery-heading"><div><p className="kicker light-text">{content.gallery.kicker}</p><h2>{content.gallery.title}<br/><em>{content.gallery.titleEmphasis}</em></h2></div><p>{content.gallery.description}</p></div>
       <div className="gallery-grid">
@@ -547,6 +562,16 @@ export default function Home() {
         <figure><img src="/assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.webp" alt={content.gallery.items[1].alt} className="cover"/><figcaption>{content.gallery.items[1].caption}</figcaption></figure>
         <figure className="full"><img src="/assets/smart-park/KMJ5_SmartPark_CentralLake_v01.webp" alt={content.gallery.items[2].alt} className="cover"/><figcaption>{content.gallery.items[2].caption}</figcaption></figure>
       </div>
+    </section>
+
+    <section className="about-section" id="about">
+      <div><p className="kicker">{content.website.about.kicker}</p><h2>{content.website.about.title}<br/><em>{content.website.about.titleEmphasis}</em></h2></div>
+      <div className="about-story"><p>{content.website.about.description}</p><div>{content.website.about.values.map((value) => <article key={value.title}><span aria-hidden="true">{value.icon}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</div></div>
+    </section>
+
+    <section className="career-section" id="careers">
+      <div><small>{content.website.careers.kicker}</small><h2>{content.website.careers.title}</h2><p>{content.website.careers.description}</p></div>
+      <a className="button gold" href={`mailto:${content.contact.email}?subject=${encodeURIComponent(content.website.careers.emailSubject)}`}>{content.website.careers.cta} <span>→</span></a>
     </section>
 
     {content.visibility.showResidentialSalesDetails && <section className="apartments" id="residential-sales">
@@ -561,7 +586,7 @@ export default function Home() {
         <label><span>{messages.forms.name}</span><input name="name" autoComplete="name" required placeholder={messages.forms.namePlaceholder}/></label>
         <label><span>{messages.forms.email}</span><input name="email" type="email" autoComplete="email" required placeholder={messages.forms.emailPlaceholder}/></label>
         <label><span>{messages.forms.phone}</span><input name="phone" type="tel" autoComplete="tel" placeholder={messages.forms.phonePlaceholder}/></label>
-        <label><span>{messages.forms.subject}</span><select name="interest" defaultValue=""><option value="" disabled>{messages.forms.select}</option><option value="investment">{messages.forms.investment}</option><option value="development-partnership">{messages.forms.developmentPartnership}</option><option value="education-partnership">{messages.forms.educationPartnership}</option><option value="senior-living-partnership">{messages.forms.seniorLivingPartnership}</option><option value="residential-interest">{messages.forms.residentialInterest}</option><option value="other">{messages.forms.other}</option></select></label>
+        <label><span>{messages.forms.subject}</span><select name="interest" defaultValue=""><option value="" disabled>{messages.forms.select}</option><option value="residential-interest">{messages.forms.residentialInterest}</option><option value="investment">{messages.forms.investment}</option><option value="commercial-tenancy">{content.website.form.commercialTenancy}</option><option value="office-tenancy">{content.website.form.officeTenancy}</option><option value="career">{content.website.form.career}</option><option value="other">{messages.forms.other}</option></select></label>
         <label className="consent"><input type="checkbox" required/><span>{messages.forms.consent}</span></label>
         <button className="button gold" type="submit">{messages.cta.contactProject} <span>→</span></button>
       </form>}
