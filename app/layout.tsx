@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./platform.css";
 import { defaultLocale, getTranslations } from "@/lib/i18n";
-import { MobileBottomNav } from "@/components/sales/MobileBottomNav";
 import { PwaRegister } from "@/components/sales/PwaRegister";
 
 const { content } = getTranslations(defaultLocale);
@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={defaultLocale}>
-      <body>{children}<MobileBottomNav/><PwaRegister/></body>
+      <body>{children}<PwaRegister/></body>
     </html>
   );
 }
