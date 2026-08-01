@@ -107,6 +107,12 @@
     "noData": "No data is available for this building yet.",
     "loading": "Loading masterplan…"
   },
+  "homeExperience": {
+    "searchEyebrow": "Quick search", "searchTitle": "Find the home that fits you", "minimumArea": "Minimum floor area",
+    "entryEyebrow": "Digital property experience", "entryTitle": "Start exploring.", "entryEmphasis": "Choose your own path.", "primary": "Primary experience",
+    "masterplan": "Explore the masterplan", "apartments": "View apartments", "favorites": "Favorites", "project": "Discover the project",
+    "masterplanAlt": "Preview of the residential district interactive masterplan", "apartmentsAlt": "Premium apartment interior overlooking the park"
+  },
   "sales": {
     "home":"Home","masterplan":"Masterplan","apartments":"Apartments","favorites":"Favorites","contact":"Contact","finderTitle":"Find your new home","finderLead":"Filter apartments or start from the interactive masterplan.","filters":"Filters","clearFilters":"Clear","results":"results","building":"Building","floor":"Floor","rooms":"Rooms","area":"Net area","outdoor":"Balcony / terrace","orientation":"Orientation","availability":"Status","all":"All","from":"Minimum","to":"Maximum","openUnit":"Open apartment","addFavorite":"Add to favorites","removeFavorite":"Remove from favorites","saved":"Saved","emptyFavorites":"No saved apartments yet.","emptyResults":"No apartments match these filters.","masterplanTitle":"Choose in three steps","masterplanLead":"Building, floor, then apartment. The view uses a stable 2D foundation.","selectBuilding":"1. Building","selectFloor":"2. Floor","selectUnit":"3. Apartment","staticPreview":"Static axonometric preview · 3D model in preparation","unitDetails":"Apartment details","interiorArea":"Net living area","terraceArea":"Balcony / terrace","gardenArea":"Private garden","totalArea":"Total area","view":"View","technology":"Technology","floorPlan":"Floor plan","axonometric":"Axonometric view","interiors":"Interior visuals","brochure":"Download apartment PDF","inquiry":"Enquire about this apartment","pricePending":"Price being finalized","backToResults":"Back to results","directLink":"Direct apartment link","offlineTitle":"You are currently offline","offlineLead":"Previously opened pages remain available. Refresh after reconnecting.","retry":"Try again"
   }

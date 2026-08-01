@@ -107,6 +107,12 @@
     "noData": "Ehhez az épülethez még nincs elérhető adat.",
     "loading": "Helyszínrajz betöltése…"
   },
+  "homeExperience": {
+    "searchEyebrow": "Gyorskereső", "searchTitle": "Találja meg az Önhöz illő otthont", "minimumArea": "Minimum alapterület",
+    "entryEyebrow": "Digitális ingatlanélmény", "entryTitle": "Induljon el.", "entryEmphasis": "Válasszon saját útvonalat.", "primary": "Elsődleges élmény",
+    "masterplan": "Masterplan felfedezése", "apartments": "Lakások megtekintése", "favorites": "Kedvencek", "project": "Projekt bemutatása",
+    "masterplanAlt": "A lakónegyed interaktív masterplanjének előnézete", "apartmentsAlt": "Prémium lakás parkra néző belső tere"
+  },
   "sales": {
     "home": "Kezdőlap", "masterplan": "Masterplan", "apartments": "Lakások", "favorites": "Kedvencek", "contact": "Kapcsolat",
     "finderTitle": "Találja meg az új otthonát", "finderLead": "Szűrje a lakásokat, vagy induljon el az interaktív masterplanből.", "filters": "Szűrők", "clearFilters": "Törlés", "results": "találat", "building": "Épület", "floor": "Emelet", "rooms": "Szobák", "area": "Nettó alapterület", "outdoor": "Erkély / terasz", "orientation": "Tájolás", "availability": "Státusz", "all": "Mind", "from": "Minimum", "to": "Maximum", "openUnit": "Lakás megnyitása", "addFavorite": "Kedvencekhez", "removeFavorite": "Eltávolítás a kedvencekből", "saved": "Mentve", "emptyFavorites": "Még nincs mentett lakása.", "emptyResults": "Nincs a feltételeknek megfelelő lakás.",

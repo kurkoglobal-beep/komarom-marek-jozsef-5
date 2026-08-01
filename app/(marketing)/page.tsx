@@ -8,6 +8,7 @@ import {
   getTranslations,
   interpolate,
 } from "@/lib/i18n";
+import { HomeAppEntry } from "@/components/home/HomeAppEntry";
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
@@ -148,11 +149,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="audience-gateway" aria-label={content.website.audiencesLabel}>
-      {content.website.audiences.filter((audience) => audience.href !== "#investment").map((audience) => <a key={audience.title} href={audience.href}>
-        <span aria-hidden="true">{audience.icon}</span><div><small>{audience.eyebrow}</small><h2>{audience.title}</h2><p>{audience.description}</p></div><b aria-hidden="true">→</b>
-      </a>)}
-    </section>
+    <HomeAppEntry messages={messages}/>
 
     <section className="development-area" id="development-area">
       <div className="development-copy">
