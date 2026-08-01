@@ -11,6 +11,7 @@ import {
 import { HomeAppEntry } from "@/components/home/HomeAppEntry";
 import { FeaturedUnits } from "@/components/home/FeaturedUnits";
 import { getUnitViews } from "@/lib/sales/data";
+import { DevelopmentPhases } from "@/components/development/DevelopmentPhases";
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
@@ -154,8 +155,9 @@ export default function Home() {
 
     <HomeAppEntry messages={messages}/>
     <FeaturedUnits units={featuredUnits} messages={messages}/>
+    <DevelopmentPhases messages={messages}/>
 
-    <section className="development-area" id="development-area">
+    <section className="development-area" hidden>
       <div className="development-copy">
         <p className="kicker">{content.project.kicker}</p>
         <h2>{content.project.title}<br/><em>{content.project.titleEmphasis}</em></h2>

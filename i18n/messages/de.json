@@ -107,6 +107,13 @@
     "noData": "Für dieses Gebäude sind noch keine Daten verfügbar.",
     "loading": "Masterplan wird geladen…"
   },
+  "experience": {
+    "phases": {
+      "kicker": "Entwicklungsphasen", "title": "Eine durchdachte Entwicklung.", "titleEmphasis": "Vier geplante Phasen.", "description": "Entdecken Sie die geplanten Phasen des Entwicklungsgebiets. Technische und vertriebliche Daten werden nach Freigabe veröffentlicht.", "imageAlt": "Illustrativer Masterplan des Entwicklungsgebiets Komárom", "selectorLabel": "Entwicklungsphase auswählen", "all": "Alle Phasen", "phase": "Phase", "overview": "Entwicklungsübersicht", "allTitle": "Das gesamte Entwicklungsgebiet", "allDescription": "Die vier geplanten Phasen bilden ein einheitliches, langfristiges Entwicklungskonzept.", "allCta": "Wohnungen ansehen", "phaseTitle": "Phase {phase}", "placeholderDescription": "Detaillierte technische und vertriebliche Angaben zu dieser Phase warten auf Freigabe.", "handover": "Geplante Übergabe", "unitCount": "Anzahl Wohnungen", "availableCount": "Verfügbare Wohnungen", "progress": "Entwicklungsfortschritt", "dataPending": "Daten in Vorbereitung", "detailsSoon": "Details folgen", "details": "Details", "plannedCta": "Für den Vorverkauf vormerken", "timelineLabel": "Entwicklungszeitplan", "smartSelection": "Personalisierte Suche", "moveQuestion": "Wann möchten Sie einziehen?",
+      "moveOptions": {"short_term": "Kurzfristig", "six_to_twelve_months": "Innerhalb von 6–12 Monaten", "later_phase": "In einer späteren Phase", "all": "Noch nicht entschieden"},
+      "status": {"completed": "Fertiggestellt", "selling": "Im Verkauf", "under_construction": "Im Bau", "preparation": "In Vorbereitung", "planned": "Geplante Phase"}
+    }
+  },
   "homeExperience": {
     "searchEyebrow": "Schnellsuche", "searchTitle": "Finden Sie Ihr passendes Zuhause", "minimumArea": "Mindestwohnfläche",
     "entryEyebrow": "Digitales Immobilienerlebnis", "entryTitle": "Entdecken Sie.", "entryEmphasis": "Wählen Sie Ihren eigenen Weg.", "primary": "Primäres Erlebnis",

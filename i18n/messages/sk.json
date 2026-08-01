@@ -107,6 +107,13 @@
     "noData": "Pre túto budovu zatiaľ nie sú dostupné údaje.",
     "loading": "Načítava sa generel…"
   },
+  "experience": {
+    "phases": {
+      "kicker": "Etapy výstavby", "title": "Jeden premyslený rozvoj.", "titleEmphasis": "Štyri plánované etapy.", "description": "Preskúmajte plánované etapy rozvojového územia. Technické a predajné údaje budú zverejnené po schválení.", "imageAlt": "Ilustračný masterplan rozvojového územia Komárom", "selectorLabel": "Vybrať etapu výstavby", "all": "Všetky etapy", "phase": "etapa", "overview": "Prehľad rozvoja", "allTitle": "Celé rozvojové územie", "allDescription": "Štyri plánované etapy tvoria jednotnú dlhodobú koncepciu rozvoja.", "allCta": "Zobraziť byty", "phaseTitle": "{phase}. etapa", "placeholderDescription": "Podrobné technické a predajné údaje tejto etapy čakajú na schválenie.", "handover": "Plánované odovzdanie", "unitCount": "Počet bytov", "availableCount": "Dostupné byty", "progress": "Postup výstavby", "dataPending": "Údaje sa pripravujú", "detailsSoon": "Podrobnosti čoskoro", "details": "Podrobnosti", "plannedCta": "Registrovať sa na predpredaj", "timelineLabel": "Časový plán výstavby", "smartSelection": "Personalizované vyhľadávanie", "moveQuestion": "Kedy sa chcete presťahovať?",
+      "moveOptions": {"short_term": "V krátkom čase", "six_to_twelve_months": "Do 6–12 mesiacov", "later_phase": "V neskoršej etape", "all": "Ešte som sa nerozhodol"},
+      "status": {"completed": "Dokončené", "selling": "V predaji", "under_construction": "Vo výstavbe", "preparation": "V príprave", "planned": "Plánovaná etapa"}
+    }
+  },
   "homeExperience": {
     "searchEyebrow": "Rýchle vyhľadávanie", "searchTitle": "Nájdite si domov, ktorý vám vyhovuje", "minimumArea": "Minimálna plocha",
     "entryEyebrow": "Digitálny zážitok z nehnuteľnosti", "entryTitle": "Začnite objavovať.", "entryEmphasis": "Vyberte si vlastnú cestu.", "primary": "Hlavný zážitok",

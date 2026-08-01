@@ -107,6 +107,13 @@
     "noData": "No data is available for this building yet.",
     "loading": "Loading masterplan…"
   },
+  "experience": {
+    "phases": {
+      "kicker": "Development phases", "title": "One considered development.", "titleEmphasis": "Four planned phases.", "description": "Explore the planned phases of the development area. Technical and sales data will be published after approval.", "imageAlt": "Illustrative masterplan of the Komárom Development Area", "selectorLabel": "Select a development phase", "all": "All phases", "phase": "phase", "overview": "Development overview", "allTitle": "The complete development area", "allDescription": "The four planned phases form one coherent, long-term development concept.", "allCta": "View apartments", "phaseTitle": "Phase {phase}", "placeholderDescription": "Detailed technical and sales information for this phase is awaiting approval.", "handover": "Planned handover", "unitCount": "Number of apartments", "availableCount": "Available apartments", "progress": "Development progress", "dataPending": "Data pending", "detailsSoon": "Details coming soon", "details": "Details", "plannedCta": "Register for pre-sales", "timelineLabel": "Development timeline", "smartSelection": "Personalised search", "moveQuestion": "When would you like to move?",
+      "moveOptions": {"short_term": "In the short term", "six_to_twelve_months": "Within 6–12 months", "later_phase": "In a later phase", "all": "I have not decided yet"},
+      "status": {"completed": "Completed", "selling": "Now selling", "under_construction": "Under construction", "preparation": "In preparation", "planned": "Planned phase"}
+    }
+  },
   "homeExperience": {
     "searchEyebrow": "Quick search", "searchTitle": "Find the home that fits you", "minimumArea": "Minimum floor area",
     "entryEyebrow": "Digital property experience", "entryTitle": "Start exploring.", "entryEmphasis": "Choose your own path.", "primary": "Primary experience",
