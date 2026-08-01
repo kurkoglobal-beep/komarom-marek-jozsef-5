@@ -1,0 +1,20 @@
+{
+  "phases": [
+    {"id":"phase-1","code":"1","status":"planned","plannedHandover":null,"unitCount":null,"availableUnitCount":null,"progressPercent":null,"hotspot":{"x":9,"y":16,"width":35,"height":34}},
+    {"id":"phase-2","code":"2","status":"planned","plannedHandover":null,"unitCount":null,"availableUnitCount":null,"progressPercent":null,"hotspot":{"x":43,"y":10,"width":31,"height":37}},
+    {"id":"phase-3","code":"3","status":"planned","plannedHandover":null,"unitCount":null,"availableUnitCount":null,"progressPercent":null,"hotspot":{"x":22,"y":51,"width":35,"height":35}},
+    {"id":"phase-4","code":"4","status":"planned","plannedHandover":null,"unitCount":null,"availableUnitCount":null,"progressPercent":null,"hotspot":{"x":58,"y":48,"width":34,"height":36}}
+  ],
+  "locations": [
+    {"id":"location-danube","category":"nature","x":22,"y":68,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-transport","category":"transport","x":68,"y":62,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-education","category":"education","x":58,"y":27,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-regional","category":"regional","x":82,"y":18,"verified":false,"travelMinutes":null,"distanceMeters":null}
+  ],
+  "moveIntents": [
+    {"id":"short_term","phaseId":null,"targetHandoverRange":"short_term","availabilityStatus":"available"},
+    {"id":"six_to_twelve_months","phaseId":null,"targetHandoverRange":"six_to_twelve_months","availabilityStatus":"coming_soon"},
+    {"id":"later_phase","phaseId":"phase-4","targetHandoverRange":"later_phase","availabilityStatus":null},
+    {"id":"all","phaseId":null,"targetHandoverRange":"all","availabilityStatus":null}
+  ]
+}
