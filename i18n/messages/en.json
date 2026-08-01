@@ -87,7 +87,8 @@
     "selectHeroSlide": "Select image {slide}: {title}",
     "selectBuilding": "Select a building",
     "openBuildingDetails": "Open building details",
-    "closeBuildingDetails": "Close building details"
+    "closeBuildingDetails": "Close building details",
+    "mobileNavigation": "Mobile application navigation"
   },
   "masterplan": {
     "title": "Interactive masterplan",

@@ -7,7 +7,7 @@ import { salesNavigation, isSalesRouteActive } from "@/config/navigation";
 const { messages } = getTranslations(defaultLocale);
 export function MobileBottomNav() {
   const pathname = usePathname();
-  return <nav className="sales-bottom-nav" aria-label="Mobil értékesítési navigáció">{salesNavigation.map(({ href, icon, labelKey }) => {
+  return <nav className="sales-bottom-nav" aria-label={messages.accessibility.mobileNavigation}>{salesNavigation.map(({ href, icon, labelKey }) => {
     const active = isSalesRouteActive(pathname, href);
     return <Link key={href} href={href} className={active ? "active" : ""} aria-current={active ? "page" : undefined}><span aria-hidden="true">{icon}</span><small>{messages.sales[labelKey]}</small></Link>;
   })}</nav>;

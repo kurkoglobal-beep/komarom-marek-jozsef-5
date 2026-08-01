@@ -87,7 +87,8 @@
     "selectHeroSlide": "{slide}. kép kiválasztása: {title}",
     "selectBuilding": "Épület kiválasztása",
     "openBuildingDetails": "Épület részleteinek megnyitása",
-    "closeBuildingDetails": "Épület részleteinek bezárása"
+    "closeBuildingDetails": "Épület részleteinek bezárása",
+    "mobileNavigation": "Mobil alkalmazásnavigáció"
   },
   "masterplan": {
     "title": "Interaktív helyszínrajz",

@@ -87,7 +87,8 @@
     "selectHeroSlide": "Vybrať obrázok {slide}: {title}",
     "selectBuilding": "Vybrať budovu",
     "openBuildingDetails": "Otvoriť podrobnosti budovy",
-    "closeBuildingDetails": "Zavrieť podrobnosti budovy"
+    "closeBuildingDetails": "Zavrieť podrobnosti budovy",
+    "mobileNavigation": "Mobilná navigácia aplikácie"
   },
   "masterplan": {
     "title": "Interaktívny generel",
