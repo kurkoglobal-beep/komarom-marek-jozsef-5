@@ -65,6 +65,13 @@ test("server-renders the multi-audience Komárom residential website", async () 
   assert.match(html, /Masterplan felfedezése/);
   assert.match(html, /Kiemelt otthonok/);
   assert.match(html, /Egy átgondolt fejlesztés/);
+  assert.match(html, /class="development-film"/);
+  assert.match(html, /KMJ5_DevelopmentArea_MoodFilm_v01\.mp4/);
+  assert.match(html, /autoplay/i);
+  assert.match(html, /muted/i);
+  assert.match(html, /loop/i);
+  assert.match(html, /playsinline/i);
+  assert.match(html, /Nem a projekt helyszínén készült felvétel/);
   assert.match(html, /Adatfeltöltés alatt/);
   assert.match(html, /Mikor szeretne költözni/);
   assert.match(html, /Távolság és menetidő ellenőrzés alatt/);

@@ -108,6 +108,15 @@
     "loading": "Načítava sa generel…"
   },
   "experience": {
+    "developmentFilm": {
+      "kicker": "Rozvojové územie",
+      "title": "Miesto, ktoré sa formuje s dlhodobou víziou.",
+      "description": "Prírodné prostredie, architektúra a komunitný život sa spájajú v jednotnom prístupe k rozvoju.",
+      "disclaimer": "Ilustračný náladový film · Záznam nevznikol na mieste projektu",
+      "videoLabel": "Ilustračný náladový film zeleného rozvojového prostredia zameraného na ľudí",
+      "continue": "Etapy výstavby",
+      "continueLabel": "Pokračovať na interaktívne etapy výstavby"
+    },
     "phases": {
       "kicker": "Etapy výstavby", "title": "Jeden premyslený rozvoj.", "titleEmphasis": "Štyri plánované etapy.", "description": "Preskúmajte plánované etapy rozvojového územia. Technické a predajné údaje budú zverejnené po schválení.", "imageAlt": "Ilustračný masterplan rozvojového územia Komárom", "selectorLabel": "Vybrať etapu výstavby", "all": "Všetky etapy", "phase": "etapa", "overview": "Prehľad rozvoja", "allTitle": "Celé rozvojové územie", "allDescription": "Štyri plánované etapy tvoria jednotnú dlhodobú koncepciu rozvoja.", "allCta": "Zobraziť byty", "phaseTitle": "{phase}. etapa", "placeholderDescription": "Podrobné technické a predajné údaje tejto etapy čakajú na schválenie.", "handover": "Plánované odovzdanie", "unitCount": "Počet bytov", "availableCount": "Dostupné byty", "progress": "Postup výstavby", "dataPending": "Údaje sa pripravujú", "detailsSoon": "Podrobnosti čoskoro", "details": "Podrobnosti", "plannedCta": "Registrovať sa na predpredaj", "timelineLabel": "Časový plán výstavby", "smartSelection": "Personalizované vyhľadávanie", "moveQuestion": "Kedy sa chcete presťahovať?",
       "moveOptions": {"short_term": "V krátkom čase", "six_to_twelve_months": "Do 6–12 mesiacov", "later_phase": "V neskoršej etape", "all": "Ešte som sa nerozhodol"},

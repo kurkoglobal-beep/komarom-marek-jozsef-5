@@ -108,6 +108,15 @@
     "loading": "Helyszínrajz betöltése…"
   },
   "experience": {
+    "developmentFilm": {
+      "kicker": "Fejlesztési terület",
+      "title": "Egy hely, amely hosszú távra formálódik.",
+      "description": "A természeti környezet, az épített terek és a közösségi élet egységes fejlesztési szemléletben kapcsolódnak össze.",
+      "disclaimer": "Illusztratív hangulatanyag · Nem a projekt helyszínén készült felvétel",
+      "videoLabel": "Illusztratív hangulatvideó egy zöld, emberközpontú fejlesztési környezetről",
+      "continue": "Fejlesztési ütemek",
+      "continueLabel": "Tovább az interaktív fejlesztési ütemekhez"
+    },
     "phases": {
       "kicker": "Fejlesztési ütemek", "title": "Egy átgondolt fejlesztés.", "titleEmphasis": "Négy tervezett ütem.", "description": "Fedezze fel a fejlesztési terület tervezett ütemeit. A műszaki és értékesítési adatok jóváhagyás után kerülnek közzétételre.", "imageAlt": "A Komárom Fejlesztési Terület szemléltető masterplanje", "selectorLabel": "Fejlesztési ütem kiválasztása", "all": "Összes ütem", "phase": "ütem", "overview": "Fejlesztési áttekintés", "allTitle": "A teljes fejlesztési terület", "allDescription": "A négy tervezett ütem egységes, hosszú távú fejlesztési koncepciót alkot.", "allCta": "Lakások megtekintése", "phaseTitle": "{phase}. ütem", "placeholderDescription": "Az ütem részletes műszaki és értékesítési adatai jóváhagyás alatt állnak.", "handover": "Tervezett átadás", "unitCount": "Lakások száma", "availableCount": "Elérhető lakások", "progress": "Fejlesztési készültség", "dataPending": "Adatfeltöltés alatt", "detailsSoon": "Részletek hamarosan", "details": "Részletek", "plannedCta": "Feliratkozom az előértékesítésre", "timelineLabel": "Fejlesztési ütemterv", "smartSelection": "Személyre szabott keresés", "moveQuestion": "Mikor szeretne költözni?",
       "moveOptions": {"short_term": "Rövid távon", "six_to_twelve_months": "6–12 hónapon belül", "later_phase": "Későbbi ütemben", "all": "Még nem döntöttem el"},

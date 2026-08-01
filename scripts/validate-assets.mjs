@@ -24,6 +24,7 @@ const visualExtensions = new Set([
   ".fig",
   ".jpeg",
   ".jpg",
+  ".mp4",
   ".pdf",
   ".png",
   ".psd",

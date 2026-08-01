@@ -12,6 +12,7 @@ import { HomeAppEntry } from "@/components/home/HomeAppEntry";
 import { FeaturedUnits } from "@/components/home/FeaturedUnits";
 import { getUnitViews } from "@/lib/sales/data";
 import { DevelopmentPhases } from "@/components/development/DevelopmentPhases";
+import { DevelopmentAreaFilm } from "@/components/development/DevelopmentAreaFilm";
 import { LocationExperience } from "@/components/location/LocationExperience";
 
 const { content, messages } = getTranslations(defaultLocale);
@@ -116,6 +117,7 @@ export default function Home() {
 
     <HomeAppEntry messages={messages}/>
     <FeaturedUnits units={featuredUnits} messages={messages}/>
+    <DevelopmentAreaFilm messages={messages}/>
     <DevelopmentPhases messages={messages}/>
 
     <section className="development-area" hidden>

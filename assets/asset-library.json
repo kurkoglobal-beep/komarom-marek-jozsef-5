@@ -465,6 +465,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-MARKETING-DEVELOPMENT-AREA-MOOD-FILM-001",
+      "name": "KMJ5_DevelopmentArea_MoodFilm",
+      "version": "v01",
+      "createdAt": "2026-08-01",
+      "creator": "Külső stock videó / projektcsapat webes feldolgozása",
+      "description": "Nyolc másodperces, optimalizált hangulatvideó a fejlesztési terület bemutatásához. Nem a Komárom projekt helyszínén készült felvétel.",
+      "purpose": ["landing-page", "marketing", "development-area", "illustrative-mood"],
+      "relatedSprint": "Development area mood film UX",
+      "category": "marketing/video",
+      "sourcePath": "assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_v01.mp4",
+      "renditions": [
+        {
+          "path": "public/assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_v01.mp4",
+          "format": "mp4",
+          "width": 480,
+          "height": 272,
+          "purpose": "web-autoplay-loop"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-BRANDING-FAVICON-001",
       "name": "KMJ5_Favicon",
       "version": "v01",
