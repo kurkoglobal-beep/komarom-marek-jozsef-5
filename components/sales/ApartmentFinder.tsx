@@ -4,8 +4,8 @@ import type { UnitView } from "@/types/sales";
 import { UnitCard } from "./UnitCard";
 import { defaultLocale, getTranslations } from "@/lib/i18n";
 const { messages } = getTranslations(defaultLocale);
-type Filters = { building:string; floor:string; rooms:string; minArea:string; outdoor:string; orientation:string; status:string };
-const empty: Filters = { building:"",floor:"",rooms:"",minArea:"",outdoor:"",orientation:"",status:"" };
+type Filters = { building:string; floor:string; rooms:string; minArea:string; outdoor:string; orientation:string; status:string; phaseId:string; targetHandoverRange:string };
+const empty: Filters = { building:"",floor:"",rooms:"",minArea:"",outdoor:"",orientation:"",status:"",phaseId:"",targetHandoverRange:"" };
 export function ApartmentFinder({ units }: { units: UnitView[] }) {
   const [filters, setFilters] = useState<Filters>(empty);
   const [queryLabel, setQueryLabel] = useState("");
