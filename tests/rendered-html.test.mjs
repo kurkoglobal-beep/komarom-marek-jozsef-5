@@ -38,7 +38,7 @@ test("server-renders the multi-audience Komárom residential website", async () 
   const html = await response.text();
   assert.match(html, /<title>Komárom Marek József utca 5\. \| Prémium lakónegyed<\/title>/i);
   assert.match(html, /Új otthonok\. Élhető jövő\./);
-  assert.match(html, /Befektetőknek/);
+  assert.doesNotMatch(html, />Befektetőknek</);
   assert.match(html, /Bérlőknek/);
   assert.match(html, /Lakáskereső/);
   assert.match(html, /Emberléptékű építészet/);
@@ -54,15 +54,13 @@ test("server-renders the multi-audience Komárom residential website", async () 
   assert.match(html, /Smart Care &amp; Health/);
   assert.match(html, /Wellness &amp; Gyógytorna/);
   assert.match(html, /KMJ5_SeniorLiving_Courtyard_v01\.webp/);
-  assert.match(html, /Befektetési potenciál/);
-  assert.match(html, /Befektetési modell/);
-  assert.match(html, /Pontosítás alatt/);
-  assert.match(html, /nem minősül pénzügyi ajánlatnak vagy hozamígéretnek/);
+  assert.doesNotMatch(html, /Befektetési potenciál/);
+  assert.doesNotMatch(html, /Befektetési modell/);
   assert.doesNotMatch(html, /12[–-]15%|6[–-]8%/);
   assert.doesNotMatch(html, /Lakástípusok/);
   assert.match(html, /Lakások felfedezése/);
   assert.match(html, /Üzlethelyiségek/);
-  assert.match(html, /Irodák és stúdiók/);
+  assert.doesNotMatch(html, /Irodák és stúdiók/);
   assert.match(html, /Hosszú távra/);
   assert.match(html, /Építsük együtt Komárom új lakónegyedét/);
   assert.match(html, /value="commercial-tenancy"/);

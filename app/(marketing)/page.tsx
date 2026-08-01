@@ -13,7 +13,6 @@ const { content, messages } = getTranslations(defaultLocale);
 const nav = [
   [messages.navigation.developmentArea, "#development-area"],
   [messages.navigation.residential, "#residential"],
-  [messages.navigation.investors, "#investment"],
   [messages.navigation.tenants, "#tenants"],
   [messages.navigation.about, "#about"],
   [messages.navigation.contact, "#contact"],
@@ -42,9 +41,6 @@ export default function Home() {
   const [activeCampusHotspot, setActiveCampusHotspot] = useState(0);
   const [activeSeniorMode, setActiveSeniorMode] = useState(0);
   const [activeSeniorHotspot, setActiveSeniorHotspot] = useState(0);
-  const [investmentAmount, setInvestmentAmount] = useState(5);
-  const [investmentCategory, setInvestmentCategory] = useState(0);
-  const [investmentYears, setInvestmentYears] = useState(7);
   const [locationVisible, setLocationVisible] = useState(false);
   const [locationTimes, setLocationTimes] = useState(() => content.location.places.map(() => 0));
 
@@ -153,7 +149,7 @@ export default function Home() {
     </section>
 
     <section className="audience-gateway" aria-label={content.website.audiencesLabel}>
-      {content.website.audiences.map((audience) => <a key={audience.title} href={audience.href}>
+      {content.website.audiences.filter((audience) => audience.href !== "#investment").map((audience) => <a key={audience.title} href={audience.href}>
         <span aria-hidden="true">{audience.icon}</span><div><small>{audience.eyebrow}</small><h2>{audience.title}</h2><p>{audience.description}</p></div><b aria-hidden="true">→</b>
       </a>)}
     </section>
@@ -489,78 +485,9 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="investment-section" id="investment">
-      <div className="investment-heading">
-        <div>
-          <p className="kicker">{content.investment.kicker}</p>
-          <h2>{content.investment.title}<br/><em>{content.investment.titleEmphasis}</em></h2>
-        </div>
-        <p>{content.investment.description}</p>
-      </div>
-
-      <div className="investment-kpis">
-        {content.investment.kpis.map((kpi) => <article key={kpi.label}>
-          <span aria-hidden="true">{kpi.icon}</span>
-          <strong>{kpi.value}</strong>
-          <p>{kpi.label}</p>
-        </article>)}
-      </div>
-
-      <div className="investment-dashboard">
-        <div className="investment-calculator">
-          <header><div><small>{content.investment.calculator.eyebrow}</small><h3>{content.investment.calculator.title}</h3></div><span>{content.investment.calculator.status}</span></header>
-          <div className="investment-controls">
-            <label>
-              <span>{content.investment.calculator.amountLabel}</span>
-              <strong>{investmentAmount} {content.investment.calculator.amountUnit}</strong>
-              <input type="range" min="1" max="20" step="1" value={investmentAmount} onChange={(event) => setInvestmentAmount(Number(event.target.value))}/>
-              <small><span>1 {content.investment.calculator.amountUnit}</span><span>20 {content.investment.calculator.amountUnit}</span></small>
-            </label>
-            <div className="investment-selector">
-              <span>{content.investment.calculator.categoryLabel}</span>
-              <div>{content.investment.calculator.categories.map((category, index) => <button key={category} type="button" className={investmentCategory === index ? "active" : ""} aria-pressed={investmentCategory === index} onClick={() => setInvestmentCategory(index)}>{category}</button>)}</div>
-            </div>
-            <div className="investment-selector">
-              <span>{content.investment.calculator.horizonLabel}</span>
-              <div>{[5, 7, 10].map((year) => <button key={year} type="button" className={investmentYears === year ? "active" : ""} aria-pressed={investmentYears === year} onClick={() => setInvestmentYears(year)}>{year} {content.investment.calculator.yearUnit}</button>)}</div>
-            </div>
-          </div>
-          <div className="investment-chart" role="img" aria-label={content.investment.calculator.chartAriaLabel}>
-            <div className="chart-legend"><span><i className="appreciation"/> {content.investment.calculator.appreciationLabel}</span><span><i className="rental"/> {content.investment.calculator.rentalLabel}</span></div>
-            <div className="chart-grid">
-              {Array.from({ length: investmentYears }, (_, index) => {
-                const base = 24 + index * (56 / Math.max(investmentYears - 1, 1));
-                const categoryLift = investmentCategory * 3;
-                const amountLift = Math.min(investmentAmount, 20) * .35;
-                return <div className="chart-year" key={index}>
-                  <div className="chart-bars"><span className="appreciation-bar" style={{ height: `${Math.min(94, base + categoryLift + amountLift)}%` }}/><span className="rental-bar" style={{ height: `${Math.min(75, 16 + index * (45 / Math.max(investmentYears - 1, 1)) + categoryLift)}%` }}/></div>
-                  <small>{index + 1}. {content.investment.calculator.yearShort}</small>
-                </div>;
-              })}
-            </div>
-            <p>{content.investment.calculator.disclaimer}</p>
-          </div>
-        </div>
-
-        <aside className="investment-teaser">
-          <span className="pdf-icon" aria-hidden="true">PDF</span>
-          <small>{content.investment.teaser.eyebrow}</small>
-          <h3>{content.investment.teaser.title}</h3>
-          <p>{content.investment.teaser.description}</p>
-          <a className="button gold" href="#project-contact">{content.investment.teaser.cta} <span>→</span></a>
-          <button type="button" disabled>{content.investment.teaser.download} <span>↓</span></button>
-        </aside>
-      </div>
-
-      <div className="investment-roadmap">
-        <header><small>{content.investment.roadmap.eyebrow}</small><h3>{content.investment.roadmap.title}</h3></header>
-        <ol>{content.investment.roadmap.phases.map((phase, index) => <li key={phase.title}><span>{index + 1}</span><div><strong>{phase.title}</strong><p>{phase.description}</p></div></li>)}</ol>
-      </div>
-    </section>
-
     <section className="tenant-section" id="tenants">
       <div className="tenant-heading"><div><p className="kicker light-text">{content.website.tenants.kicker}</p><h2>{content.website.tenants.title}<br/><em>{content.website.tenants.titleEmphasis}</em></h2></div><p>{content.website.tenants.description}</p></div>
-      <div className="tenant-grid">{content.website.tenants.spaces.map((space) => <article key={space.title}><span aria-hidden="true">{space.icon}</span><small>{space.type}</small><h3>{space.title}</h3><p>{space.description}</p><dl>{space.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl><a href="#project-contact">{content.website.tenants.cta} <b>→</b></a></article>)}</div>
+      <div className="tenant-grid single">{content.website.tenants.spaces.slice(0, 1).map((space) => <article key={space.title}><span aria-hidden="true">{space.icon}</span><small>{space.type}</small><h3>{space.title}</h3><p>{space.description}</p><dl>{space.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl><a href="#project-contact">{content.website.tenants.cta} <b>→</b></a></article>)}</div>
     </section>
 
     <section className="gallery" id="gallery">
