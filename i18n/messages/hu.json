@@ -111,7 +111,8 @@
     "searchEyebrow": "Gyorskereső", "searchTitle": "Találja meg az Önhöz illő otthont", "minimumArea": "Minimum alapterület",
     "entryEyebrow": "Digitális ingatlanélmény", "entryTitle": "Induljon el.", "entryEmphasis": "Válasszon saját útvonalat.", "primary": "Elsődleges élmény",
     "masterplan": "Masterplan felfedezése", "apartments": "Lakások megtekintése", "favorites": "Kedvencek", "project": "Projekt bemutatása",
-    "masterplanAlt": "A lakónegyed interaktív masterplanjének előnézete", "apartmentsAlt": "Prémium lakás parkra néző belső tere"
+    "masterplanAlt": "A lakónegyed interaktív masterplanjének előnézete", "apartmentsAlt": "Prémium lakás parkra néző belső tere",
+    "featuredEyebrow": "Kiemelt otthonok", "featuredTitle": "Válogatott lakások.", "featuredEmphasis": "Közvetlenül felfedezhetők."
   },
   "sales": {
     "home": "Kezdőlap", "masterplan": "Masterplan", "apartments": "Lakások", "favorites": "Kedvencek", "contact": "Kapcsolat",

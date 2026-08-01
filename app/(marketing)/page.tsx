@@ -9,6 +9,8 @@ import {
   interpolate,
 } from "@/lib/i18n";
 import { HomeAppEntry } from "@/components/home/HomeAppEntry";
+import { FeaturedUnits } from "@/components/home/FeaturedUnits";
+import { getUnitViews } from "@/lib/sales/data";
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
@@ -20,6 +22,7 @@ const nav = [
 ];
 const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living-pillar", "common-space"] as const;
 const heroIntervalMs = 8_000;
+const featuredUnits = getUnitViews().filter((unit) => unit.availabilityStatus === "available").slice(0, 4);
 
 function Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
@@ -150,6 +153,7 @@ export default function Home() {
     </section>
 
     <HomeAppEntry messages={messages}/>
+    <FeaturedUnits units={featuredUnits} messages={messages}/>
 
     <section className="development-area" id="development-area">
       <div className="development-copy">
@@ -228,7 +232,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="residential-overview" id="residential">
+    <section className="residential-overview" id="residential" hidden>
       <div className="residential-overview-copy"><p className="kicker">{content.website.residential.kicker}</p><h2>{content.website.residential.title}<br/><em>{content.website.residential.titleEmphasis}</em></h2><p>{content.website.residential.description}</p><a className="text-link" href="#apartment-finder">{content.website.residential.cta} <span>→</span></a></div>
       <div className="residential-values">{content.website.residential.values.map((value, index) => <article key={value.title}><span>0{index + 1}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</div>
     </section>
@@ -259,7 +263,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="residential-masterplan-section" id="apartment-finder">
+    <section className="residential-masterplan-section" id="apartment-finder" hidden>
       <div className="residential-masterplan-heading">
         <div><p className="kicker">{content.residentialMasterplan.kicker}</p><h2>{content.residentialMasterplan.title}<br/><em>{content.residentialMasterplan.titleEmphasis}</em></h2></div>
         <p>{content.residentialMasterplan.description}</p>
@@ -482,7 +486,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="tenant-section" id="tenants">
+    <section className="tenant-section" id="tenants" hidden>
       <div className="tenant-heading"><div><p className="kicker light-text">{content.website.tenants.kicker}</p><h2>{content.website.tenants.title}<br/><em>{content.website.tenants.titleEmphasis}</em></h2></div><p>{content.website.tenants.description}</p></div>
       <div className="tenant-grid single">{content.website.tenants.spaces.slice(0, 1).map((space) => <article key={space.title}><span aria-hidden="true">{space.icon}</span><small>{space.type}</small><h3>{space.title}</h3><p>{space.description}</p><dl>{space.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl><a href="#project-contact">{content.website.tenants.cta} <b>→</b></a></article>)}</div>
     </section>
@@ -496,12 +500,12 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="about-section" id="about">
+    <section className="about-section" id="about" hidden>
       <div><p className="kicker">{content.website.about.kicker}</p><h2>{content.website.about.title}<br/><em>{content.website.about.titleEmphasis}</em></h2></div>
       <div className="about-story"><p>{content.website.about.description}</p><div>{content.website.about.values.map((value) => <article key={value.title}><span aria-hidden="true">{value.icon}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</div></div>
     </section>
 
-    <section className="career-section" id="careers">
+    <section className="career-section" id="careers" hidden>
       <div><small>{content.website.careers.kicker}</small><h2>{content.website.careers.title}</h2><p>{content.website.careers.description}</p></div>
       <a className="button gold" href={`mailto:${content.contact.email}?subject=${encodeURIComponent(content.website.careers.emailSubject)}`}>{content.website.careers.cta} <span>→</span></a>
     </section>

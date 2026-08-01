@@ -59,6 +59,12 @@ test("server-renders the multi-audience Komárom residential website", async () 
   assert.doesNotMatch(html, /12[–-]15%|6[–-]8%/);
   assert.doesNotMatch(html, /Lakástípusok/);
   assert.match(html, /Lakások felfedezése/);
+  assert.match(html, /name="rooms"/);
+  assert.match(html, /name="minArea"/);
+  assert.match(html, /name="status"/);
+  assert.match(html, /Masterplan felfedezése/);
+  assert.match(html, /Kiemelt otthonok/);
+  assert.match(html, /href="\/lakasok\/unit-[^"]+"/);
   assert.match(html, /Üzlethelyiségek/);
   assert.doesNotMatch(html, /Irodák és stúdiók/);
   assert.match(html, /Hosszú távra/);
