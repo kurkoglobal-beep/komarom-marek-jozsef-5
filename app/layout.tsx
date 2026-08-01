@@ -4,6 +4,8 @@ import "./platform.css";
 import { defaultLocale, getTranslations } from "@/lib/i18n";
 import { PwaRegister } from "@/components/sales/PwaRegister";
 import { MobileBottomNav } from "@/components/sales/MobileBottomNav";
+import { RouteProgress } from "@/components/ui/RouteProgress";
+import { Suspense } from "react";
 
 const { content } = getTranslations(defaultLocale);
 
@@ -41,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={defaultLocale}>
-      <body className="platform-mobile-navigation">{children}<MobileBottomNav/><PwaRegister/></body>
+      <body className="platform-mobile-navigation"><Suspense fallback={null}><RouteProgress/></Suspense>{children}<MobileBottomNav/><PwaRegister/></body>
     </html>
   );
 }

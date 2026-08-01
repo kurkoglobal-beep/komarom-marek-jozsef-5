@@ -1,11 +1,31 @@
 @import "tailwindcss";
 
-:root { --ink:#17201b; --forest:#1c2a21; --olive:#7d8b4e; --gold:#cabb7e; --paper:#f9f8f4; --line:rgba(23,32,27,.14); }
+:root {
+  --ink:#17201b; --forest:#1c2a21; --olive:#7d8b4e; --gold:#cabb7e; --paper:#f9f8f4; --line:rgba(23,32,27,.14);
+  --ui-color-text:var(--ink); --ui-color-text-muted:#69736c; --ui-color-surface:var(--paper); --ui-color-surface-elevated:#fff;
+  --ui-color-primary:var(--forest); --ui-color-accent:var(--gold); --ui-color-border:var(--line); --ui-color-danger:#8d4038;
+  --ui-space-1:8px; --ui-space-2:16px; --ui-space-3:24px; --ui-space-4:32px; --ui-space-5:40px; --ui-space-6:48px; --ui-space-8:64px;
+  --ui-radius-md:16px; --ui-radius-lg:20px; --ui-radius-xl:24px; --ui-touch-target:44px;
+  --ui-safe-top:env(safe-area-inset-top,0px); --ui-safe-right:env(safe-area-inset-right,0px); --ui-safe-bottom:env(safe-area-inset-bottom,0px); --ui-safe-left:env(safe-area-inset-left,0px);
+  --ui-shadow-low:0 10px 30px rgba(23,32,27,.08); --ui-shadow-overlay:0 24px 70px rgba(23,32,27,.2); --ui-motion-fast:180ms; --ui-motion-base:240ms;
+}
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,Helvetica,sans-serif; }
 a { color:inherit; text-decoration:none; }
 button,input,select { font:inherit; }
+button,a,input,select,textarea{touch-action:manipulation}
+:focus-visible{outline:2px solid var(--ui-color-accent);outline-offset:3px}
+.ui-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ui-state{min-height:260px;display:grid;place-items:center;align-content:center;gap:var(--ui-space-2);padding:var(--ui-space-4);text-align:center;border:1px solid var(--ui-color-border);border-radius:var(--ui-radius-lg);background:var(--ui-color-surface-elevated)}
+.ui-state__icon{font:400 42px/1 Georgia;color:var(--ui-color-accent)}.ui-state h2,.ui-state p{margin:0}.ui-state p{max-width:480px;color:var(--ui-color-text-muted);line-height:1.6}
+.ui-skeleton{display:block;overflow:hidden;border-radius:var(--ui-radius-md);background:color-mix(in srgb,var(--ui-color-primary) 8%,var(--ui-color-surface))}.ui-skeleton:after{content:"";display:block;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:ui-shimmer 1.4s infinite;transform:translateX(-100%)}
+.ui-bottom-sheet{position:fixed;z-index:140;left:0;right:0;bottom:0;padding:var(--ui-space-3) max(var(--ui-space-2),var(--ui-safe-right)) calc(var(--ui-space-3) + var(--ui-safe-bottom)) max(var(--ui-space-2),var(--ui-safe-left));border-radius:var(--ui-radius-xl) var(--ui-radius-xl) 0 0;background:color-mix(in srgb,var(--ui-color-surface-elevated) 92%,transparent);box-shadow:var(--ui-shadow-overlay);backdrop-filter:blur(20px)}
+.ui-sticky-actions{position:sticky;z-index:50;bottom:0;display:flex;gap:var(--ui-space-1);padding:var(--ui-space-2);padding-bottom:calc(var(--ui-space-2) + var(--ui-safe-bottom));border-top:1px solid var(--ui-color-border);background:color-mix(in srgb,var(--ui-color-surface) 92%,transparent);backdrop-filter:blur(18px)}.ui-sticky-actions>*{min-height:var(--ui-touch-target)}
+.ui-toast-region{position:fixed;z-index:200;right:max(var(--ui-space-2),var(--ui-safe-right));bottom:calc(88px + var(--ui-safe-bottom));display:grid;gap:var(--ui-space-1)}.ui-toast{max-width:360px;padding:14px 18px;border-radius:var(--ui-radius-md);color:#fff;background:var(--ui-color-primary);box-shadow:var(--ui-shadow-overlay)}
+.ui-route-progress{position:fixed;z-index:250;left:0;top:0;width:100%;height:2px;pointer-events:none;transform-origin:left;background:var(--ui-color-accent);animation:ui-route-progress .65s ease both}
+@keyframes ui-shimmer{to{transform:translateX(100%)}}@keyframes ui-route-progress{0%{transform:scaleX(0);opacity:1}75%{transform:scaleX(.78);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 .site { overflow:hidden; }
 .site h1,.site h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.05em; }
 .site h2 { font-size:clamp(44px,5.3vw,80px); line-height:.98; }
