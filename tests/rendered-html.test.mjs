@@ -64,6 +64,11 @@ test("server-renders the multi-audience Komárom residential website", async () 
   assert.match(html, /name="status"/);
   assert.match(html, /Masterplan felfedezése/);
   assert.match(html, /Kiemelt otthonok/);
+  assert.match(html, /Egy átgondolt fejlesztés/);
+  assert.match(html, /Adatfeltöltés alatt/);
+  assert.match(html, /Mikor szeretne költözni/);
+  assert.match(html, /Távolság és menetidő ellenőrzés alatt/);
+  assert.doesNotMatch(html, /class="location-count"/);
   assert.match(html, /href="\/lakasok\/unit-[^"]+"/);
   assert.match(html, /Üzlethelyiségek/);
   assert.doesNotMatch(html, /Irodák és stúdiók/);
@@ -85,7 +90,12 @@ test("server-renders apartment finder and direct unit URL", async () => {
   const html = await detail.text();
   assert.match(html, /A-2\.01/);
   assert.match(html, /Érdeklődöm a lakásról/);
-  assert.match(html, /Statikus axonometrikus előnézet/);
+  assert.match(html, /Minden nézet egy helyen/);
+  assert.match(html, /Lakáshoz rendelt dokumentáció/);
+  assert.match(html, /2D alaprajz/);
+  const conceptDetail = await renderPath("/lakasok/unit-a-101");
+  assert.equal(conceptDetail.status, 200);
+  assert.match(await conceptDetail.text(), /Belsőépítészeti koncepció/);
 });
 
 test("keeps marketing and sales route boundaries available", async () => {
