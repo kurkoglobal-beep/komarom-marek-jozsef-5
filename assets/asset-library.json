@@ -465,6 +465,28 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-RENDER-CONSTRUCTION-MOOD-001",
+      "name": "KMJ5_DevelopmentPhases_ConstructionMood",
+      "version": "v01",
+      "createdAt": "2026-08-01",
+      "creator": "Felhasználó által biztosított külső fotó / projektcsapat webes feldolgozása",
+      "description": "Rakodógépet ábrázoló építési hangulatkép a fejlesztési ütemek vizuális hátteréhez. Nem a Komárom projekt helyszínén készült felvétel.",
+      "purpose": ["landing-page", "development-phases", "illustrative-mood"],
+      "relatedSprint": "Development phases visual redesign",
+      "category": "renders/construction",
+      "sourcePath": "assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v01.jpg",
+      "renditions": [
+        {
+          "path": "public/assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v01.webp",
+          "format": "webp",
+          "width": 2400,
+          "height": 1049,
+          "purpose": "web-background"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-MARKETING-DEVELOPMENT-AREA-MOOD-FILM-001",
       "name": "KMJ5_DevelopmentArea_MoodFilm",
       "version": "v01",

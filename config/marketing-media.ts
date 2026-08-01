@@ -3,3 +3,7 @@ export const developmentAreaFilm = {
   poster: "/assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.webp",
   type: "video/mp4",
 } as const;
+
+export const developmentPhasesMedia = {
+  background: "/assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v01.webp",
+} as const;
