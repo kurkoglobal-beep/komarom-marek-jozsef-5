@@ -6,10 +6,11 @@
     {"id":"phase-4","code":"4","status":"planned","plannedHandover":null,"unitCount":null,"availableUnitCount":null,"progressPercent":null,"hotspot":{"x":58,"y":48,"width":34,"height":36}}
   ],
   "locations": [
-    {"id":"location-danube","category":"nature","x":22,"y":68,"verified":false,"travelMinutes":null,"distanceMeters":null},
-    {"id":"location-transport","category":"transport","x":68,"y":62,"verified":false,"travelMinutes":null,"distanceMeters":null},
-    {"id":"location-education","category":"education","x":58,"y":27,"verified":false,"travelMinutes":null,"distanceMeters":null},
-    {"id":"location-regional","category":"regional","x":82,"y":18,"verified":false,"travelMinutes":null,"distanceMeters":null}
+    {"id":"location-danube","category":"nature","x":30,"y":67,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-bridge","category":"transport","x":72,"y":39,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-promenade","category":"nature","x":76,"y":78,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-residential","category":"regional","x":92,"y":48,"verified":false,"travelMinutes":null,"distanceMeters":null},
+    {"id":"location-regional","category":"regional","x":18,"y":49,"verified":false,"travelMinutes":null,"distanceMeters":null}
   ],
   "moveIntents": [
     {"id":"short_term","phaseId":null,"targetHandoverRange":"short_term","availabilityStatus":"available"},

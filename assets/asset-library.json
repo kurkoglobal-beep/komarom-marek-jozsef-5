@@ -27,6 +27,78 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-LOCATION-MONOSTORI-BRIDGE-001",
+      "name": "KMJ5_Location_MonostoriBridge",
+      "version": "v01",
+      "createdAt": "2026-08-02",
+      "creator": "OpenAI ImageGen, a felhasználó által jóváhagyott vizuális referencia alapján",
+      "description": "UI-mentes, naplementés komáromi Duna-parti helyszínvizuál a Monostori híddal, sétánnyal és jobb oldali lakóépülettel, külön desktop és mobil kompozícióban.",
+      "purpose": ["landing-page", "location", "interactive-hotspots", "responsive-background"],
+      "relatedSprint": "Location and surroundings visual redesign",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_Location_MonostoriBridge_v01.png",
+      "renditions": [
+        {
+          "path": "assets/renders/exterior/KMJ5_Location_MonostoriBridge_Mobile_v01.png",
+          "format": "png",
+          "width": 1086,
+          "height": 1448,
+          "purpose": "mobile-source"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_Location_MonostoriBridge_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "desktop-web-background"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_Location_MonostoriBridge_Mobile_v01.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "purpose": "mobile-web-background"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-RENDER-CONSTRUCTION-MOOD-002",
+      "name": "KMJ5_DevelopmentPhases_ConstructionMood",
+      "version": "v02",
+      "createdAt": "2026-08-02",
+      "creator": "OpenAI ImageGen, a felhasználó által jóváhagyott vizuális referencia alapján",
+      "description": "Felirat- és UI-mentes, naplementés építési hangulatkép desktop és külön újrakomponált mobil változatban. Nem a Komárom projekt helyszínén készült felvétel.",
+      "purpose": ["landing-page", "development-phases", "illustrative-mood", "responsive-background"],
+      "relatedSprint": "Development phases final visual",
+      "category": "renders/construction",
+      "sourcePath": "assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v02.png",
+      "renditions": [
+        {
+          "path": "assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_Mobile_v02.png",
+          "format": "png",
+          "width": 1086,
+          "height": 1448,
+          "purpose": "mobile-source"
+        },
+        {
+          "path": "public/assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1536,
+          "height": 1024,
+          "purpose": "desktop-web-background"
+        },
+        {
+          "path": "public/assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_Mobile_v02.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "purpose": "mobile-web-background"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-HERO-RESIDENTIAL-001",
       "name": "KMJ5_Hero_Residential",
       "version": "v01",
@@ -73,6 +145,35 @@
           "width": 1280,
           "height": 720,
           "purpose": "mobile-web-autoplay-loop"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-MARKETING-OFFICIAL-PROJECT-FILM-001",
+      "name": "KMJ5_OfficialProjectFilm",
+      "version": "v01",
+      "createdAt": "2026-08-02",
+      "creator": "Projektcsapat / AI-támogatott videó",
+      "description": "A Komárom Fejlesztési Terület hivatalos, tíz másodperces cinematic projektvideója. H.264/AAC forrásból veszteségmentes fast-start webes rendition és önálló WebP poster készült.",
+      "purpose": ["landing-page", "marketing", "development-area", "official-project-film"],
+      "relatedSprint": "Official project film integration",
+      "category": "marketing/video",
+      "sourcePath": "assets/marketing/video/KMJ5_OfficialProjectFilm_v01.mp4",
+      "renditions": [
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Web_v01.mp4",
+          "format": "mp4",
+          "width": 1280,
+          "height": 720,
+          "purpose": "responsive-web-autoplay-loop"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Poster_v01.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "purpose": "video-poster"
         }
       ],
       "status": "published"
@@ -536,6 +637,35 @@
         }
       ],
       "status": "retired"
+    },
+    {
+      "id": "KMJ5-EXTERIOR-EARLY-CHOICE-001",
+      "name": "KMJ5_EarlyChoice_ResidentialCourtyard",
+      "version": "v01",
+      "createdAt": "2026-08-02",
+      "creator": "Projektcsapat / AI vizuális koncepció",
+      "description": "Naplementés, parkosított háromszintes lakóépületek az előértékesítési előnyöket bemutató főoldali szekcióhoz.",
+      "purpose": ["landing-page", "early-choice", "residential", "marketing"],
+      "relatedSprint": "Early choice value section",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_EarlyChoice_ResidentialCourtyard_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_EarlyChoice_ResidentialCourtyard_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1535,
+          "height": 1024,
+          "purpose": "web-background-desktop"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_EarlyChoice_ResidentialCourtyard_Mobile_v01.webp",
+          "format": "webp",
+          "width": 900,
+          "height": 1200,
+          "purpose": "web-background-mobile"
+        }
+      ],
+      "status": "published"
     },
     {
       "id": "KMJ5-BRANDING-FAVICON-001",

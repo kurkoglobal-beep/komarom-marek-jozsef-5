@@ -14,6 +14,7 @@ import { getUnitViews } from "@/lib/sales/data";
 import { DevelopmentPhases } from "@/components/development/DevelopmentPhases";
 import { DevelopmentAreaFilm } from "@/components/development/DevelopmentAreaFilm";
 import { LocationExperience } from "@/components/location/LocationExperience";
+import { EarlyChoiceSection } from "@/components/home/EarlyChoiceSection";
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
@@ -117,6 +118,7 @@ export default function Home() {
 
     <HomeAppEntry messages={messages}/>
     <FeaturedUnits units={featuredUnits} messages={messages}/>
+    <EarlyChoiceSection messages={messages}/>
     <DevelopmentAreaFilm messages={messages}/>
     <DevelopmentPhases messages={messages}/>
 

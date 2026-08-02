@@ -1,12 +1,34 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Messages } from "@/lib/i18n";
 import { developmentAreaFilm } from "@/config/marketing-media";
 
 export function DevelopmentAreaFilm({ messages }: { messages: Messages }) {
   const copy = messages.experience.developmentFilm;
+  const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || typeof IntersectionObserver === "undefined") {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setShouldLoad(true);
+        observer.disconnect();
+      },
+      { rootMargin: "500px 0px" },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -36,7 +58,7 @@ export function DevelopmentAreaFilm({ messages }: { messages: Messages }) {
   }, []);
 
   return (
-    <section className="development-film" aria-labelledby="development-film-title">
+    <section ref={sectionRef} className="development-film" aria-labelledby="development-film-title">
       <div className="development-film__media">
         <video
           ref={videoRef}
@@ -44,15 +66,14 @@ export function DevelopmentAreaFilm({ messages }: { messages: Messages }) {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           controls={false}
           disablePictureInPicture
           poster={developmentAreaFilm.poster}
           aria-label={copy.videoLabel}
+          data-load-state={shouldLoad ? "ready" : "deferred"}
         >
-          {developmentAreaFilm.sources.map((source) => (
-            <source key={source.src} src={source.src} media={source.media} type={source.type} />
-          ))}
+          {shouldLoad ? <source src={developmentAreaFilm.src} type={developmentAreaFilm.type} /> : null}
         </video>
         <div className="development-film__shade" aria-hidden="true" />
         <div className="development-film__copy">
