@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "project": "KMJ5",
   "projectName": "Komárom, Marek József utca 5.",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-02",
   "assets": [
     {
       "id": "KMJ5-HERO-DEVELOPMENT-MASTER-001",
@@ -44,6 +44,35 @@
           "width": 3840,
           "height": 2160,
           "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-MARKETING-DEVELOPMENT-AREA-MOOD-FILM-002",
+      "name": "KMJ5_DevelopmentArea_MoodFilm",
+      "version": "v02",
+      "createdAt": "2026-08-02",
+      "creator": "Külső stock videó / projektcsapat webes feldolgozása",
+      "description": "Nyolc másodperces, adaptív H.264 hangulatvideó külön Retina desktop és mobil renditionnel. Hangcsatorna nélkül, muted inline autoplay használatra. Nem a Komárom projekt helyszínén készült felvétel.",
+      "purpose": ["landing-page", "marketing", "development-area", "illustrative-mood"],
+      "relatedSprint": "Development area video compatibility fix",
+      "category": "marketing/video",
+      "sourcePath": "assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_v02.json",
+      "renditions": [
+        {
+          "path": "public/assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_Desktop_v02.mp4",
+          "format": "mp4",
+          "width": 1920,
+          "height": 1080,
+          "purpose": "desktop-web-autoplay-loop"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_Mobile_v02.mp4",
+          "format": "mp4",
+          "width": 1280,
+          "height": 720,
+          "purpose": "mobile-web-autoplay-loop"
         }
       ],
       "status": "published"
@@ -506,7 +535,7 @@
           "purpose": "web-autoplay-loop"
         }
       ],
-      "status": "published"
+      "status": "retired"
     },
     {
       "id": "KMJ5-BRANDING-FAVICON-001",

@@ -1,0 +1,9 @@
+{
+  "source": "externally supplied project file",
+  "sourceFilename": "11901674_3840_2160_30fps.mp4",
+  "sourceResolution": "3840x2160",
+  "sourceDurationSeconds": 27.633,
+  "sourceCodec": "H.264 (avc1)",
+  "audio": "none",
+  "note": "The source file exceeds the Git repository threshold and remains outside Git until managed object storage is connected."
+}
