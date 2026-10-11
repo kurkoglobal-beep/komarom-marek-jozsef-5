@@ -2,16 +2,373 @@
   "schemaVersion": "1.0",
   "project": "KMJ5",
   "projectName": "Komárom, Marek József utca 5.",
-  "updatedAt": "2026-08-02",
+  "updatedAt": "2026-08-13",
   "assets": [
+    {
+      "id": "KMJ5-HERO-AERIAL-MASTERPLAN-001",
+      "name": "KMJ5_Hero_AerialMasterplan",
+      "version": "v01",
+      "createdAt": "2026-08-03",
+      "creator": "Projektépítész / projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "A teljes Komárom Marek József utca 5. lakópark eredeti madártávlati építészeti látványterve esti megvilágításban.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "masterplan-overview"
+      ],
+      "relatedSprint": "Hero architectural render replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_AerialMasterplan_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_AerialMasterplan_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1713,
+          "height": 918,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-AERIAL-MASTERPLAN-002",
+      "name": "KMJ5_Hero_AerialMasterplan",
+      "version": "v02",
+      "createdAt": "2026-08-13",
+      "creator": "OpenAI ImageGen / projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL / BRANDING CLEANUP",
+      "description": "A teljes lakópark esti madártávlati építészeti látványtervének hero-változata, a képre égetett logó és szlogen nélkül.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "masterplan-overview"
+      ],
+      "relatedSprint": "Hero duplicate logo cleanup",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_AerialMasterplan_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_AerialMasterplan_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1713,
+          "height": 918,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-AERIAL-MASTERPLAN-003",
+      "name": "KMJ5_Hero_AerialMasterplan",
+      "version": "v03",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "A teljes lakópark tetőkontúr-világítással kiemelt, esti madártávlati hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "masterplan-overview"
+      ],
+      "relatedSprint": "User-supplied hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_AerialMasterplan_v03.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_AerialMasterplan_Desktop_v03.webp",
+          "format": "webp",
+          "width": 3285,
+          "height": 1021,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-AERIAL-MASTERPLAN-004",
+      "name": "KMJ5_Hero_AerialMasterplan",
+      "version": "v04",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított javított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "A teljes lakópark nagy felbontású, tetőkontúr-világítással kiemelt esti madártávlati hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "masterplan-overview"
+      ],
+      "relatedSprint": "High-resolution hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_AerialMasterplan_v04.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_AerialMasterplan_Desktop_v04.webp",
+          "format": "webp",
+          "width": 2144,
+          "height": 733,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-MARKETING-OFFICIAL-PROJECT-FILM-002",
+      "name": "KMJ5_OfficialProjectFilm",
+      "version": "v02",
+      "createdAt": "2026-08-11",
+      "creator": "Felhasználó által biztosított projektanyag",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "A felhasználó által biztosított, 68 másodperces 4K projektfilm optimalizált webes kiadása. A repository a méretkorlát miatt checksum source manifestet, külön desktop és mobil fast-start H.264 renditiont, valamint kezdőképkockához igazított WebP postert tárol.",
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "development-area",
+        "official-project-film"
+      ],
+      "relatedSprint": "Approved project film replacement",
+      "category": "marketing/video",
+      "sourcePath": "assets/marketing/video/KMJ5_OfficialProjectFilm_SourceManifest_v02.json",
+      "sourceSha256": "05dc290396ed644e5dd70441b36b675ab74c49f9e6cb29f8b6fb53fceea7215a",
+      "sourceStorageStatus": "managed-object-storage-pending",
+      "renditions": [
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Web_v02.mp4",
+          "format": "mp4",
+          "width": 1280,
+          "height": 720,
+          "purpose": "desktop-fast-start-autoplay-loop"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Mobile_v02.mp4",
+          "format": "mp4",
+          "width": 960,
+          "height": 540,
+          "purpose": "mobile-fast-start-autoplay-loop"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Poster_v03.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "purpose": "first-frame-aligned-video-poster"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-BALCONY-SUNSET-002",
+      "name": "KMJ5_Hero_BalconySunset",
+      "version": "v02",
+      "createdAt": "2026-08-13",
+      "creator": "OpenAI ImageGen / projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL / BRANDING CLEANUP",
+      "description": "A naplementés erkély építészeti látványtervének hero-változata, a képre égetett logó és szlogen nélkül.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "residential-lifestyle"
+      ],
+      "relatedSprint": "Hero duplicate logo cleanup",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_BalconySunset_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_BalconySunset_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-BALCONY-SUNSET-001",
+      "name": "KMJ5_Hero_BalconySunset",
+      "version": "v01",
+      "createdAt": "2026-08-03",
+      "creator": "Projektépítész / projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "Prémium erkélyről nyíló naplementés életérzés az eredeti építészeti látványterven.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "residential-lifestyle"
+      ],
+      "relatedSprint": "Hero architectural render replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_BalconySunset_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_BalconySunset_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-COMMUNITY-GARDEN-EVENING-001",
+      "name": "KMJ5_Hero_CommunityGardenEvening",
+      "version": "v01",
+      "createdAt": "2026-08-03",
+      "creator": "Projektépítész / projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "A parkosított közösségi kert és a háromszintes lakóépületek esti hangulatú eredeti építészeti látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "community-garden"
+      ],
+      "relatedSprint": "Hero architectural render replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CommunityGardenEvening_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CommunityGardenEvening_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1535,
+          "height": 1024,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-COMMUNITY-GARDEN-EVENING-002",
+      "name": "KMJ5_Hero_CommunityGardenEvening",
+      "version": "v02",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "Háromszintes, kertkapcsolatos lakóépületek kékórás esti hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "community-garden"
+      ],
+      "relatedSprint": "User-supplied hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CommunityGardenEvening_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CommunityGardenEvening_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1632,
+          "height": 671,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-COMMUNITY-GARDEN-EVENING-003",
+      "name": "KMJ5_Hero_CommunityGardenEvening",
+      "version": "v03",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított javított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "Háromszintes, kertkapcsolatos lakóépületek nagy felbontású, kékórás esti hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "community-garden"
+      ],
+      "relatedSprint": "High-resolution hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CommunityGardenEvening_v03.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CommunityGardenEvening_Desktop_v03.webp",
+          "format": "webp",
+          "width": 1956,
+          "height": 804,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-COURTYARD-EVENING-001",
+      "name": "KMJ5_Hero_CourtyardEvening",
+      "version": "v01",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "Erkélyes lakóépület és parkosított belső kert kékórás esti hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "courtyard"
+      ],
+      "relatedSprint": "User-supplied hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CourtyardEvening_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CourtyardEvening_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1649,
+          "height": 686,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HERO-COURTYARD-EVENING-002",
+      "name": "KMJ5_Hero_CourtyardEvening",
+      "version": "v02",
+      "createdAt": "2026-08-13",
+      "creator": "Felhasználó által biztosított javított projektvizuál",
+      "classification": "USER-SUPPLIED / PROJECT VISUAL",
+      "description": "Erkélyes lakóépület és parkosított belső kert nagy felbontású, kékórás esti hero látványterve.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "marketing",
+        "courtyard"
+      ],
+      "relatedSprint": "High-resolution hero carousel replacement",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CourtyardEvening_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CourtyardEvening_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1944,
+          "height": 809,
+          "purpose": "responsive-web-hero"
+        }
+      ],
+      "status": "published"
+    },
     {
       "id": "KMJ5-HERO-DEVELOPMENT-MASTER-001",
       "name": "KMJ5_Hero_DevelopmentMaster",
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Az integrált Komárom Fejlesztési Terület emberi szemmagasságú master hero látványterve központi parkkal és tóval.",
-      "purpose": ["landing-page", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Hero redesign",
       "category": "hero",
       "sourcePath": "assets/hero/KMJ5_Hero_DevelopmentMaster_v01.png",
@@ -27,13 +384,55 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-EXTERIOR-EARLY-CHOICE-BALCONY-SUNSET-002",
+      "name": "KMJ5_EarlyChoice_BalconySunset",
+      "version": "v02",
+      "createdAt": "2026-08-03",
+      "creator": "Projektcsapat / ImageGen reszponzív képkiterjesztés a jóváhagyott forrásból",
+      "classification": "AI / GENERATED",
+      "description": "Naplementés erkély kilátással a Komárom Marek József utcai lakópark parkosított környezetére, külön desktop/tablet és mobil kompozícióban.",
+      "purpose": [
+        "landing-page",
+        "early-choice",
+        "residential",
+        "marketing",
+        "responsive-background"
+      ],
+      "relatedSprint": "Early choice image replacement",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_EarlyChoice_BalconySunset_v02.jpg",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_EarlyChoice_BalconySunset_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "purpose": "web-background-desktop-tablet"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_EarlyChoice_BalconySunset_Mobile_v02.webp",
+          "format": "webp",
+          "width": 900,
+          "height": 1200,
+          "purpose": "web-background-mobile"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-LOCATION-MONOSTORI-BRIDGE-001",
       "name": "KMJ5_Location_MonostoriBridge",
       "version": "v01",
       "createdAt": "2026-08-02",
       "creator": "OpenAI ImageGen, a felhasználó által jóváhagyott vizuális referencia alapján",
+      "classification": "AI / GENERATED",
       "description": "UI-mentes, naplementés komáromi Duna-parti helyszínvizuál a Monostori híddal, sétánnyal és jobb oldali lakóépülettel, külön desktop és mobil kompozícióban.",
-      "purpose": ["landing-page", "location", "interactive-hotspots", "responsive-background"],
+      "purpose": [
+        "landing-page",
+        "location",
+        "interactive-hotspots",
+        "responsive-background"
+      ],
       "relatedSprint": "Location and surroundings visual redesign",
       "category": "renders/exterior",
       "sourcePath": "assets/renders/exterior/KMJ5_Location_MonostoriBridge_v01.png",
@@ -68,8 +467,14 @@
       "version": "v02",
       "createdAt": "2026-08-02",
       "creator": "OpenAI ImageGen, a felhasználó által jóváhagyott vizuális referencia alapján",
+      "classification": "AI / GENERATED",
       "description": "Felirat- és UI-mentes, naplementés építési hangulatkép desktop és külön újrakomponált mobil változatban. Nem a Komárom projekt helyszínén készült felvétel.",
-      "purpose": ["landing-page", "development-phases", "illustrative-mood", "responsive-background"],
+      "purpose": [
+        "landing-page",
+        "development-phases",
+        "illustrative-mood",
+        "responsive-background"
+      ],
       "relatedSprint": "Development phases final visual",
       "category": "renders/construction",
       "sourcePath": "assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v02.png",
@@ -96,6 +501,76 @@
           "purpose": "mobile-web-background"
         }
       ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-RENDER-DEVELOPMENT-AREA-ARCHITECT-001",
+      "name": "KMJ5_DevelopmentArea_ArchitectFacade",
+      "version": "v01",
+      "createdAt": "2026-08-03",
+      "creator": "A projekt építésze / projektcsapat webes feldolgozása",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "Hivatalos esti építészeti 3D látványterv a háromszintes lakóépületről és a parkosított előtérről. Tiszta, természetes arányú desktop panoráma és középre fókuszált, valódi mobil crop készült, mesterséges háttérkitöltés nélkül.",
+      "purpose": [
+        "landing-page",
+        "development-area",
+        "official-architect-render",
+        "responsive-background"
+      ],
+      "relatedSprint": "Homepage development area visual refresh",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_v01.jpg",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_Desktop_v01.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 435,
+          "purpose": "desktop-web-background"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_Mobile_v01.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "purpose": "mobile-web-background"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-RENDER-DEVELOPMENT-AREA-ARCHITECT-002",
+      "name": "KMJ5_DevelopmentArea_ArchitectFacade",
+      "version": "v02",
+      "createdAt": "2026-08-03",
+      "creator": "A projekt építésze / projektcsapat webes feldolgozása",
+      "classification": "APPROVED PROJECT VISUAL",
+      "description": "Hivatalos esti 3D építészeti látványterv a háromszintes lakóépületről és a parkosított kertről. Kontrollált desktop panorámacrop és a teljes kompozíciót őrző mobil rendíció készült.",
+      "purpose": [
+        "landing-page",
+        "development-area",
+        "official-architect-render",
+        "responsive-background"
+      ],
+      "relatedSprint": "Homepage development area visual refresh",
+      "category": "renders/exterior",
+      "sourcePath": "assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_Desktop_v02.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 435,
+          "purpose": "desktop-controlled-panorama"
+        },
+        {
+          "path": "public/assets/renders/exterior/KMJ5_DevelopmentArea_ArchitectFacade_Mobile_v02.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "purpose": "mobile-full-composition"
+        }
+      ],
       "status": "published"
     },
     {
@@ -104,8 +579,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "A lakónegyedi pillér emberi szemmagasságú hero látványterve családokkal, parkkal és központi tóval.",
-      "purpose": ["landing-page", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Hero redesign",
       "category": "hero",
       "sourcePath": "assets/hero/KMJ5_Hero_Residential_v01.png",
@@ -126,8 +606,14 @@
       "version": "v02",
       "createdAt": "2026-08-02",
       "creator": "Külső stock videó / projektcsapat webes feldolgozása",
+      "classification": "STOCK / ILLUSTRATIVE",
       "description": "Nyolc másodperces, adaptív H.264 hangulatvideó külön Retina desktop és mobil renditionnel. Hangcsatorna nélkül, muted inline autoplay használatra. Nem a Komárom projekt helyszínén készült felvétel.",
-      "purpose": ["landing-page", "marketing", "development-area", "illustrative-mood"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "development-area",
+        "illustrative-mood"
+      ],
       "relatedSprint": "Development area video compatibility fix",
       "category": "marketing/video",
       "sourcePath": "assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_v02.json",
@@ -155,8 +641,14 @@
       "version": "v01",
       "createdAt": "2026-08-02",
       "creator": "Projektcsapat / AI-támogatott videó",
-      "description": "A Komárom Fejlesztési Terület hivatalos, tíz másodperces cinematic projektvideója. H.264/AAC forrásból veszteségmentes fast-start webes rendition és önálló WebP poster készült.",
-      "purpose": ["landing-page", "marketing", "development-area", "official-project-film"],
+      "classification": "AI / GENERATED",
+      "description": "A Komárom Fejlesztési Terület hivatalos, tíz másodperces cinematic projektvideója. A desktop fast-start rendition mellett külön hang nélküli, rövid-GOP mobil H.264 változat és az első képkockához igazított WebP poster készült.",
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "development-area",
+        "official-project-film"
+      ],
       "relatedSprint": "Official project film integration",
       "category": "marketing/video",
       "sourcePath": "assets/marketing/video/KMJ5_OfficialProjectFilm_v01.mp4",
@@ -166,7 +658,14 @@
           "format": "mp4",
           "width": 1280,
           "height": 720,
-          "purpose": "responsive-web-autoplay-loop"
+          "purpose": "desktop-web-autoplay-loop"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Mobile_v01.mp4",
+          "format": "mp4",
+          "width": 960,
+          "height": 540,
+          "purpose": "mobile-fast-start-autoplay-loop"
         },
         {
           "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Poster_v01.webp",
@@ -174,9 +673,16 @@
           "width": 1280,
           "height": 720,
           "purpose": "video-poster"
+        },
+        {
+          "path": "public/assets/marketing/video/KMJ5_OfficialProjectFilm_Poster_v02.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "purpose": "first-frame-aligned-video-poster"
         }
       ],
-      "status": "published"
+      "status": "retired"
     },
     {
       "id": "KMJ5-HERO-EDUCATION-CAMPUS-001",
@@ -184,8 +690,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "A parkosított, nemzetközi színvonalú Oktatási Campus emberi szemmagasságú hero látványterve.",
-      "purpose": ["landing-page", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Hero redesign",
       "category": "hero",
       "sourcePath": "assets/hero/KMJ5_Hero_EducationCampus_v01.png",
@@ -206,8 +717,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "A Senior Living pillér emberi szemmagasságú hero látványterve wellness pavilonnal, parkkal és vízfelülettel.",
-      "purpose": ["landing-page", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Hero redesign",
       "category": "hero",
       "sourcePath": "assets/hero/KMJ5_Hero_SeniorLiving_v01.png",
@@ -228,8 +744,12 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "classification": "AI / GENERATED",
       "description": "A Marek 5 lakópark esti hero látványterve.",
-      "purpose": ["landing-page", "marketing"],
+      "purpose": [
+        "landing-page",
+        "marketing"
+      ],
       "relatedSprint": "Sprint 1",
       "category": "hero",
       "sourcePath": "assets/hero/KMJ5_Hero_Night_v01.png",
@@ -250,8 +770,13 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "classification": "AI / GENERATED",
       "description": "Parkosított lakóépületek külső látványterve naplementekor.",
-      "purpose": ["landing-page", "marketing", "sales"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "sales"
+      ],
       "relatedSprint": "Sprint 1",
       "category": "renders/exterior",
       "sourcePath": "assets/renders/exterior/KMJ5_Exterior_Sunset_v01.png",
@@ -272,8 +797,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen / projekttervek alapján",
+      "classification": "AI / GENERATED",
       "description": "A prémium lakónegyed interaktív épületválasztójának tóparti, háromszintes masterplan látványterve.",
-      "purpose": ["landing-page", "masterplan", "sales"],
+      "purpose": [
+        "landing-page",
+        "masterplan",
+        "sales"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "masterplan",
       "sourcePath": "assets/masterplan/KMJ5_Residential_InteractiveMasterplan_v01.png",
@@ -289,13 +819,126 @@
       "status": "published"
     },
     {
+      "id": "KMJ5-HOME-ENTRY-MASTERPLAN-DISCOVERY-001",
+      "name": "KMJ5_HomeEntry_MasterplanDiscovery",
+      "version": "v01",
+      "createdAt": "2026-08-12",
+      "creator": "Felhasználó által biztosított vizuál",
+      "classification": "USER-SUPPLIED / CONCEPT VISUAL",
+      "description": "A kezdőlap Masterplan felfedezése belépőkártyájához biztosított, A–E épületjelöléseket és Lakáskiválasztó feliratot tartalmazó lakónegyedi vizuál.",
+      "purpose": [
+        "landing-page",
+        "masterplan-entry",
+        "sales-navigation"
+      ],
+      "relatedSprint": "Approved home experience asset replacement",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v01.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v01.webp",
+          "format": "webp",
+          "width": 1429,
+          "height": 749,
+          "purpose": "web"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HOME-ENTRY-MASTERPLAN-DISCOVERY-002",
+      "name": "KMJ5_HomeEntry_MasterplanDiscovery",
+      "version": "v02",
+      "createdAt": "2026-08-12",
+      "creator": "OpenAI ImageGen / felhasználó által biztosított vizuál",
+      "classification": "AI / GENERATED",
+      "description": "A Lakáskiválasztó kezdőlapi belépőkártyájának felirat nélküli, naplementés lakónegyedi koncepcióvizuálja.",
+      "purpose": [
+        "landing-page",
+        "apartment-selector-entry",
+        "sales-navigation"
+      ],
+      "relatedSprint": "Approved home experience asset replacement",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v02.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v02.webp",
+          "format": "webp",
+          "width": 1836,
+          "height": 857,
+          "purpose": "web"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HOME-ENTRY-MASTERPLAN-DISCOVERY-003",
+      "name": "KMJ5_HomeEntry_MasterplanDiscovery",
+      "version": "v03",
+      "createdAt": "2026-08-12",
+      "creator": "OpenAI ImageGen / projektcsapat",
+      "classification": "AI / GENERATED",
+      "description": "A Lakáskiválasztó kezdőlapi belépőkártyájának naplementés lakónegyedi koncepcióvizuálja, négy épület fölött A–D jelölőkkel.",
+      "purpose": [
+        "landing-page",
+        "apartment-selector-entry",
+        "sales-navigation"
+      ],
+      "relatedSprint": "Approved home experience asset replacement",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v03.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v03.webp",
+          "format": "webp",
+          "width": 1836,
+          "height": 857,
+          "purpose": "web"
+        }
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "KMJ5-HOME-ENTRY-MASTERPLAN-DISCOVERY-004",
+      "name": "KMJ5_HomeEntry_MasterplanDiscovery",
+      "version": "v04",
+      "createdAt": "2026-08-12",
+      "creator": "OpenAI ImageGen / projektcsapat",
+      "classification": "AI / GENERATED",
+      "description": "A Lakáskiválasztó kezdőlapi belépőkártyájának naplementés lakónegyedi koncepcióvizuálja, a kártyakivágásban is látható A–D épületjelölőkkel.",
+      "purpose": [
+        "landing-page",
+        "apartment-selector-entry",
+        "sales-navigation"
+      ],
+      "relatedSprint": "Approved home experience asset replacement",
+      "category": "masterplan",
+      "sourcePath": "assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v04.png",
+      "renditions": [
+        {
+          "path": "public/assets/masterplan/KMJ5_HomeEntry_MasterplanDiscovery_v04.webp",
+          "format": "webp",
+          "width": 1836,
+          "height": 857,
+          "purpose": "web"
+        }
+      ],
+      "status": "published"
+    },
+    {
       "id": "KMJ5-FLOORPLAN-A201-001",
       "name": "KMJ5_A201_Floorplan",
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "Projektcsapat / látványtervi feldolgozás",
+      "classification": "ARCHITECTURAL SOURCE",
       "description": "Az A-2.01 kétszobás lakás berendezett alaprajzi vizualizációja.",
-      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "purpose": [
+        "landing-page",
+        "sales",
+        "apartment-detail"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "floorplans",
       "sourcePath": "assets/floorplans/KMJ5_A201_Floorplan_v01.png",
@@ -316,8 +959,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "Projektcsapat / látványtervi feldolgozás",
+      "classification": "ARCHITECTURAL SOURCE",
       "description": "Az A-2.01 lakás berendezett axonometrikus belső nézete.",
-      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "purpose": [
+        "landing-page",
+        "sales",
+        "apartment-detail"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "apartments/type-a",
       "sourcePath": "assets/apartments/type-a/KMJ5_A201_Axonometric_v01.png",
@@ -338,8 +986,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "Projektcsapat / látványtervi feldolgozás",
+      "classification": "CONCEPT VISUAL",
       "description": "Az A-2.01 lakás tóra néző nappali-étkező-konyha enteriőrje.",
-      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "purpose": [
+        "landing-page",
+        "sales",
+        "apartment-detail"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "apartments/type-a",
       "sourcePath": "assets/apartments/type-a/KMJ5_A201_Livingroom_v01.png",
@@ -360,8 +1013,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "Projektcsapat / látványtervi feldolgozás",
+      "classification": "CONCEPT VISUAL",
       "description": "Az A-2.01 lakás meleg tölgy és textil anyaghasználatú hálószobája.",
-      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "purpose": [
+        "landing-page",
+        "sales",
+        "apartment-detail"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "apartments/type-a",
       "sourcePath": "assets/apartments/type-a/KMJ5_A201_Bedroom_v01.png",
@@ -382,8 +1040,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "Projektcsapat / látványtervi feldolgozás",
+      "classification": "CONCEPT VISUAL",
       "description": "Az A-2.01 lakás bézs kőhatású burkolattal tervezett fürdőszobája.",
-      "purpose": ["landing-page", "sales", "apartment-detail"],
+      "purpose": [
+        "landing-page",
+        "sales",
+        "apartment-detail"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "apartments/type-a",
       "sourcePath": "assets/apartments/type-a/KMJ5_A201_Bathroom_v01.png",
@@ -404,8 +1067,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "HRSZ. 136 / Projektcsapat",
+      "classification": "ARCHITECTURAL SOURCE",
       "description": "A lakóépület hivatalos földszinti tervlapja PDF-formátumban.",
-      "purpose": ["document", "floorplan", "download"],
+      "purpose": [
+        "document",
+        "floorplan",
+        "download"
+      ],
       "relatedSprint": "Residential interactive masterplan",
       "category": "documents",
       "sourcePath": "assets/documents/KMJ5_Residential_GroundFloorPlan_v01.pdf",
@@ -424,8 +1092,14 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "A 3,2 hektáros Komárom Fejlesztési Terület négy integrált pillérének izometrikus masterplan koncepciója, kizárólag háromszintes épületekkel és ütemezhető páros lakótömbökkel.",
-      "purpose": ["landing-page", "masterplan", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "masterplan",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Development pillars redesign",
       "category": "masterplan",
       "sourcePath": "assets/masterplan/KMJ5_Masterplan_DevelopmentPillars_v01.png",
@@ -446,8 +1120,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Az integrált Komárom Fejlesztési Terület látványterve központi tóval, parkkal, közösségi épülettel és egységes háromszintes építészettel.",
-      "purpose": ["landing-page", "marketing", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "investor"
+      ],
       "relatedSprint": "Development area section",
       "category": "renders/exterior",
       "sourcePath": "assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.png",
@@ -468,8 +1147,13 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "classification": "AI / GENERATED",
       "description": "Prémium lakásenteriőrök összeállítása.",
-      "purpose": ["landing-page", "marketing", "sales"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "sales"
+      ],
       "relatedSprint": "Sprint 1",
       "category": "renders/interior",
       "sourcePath": "assets/renders/interior/KMJ5_Interior_Collection_v01.png",
@@ -490,8 +1174,13 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Smart Home nappali belső parkra és központi tóra néző kilátással.",
-      "purpose": ["landing-page", "marketing", "sales"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "sales"
+      ],
       "relatedSprint": "Sprint 6",
       "category": "smart-home",
       "sourcePath": "assets/smart-home/KMJ5_SmartHome_Livingroom_ParkView_v01.png",
@@ -512,8 +1201,14 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Smart Park központi tóval, napelemes ülőpaddal és intelligens park-infrastruktúrával.",
-      "purpose": ["landing-page", "marketing", "sales", "investor"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "sales",
+        "investor"
+      ],
       "relatedSprint": "Sprint 6",
       "category": "smart-park",
       "sourcePath": "assets/smart-park/KMJ5_SmartPark_CentralLake_v01.png",
@@ -534,8 +1229,12 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Projektcsapat / AI-támogatott vizualizáció",
+      "classification": "AI / GENERATED",
       "description": "Marek 5 közösségi megosztási és Open Graph előnézeti kép.",
-      "purpose": ["social-media", "open-graph"],
+      "purpose": [
+        "social-media",
+        "open-graph"
+      ],
       "relatedSprint": "Sprint 1",
       "category": "social-media",
       "sourcePath": "assets/social-media/KMJ5_Social_OG_v01.png",
@@ -556,8 +1255,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Háromszintes, fa- és üvegszerkezetű Smart Campus metszeti látvány tantermekkel, központi átriummal, coworking könyvtárral és STEM laborokkal.",
-      "purpose": ["landing-page", "education-campus", "interactive-simulator"],
+      "purpose": [
+        "landing-page",
+        "education-campus",
+        "interactive-simulator"
+      ],
       "relatedSprint": "Education Campus section",
       "category": "education-campus",
       "sourcePath": "assets/education-campus/KMJ5_EducationCampus_Cutaway_v01.png",
@@ -578,8 +1282,13 @@
       "version": "v01",
       "createdAt": "2026-07-24",
       "creator": "OpenAI ImageGen",
+      "classification": "AI / GENERATED",
       "description": "Háromszintes, U alakú Senior Living épületegyüttes parkosított, akadálymentes belső udvarral és közösségi élettel.",
-      "purpose": ["landing-page", "senior-living", "interactive-experience"],
+      "purpose": [
+        "landing-page",
+        "senior-living",
+        "interactive-experience"
+      ],
       "relatedSprint": "Senior Living section",
       "category": "senior-living",
       "sourcePath": "assets/senior-living/KMJ5_SeniorLiving_Courtyard_v01.png",
@@ -600,8 +1309,13 @@
       "version": "v01",
       "createdAt": "2026-08-01",
       "creator": "Felhasználó által biztosított külső fotó / projektcsapat webes feldolgozása",
+      "classification": "STOCK / ILLUSTRATIVE",
       "description": "Rakodógépet ábrázoló építési hangulatkép a fejlesztési ütemek vizuális hátteréhez. Nem a Komárom projekt helyszínén készült felvétel.",
-      "purpose": ["landing-page", "development-phases", "illustrative-mood"],
+      "purpose": [
+        "landing-page",
+        "development-phases",
+        "illustrative-mood"
+      ],
       "relatedSprint": "Development phases visual redesign",
       "category": "renders/construction",
       "sourcePath": "assets/renders/construction/KMJ5_DevelopmentPhases_ConstructionMood_v01.jpg",
@@ -622,8 +1336,14 @@
       "version": "v01",
       "createdAt": "2026-08-01",
       "creator": "Külső stock videó / projektcsapat webes feldolgozása",
+      "classification": "STOCK / ILLUSTRATIVE",
       "description": "Nyolc másodperces, optimalizált hangulatvideó a fejlesztési terület bemutatásához. Nem a Komárom projekt helyszínén készült felvétel.",
-      "purpose": ["landing-page", "marketing", "development-area", "illustrative-mood"],
+      "purpose": [
+        "landing-page",
+        "marketing",
+        "development-area",
+        "illustrative-mood"
+      ],
       "relatedSprint": "Development area mood film UX",
       "category": "marketing/video",
       "sourcePath": "assets/marketing/video/KMJ5_DevelopmentArea_MoodFilm_v01.mp4",
@@ -644,8 +1364,14 @@
       "version": "v01",
       "createdAt": "2026-08-02",
       "creator": "Projektcsapat / AI vizuális koncepció",
+      "classification": "AI / GENERATED",
       "description": "Naplementés, parkosított háromszintes lakóépületek az előértékesítési előnyöket bemutató főoldali szekcióhoz.",
-      "purpose": ["landing-page", "early-choice", "residential", "marketing"],
+      "purpose": [
+        "landing-page",
+        "early-choice",
+        "residential",
+        "marketing"
+      ],
       "relatedSprint": "Early choice value section",
       "category": "renders/exterior",
       "sourcePath": "assets/renders/exterior/KMJ5_EarlyChoice_ResidentialCourtyard_v01.png",
@@ -665,7 +1391,7 @@
           "purpose": "web-background-mobile"
         }
       ],
-      "status": "published"
+      "status": "retired"
     },
     {
       "id": "KMJ5-BRANDING-FAVICON-001",
@@ -673,8 +1399,12 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Projektcsapat",
+      "classification": "APPROVED PROJECT VISUAL",
       "description": "A Marek 5 webes faviconja.",
-      "purpose": ["branding", "web"],
+      "purpose": [
+        "branding",
+        "web"
+      ],
       "relatedSprint": "Sprint 1",
       "category": "branding/favicon",
       "sourcePath": "assets/branding/favicon/KMJ5_Favicon_v01.svg",
@@ -693,8 +1423,11 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Next.js starter",
+      "classification": "UNKNOWN",
       "description": "Nem használt sablonikon, archiválva.",
-      "purpose": ["archive"],
+      "purpose": [
+        "archive"
+      ],
       "relatedSprint": "Sprint 6.1",
       "category": "archive/template-assets",
       "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateFileIcon_v01.svg",
@@ -707,8 +1440,11 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Next.js starter",
+      "classification": "UNKNOWN",
       "description": "Nem használt sablonikon, archiválva.",
-      "purpose": ["archive"],
+      "purpose": [
+        "archive"
+      ],
       "relatedSprint": "Sprint 6.1",
       "category": "archive/template-assets",
       "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateGlobeIcon_v01.svg",
@@ -721,13 +1457,97 @@
       "version": "v01",
       "createdAt": "2026-07-23",
       "creator": "Next.js starter",
+      "classification": "UNKNOWN",
       "description": "Nem használt sablonikon, archiválva.",
-      "purpose": ["archive"],
+      "purpose": [
+        "archive"
+      ],
       "relatedSprint": "Sprint 6.1",
       "category": "archive/template-assets",
       "sourcePath": "assets/archive/template-assets/KMJ5_Archive_TemplateWindowIcon_v01.svg",
       "renditions": [],
       "status": "archived"
+    },
+    {
+      "id": "KMJ5-HERO-AERIAL-MASTERPLAN-MOBILE-005",
+      "name": "KMJ5_Hero_AerialMasterplan_Mobile",
+      "version": "v05",
+      "createdAt": "2026-08-13",
+      "creator": "OpenAI ImageGen, felhasználó által biztosított projektvizuál alapján",
+      "classification": "AI-ASSISTED / PROJECT VISUAL",
+      "description": "Madártávlati projektvizuál mobil, álló kompozíciója.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "mobile"
+      ],
+      "relatedSprint": "Mobile hero composition",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_AerialMasterplan_Mobile_v05.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_AerialMasterplan_Mobile_v05.jpg",
+          "format": "jpg",
+          "width": 941,
+          "height": 1672,
+          "purpose": "responsive-mobile-hero"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-COMMUNITY-GARDEN-MOBILE-004",
+      "name": "KMJ5_Hero_CommunityGardenEvening_Mobile",
+      "version": "v04",
+      "createdAt": "2026-08-13",
+      "creator": "OpenAI ImageGen, felhasználó által biztosított projektvizuál alapján",
+      "classification": "AI-ASSISTED / PROJECT VISUAL",
+      "description": "Kertkapcsolatos épület mobil, álló kompozíciója.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "mobile"
+      ],
+      "relatedSprint": "Mobile hero composition",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CommunityGardenEvening_Mobile_v04.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CommunityGardenEvening_Mobile_v04.jpg",
+          "format": "jpg",
+          "width": 941,
+          "height": 1672,
+          "purpose": "responsive-mobile-hero"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KMJ5-HERO-COURTYARD-MOBILE-003",
+      "name": "KMJ5_Hero_CourtyardEvening_Mobile",
+      "version": "v03",
+      "createdAt": "2026-08-13",
+      "creator": "OpenAI ImageGen, felhasználó által biztosított projektvizuál alapján",
+      "classification": "AI-ASSISTED / PROJECT VISUAL",
+      "description": "Belső kerti épület mobil, álló kompozíciója.",
+      "purpose": [
+        "landing-page",
+        "hero-carousel",
+        "mobile"
+      ],
+      "relatedSprint": "Mobile hero composition",
+      "category": "hero",
+      "sourcePath": "assets/hero/KMJ5_Hero_CourtyardEvening_Mobile_v03.png",
+      "renditions": [
+        {
+          "path": "public/assets/hero/KMJ5_Hero_CourtyardEvening_Mobile_v03.jpg",
+          "format": "jpg",
+          "width": 941,
+          "height": 1672,
+          "purpose": "responsive-mobile-hero"
+        }
+      ],
+      "status": "published"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   defaultLocale,
   getTranslations,
@@ -18,15 +18,20 @@ import { EarlyChoiceSection } from "@/components/home/EarlyChoiceSection";
 
 const { content, messages } = getTranslations(defaultLocale);
 const nav = [
-  [messages.navigation.developmentArea, "#development-area"],
-  [messages.navigation.residential, "#residential"],
+  [messages.navigation.project, "/projekt"],
+  [messages.navigation.gallery, "/galeria"],
+  [messages.sales.masterplan, "/masterplan"],
   [messages.navigation.tenants, "#tenants"],
-  [messages.navigation.about, "#about"],
-  [messages.navigation.contact, "#contact"],
+  [messages.navigation.contact, "/kapcsolat"],
 ];
 const pillarAnchors = ["residential-pillar", "education-campus-pillar", "senior-living-pillar", "common-space"] as const;
 const heroIntervalMs = 8_000;
-const featuredUnits = getUnitViews().filter((unit) => unit.availabilityStatus === "available").slice(0, 4);
+const mobileHeroSources: Record<string, string> = {
+  "aerial-masterplan": "/assets/hero/KMJ5_Hero_AerialMasterplan_Mobile_v05.jpg",
+  "community-garden": "/assets/hero/KMJ5_Hero_CommunityGardenEvening_Mobile_v04.jpg",
+  "courtyard-evening": "/assets/hero/KMJ5_Hero_CourtyardEvening_Mobile_v03.jpg",
+};
+const featuredUnits = getUnitViews().slice(0, 4);
 
 function Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? "light" : ""}`} href="#top" aria-label={messages.accessibility.home}>
@@ -37,9 +42,9 @@ function Brand({ light = false }: { light?: boolean }) {
 
 export default function Home() {
   const [menu, setMenu] = useState(false);
-  const [sent, setSent] = useState(false);
   const [enquiryUnit, setEnquiryUnit] = useState<{unitId:string;building:string;floor:string;unitName:string;sourceUrl:string} | null>(null);
   const [heroIndex, setHeroIndex] = useState(0);
+  const heroTouchStartX = useRef<number | null>(null);
   const [activeHotspot, setActiveHotspot] = useState(0);
   const [activeResidentialBuilding, setActiveResidentialBuilding] = useState(0);
   const [residentialPhase, setResidentialPhase] = useState<"all" | "1" | "2">("all");
@@ -65,8 +70,6 @@ export default function Home() {
     if (unitId) queueMicrotask(() => setEnquiryUnit({ unitId, building: params.get("building") ?? "", floor: params.get("floor") ?? "", unitName: params.get("unitName") ?? unitId, sourceUrl: window.location.href }));
   }, []);
 
-  function submit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true); e.currentTarget.reset(); }
-
   const selectedResidentialBuilding = content.residentialMasterplan.buildings[activeResidentialBuilding];
   const selectedCampusHotspot = content.educationCampus.hotspots[activeCampusHotspot];
   const selectedSeniorHotspot = content.seniorLiving.hotspots[activeSeniorHotspot];
@@ -80,23 +83,43 @@ export default function Home() {
       {menu && <nav className="mobile-nav">{nav.map(([text, href]) => <a key={href} href={href} onClick={() => setMenu(false)}>{text}<span>→</span></a>)}<a href="#careers" onClick={() => setMenu(false)}>{messages.navigation.career}<span>→</span></a><Link href="/lakasok" onClick={() => setMenu(false)}>{messages.navigation.apartmentFinder}<span>→</span></Link></nav>}
     </header>
 
-    <section className="hero">
+    <section
+      className="hero"
+      onTouchStart={(event) => {
+        heroTouchStartX.current = event.touches[0]?.clientX ?? null;
+      }}
+      onTouchEnd={(event) => {
+        const startX = heroTouchStartX.current;
+        const endX = event.changedTouches[0]?.clientX;
+        heroTouchStartX.current = null;
+        if (startX === null || endX === undefined || Math.abs(startX - endX) < 45) return;
+        setHeroIndex((current) => (
+          startX > endX
+            ? (current + 1) % content.hero.slides.length
+            : (current - 1 + content.hero.slides.length) % content.hero.slides.length
+        ));
+      }}
+    >
       <div className="hero-media" role="img" aria-label={content.hero.slides[heroIndex].alt}>
         {content.hero.slides.map((slide, index) => (
-          <Image
-            key={slide.src}
-            src={slide.src}
-            alt=""
-            fill
-            sizes="100vw"
-            preload={index === 0}
-            loading={index === 0 || index === heroIndex ? undefined : "lazy"}
-            className={`hero-slide ${index === heroIndex ? "active" : ""}`}
-          />
+          <picture key={slide.src}>
+            <source media="(max-width: 760px)" srcSet={mobileHeroSources[slide.focus]} />
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              preload={index === 0}
+              loading={index === 0 || index === heroIndex ? undefined : "lazy"}
+              style={{ objectPosition: slide.objectPosition }}
+              className={`hero-slide hero-slide--${slide.focus} ${index === heroIndex ? "active" : ""}`}
+            />
+          </picture>
         ))}
       </div>
       <div className="hero-shade" />
       <div className="hero-content">
+        <span className="visual-status">{messages.visualLabels.architecturalVisual}</span>
         <p className="kicker light-text">{content.hero.kicker}</p>
         <h1>{content.hero.title}</h1>
         <p className="hero-description">{content.hero.description.map((line) => <span key={line}>{line}</span>)}</p>
@@ -455,8 +478,8 @@ export default function Home() {
 
     <section className="interest" id="project-contact">
       <div className="interest-copy"><p className="kicker light-text">{content.interest.kicker}</p><h2>{content.interest.title}<br/><em>{content.interest.titleEmphasis}</em></h2><p>{content.interest.description}</p><div className="privacy"><b>◇</b><span>{content.interest.privacy}</span></div></div>
-      {sent ? <div className="success" role="status"><b>✓</b><h3>{messages.forms.successTitle}</h3><p>{messages.forms.successMessage}</p><button onClick={() => setSent(false)}>{messages.cta.newInquiry}</button></div> :
-      <form className="form" onSubmit={submit}>
+      <form className="form" onSubmit={(event) => event.preventDefault()}>
+        <p className="sales-feedback" role="status">{messages.forms.unavailable}</p>
         {enquiryUnit && <div className="enquiry-unit-summary"><small>Kiválasztott lakás</small><strong>{enquiryUnit.unitName}</strong><span>{enquiryUnit.building} épület · {enquiryUnit.floor}. emelet</span></div>}
         <input type="hidden" name="unitId" value={enquiryUnit?.unitId ?? ""}/><input type="hidden" name="building" value={enquiryUnit?.building ?? ""}/><input type="hidden" name="floor" value={enquiryUnit?.floor ?? ""}/><input type="hidden" name="unitName" value={enquiryUnit?.unitName ?? ""}/><input type="hidden" name="sourceUrl" value={enquiryUnit?.sourceUrl ?? ""}/>
         <label><span>{messages.forms.name}</span><input name="name" autoComplete="name" required placeholder={messages.forms.namePlaceholder}/></label>
@@ -464,13 +487,13 @@ export default function Home() {
         <label><span>{messages.forms.phone}</span><input name="phone" type="tel" autoComplete="tel" placeholder={messages.forms.phonePlaceholder}/></label>
         <label><span>{messages.forms.subject}</span><select name="interest" defaultValue=""><option value="" disabled>{messages.forms.select}</option><option value="residential-interest">{messages.forms.residentialInterest}</option><option value="investment">{messages.forms.investment}</option><option value="commercial-tenancy">{content.website.form.commercialTenancy}</option><option value="office-tenancy">{content.website.form.officeTenancy}</option><option value="career">{content.website.form.career}</option><option value="other">{messages.forms.other}</option></select></label>
         <label className="consent"><input type="checkbox" required/><span>{messages.forms.consent}</span></label>
-        <button className="button gold" type="submit">{messages.cta.contactProject} <span>→</span></button>
-      </form>}
+        <button className="button gold" type="submit" disabled>{messages.cta.contactProject} · {messages.status.comingSoon}</button>
+      </form>
     </section>
 
     <section className="contact" id="contact">
-      <Brand/><div><p className="kicker">{messages.common.contact}</p><a href={`mailto:${content.contact.email}`}>{content.contact.email}</a><a href={`tel:${content.contact.phoneHref}`}>{content.contact.phoneDisplay}</a></div><div><p className="kicker">{messages.common.projectContact}</p><address>{content.contact.postalCode} {content.contact.city}<br/>{content.contact.street}</address></div><a className="button dark" href="#project-contact">{messages.cta.partnerConsultation} <span>→</span></a>
+      <Brand/><div><p className="kicker">{messages.common.contact}</p><a href={`mailto:${content.contact.email}`}>{content.contact.email}</a></div><div><p className="kicker">{messages.common.projectContact}</p><address>{content.contact.postalCode} {content.contact.city}<br/>{content.contact.street}</address></div><a className="button dark" href="#project-contact">{messages.cta.partnerConsultation} <span>→</span></a>
     </section>
-    <footer><span>{content.contact.copyright}</span><div><a href="#">{messages.common.privacy}</a><a href="#">{messages.common.imprint}</a></div><a href="#top">{messages.common.backToTop} ↑</a></footer>
+    <footer><span>{content.contact.copyright}</span><div><span>{messages.common.privacy} · {messages.common.legalPending}</span><span>{messages.common.imprint} · {messages.common.legalPending}</span></div><a href="#top">{messages.common.backToTop} ↑</a></footer>
   </main>;
 }

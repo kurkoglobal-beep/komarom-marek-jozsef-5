@@ -15,14 +15,16 @@ export function UnitMediaViewer({ unit, messages }: { unit: UnitView; messages: 
   const copy = messages.experience.media;
   const [mode, setMode] = useState<ViewMode>("floorPlan");
   const { items } = useMemo(() => getUnitMedia(unit), [unit]);
-  const floorPlan = items.find((item) => item.type === "floorPlan2D")!;
+  const floorPlan = items.find((item) => item.type === "floorPlan2D");
   const furnished = items.filter((item) => item.type === "furnishedAxonometry");
   const interiors = items.filter((item) => item.type === "interior");
   const [activeInteriorId, setActiveInteriorId] = useState(interiors[0]?.id ?? "");
   const activeInterior = interiors.find((item) => item.id === activeInteriorId) ?? interiors[0];
-  const exact = floorPlan.relationship === "exact";
+  const exact = floorPlan?.relationship === "exact";
   const roomHotspots: RoomHotspotItem[] = exact ? interiors.flatMap((item) => item.roomId && roomPositions[item.roomId] ? [{ id: item.id, label: copy.labels[item.labelKey as keyof typeof copy.labels], ...roomPositions[item.roomId] }] : []) : [];
   const tabs = [{ value: "floorPlan", label: copy.tabs.floorPlan }, { value: "furnished", label: copy.tabs.furnished }, { value: "interiors", label: copy.tabs.interiors }] as { value: ViewMode; label: string }[];
+
+  if (!floorPlan) return <section className="unit-media" aria-labelledby="unit-media-title"><header><div><p>{copy.kicker}</p><h2 id="unit-media-title">{copy.title}</h2></div></header><div className="sales-empty">{copy.mediaUnavailable}</div><aside className="unit-media__disclaimer concept"><strong>{copy.conceptTitle}</strong><p>{copy.conceptDescription}</p></aside></section>;
 
   return <section className="unit-media" aria-labelledby="unit-media-title">
     <header><div><p>{copy.kicker}</p><h2 id="unit-media-title">{copy.title}</h2></div><SegmentedControl options={tabs} value={mode} label={copy.viewLabel} onChange={setMode}/></header>

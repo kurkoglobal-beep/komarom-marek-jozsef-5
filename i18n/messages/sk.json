@@ -26,9 +26,16 @@
     "projectContact": "Kontakt pre projekt",
     "privacy": "Ochrana údajov",
     "imprint": "Právne informácie",
+    "legalPending": "V príprave",
     "backToTop": "Späť hore",
     "loading": "Načítava sa…",
     "noData": "Nie sú dostupné žiadne údaje."
+  },
+  "visualLabels": {
+    "architecturalVisual": "Architektonická vizualizácia",
+    "conceptVisual": "Koncepčná vizualizácia",
+    "illustration": "Ilustrácia",
+    "projectVision": "Vízia projektu · koncepčný film"
   },
   "cta": {
     "interestProject": "Mám záujem",
@@ -45,7 +52,7 @@
     "contactProject": "Kontaktovať nás"
   },
   "status": {
-    "comingSoon": "Už čoskoro",
+    "comingSoon": "Koncept",
     "available": "Dostupné",
     "temporarilyReserved": "Dočasne rezervované",
     "reserved": "Rezervované",
@@ -58,7 +65,7 @@
     "email": "E-mailová adresa",
     "emailPlaceholder": "meno@priklad.sk",
     "phone": "Telefónne číslo",
-    "phonePlaceholder": "+421 900 123 456",
+    "phonePlaceholder": "Voliteľné telefónne číslo",
     "subject": "Predmet záujmu",
     "select": "Vyberte",
     "ownHome": "Vlastné bývanie",
@@ -71,7 +78,8 @@
     "other": "Iné",
     "consent": "Súhlasím s informáciami o ochrane osobných údajov.",
     "successTitle": "Ďakujeme za váš záujem!",
-    "successMessage": "Čoskoro vás budeme kontaktovať.",
+    "successMessage": "Kontaktná funkcia bude čoskoro dostupná.",
+    "unavailable": "Online kontakt je momentálne v príprave.",
     "integrationNote": "Formulár môže v ďalšej integračnej fáze používať samostatný dátový model kompatibilný so Supabase."
   },
   "errors": {
@@ -114,8 +122,15 @@
       "description": "Prírodné prostredie, architektúra a komunitný život sa spájajú v jednotnom prístupe k rozvoju.",
       "disclaimer": "Ilustračný náladový film · Záznam nevznikol na mieste projektu",
       "videoLabel": "Ilustračný náladový film zeleného rozvojového prostredia zameraného na ľudí",
+      "playLabel": "Prehrať projektový film",
       "continue": "Etapy výstavby",
-      "continueLabel": "Pokračovať na interaktívne etapy výstavby"
+      "continueLabel": "Pokračovať na interaktívne etapy výstavby",
+      "cards": {
+        "concept": {"title": "Koncepcia projektu", "description": "Obytné budovy v ľudskej mierke, premyslené spoločné priestory a parkové prostredie vytvárajú jednotný mestský priestor plánovaný na dlhé obdobie."},
+        "specs": {"title": "Hlavné technické údaje", "items": [{"label": "Budovy", "value": "Trojpodlažné riešenie"}, {"label": "Byty", "value": "Údaje sa pripravujú"}, {"label": "Energetika", "value": "Technické údaje sa upresňujú"}, {"label": "Smart Home", "value": "Plánovaná príprava"}]},
+        "schedule": {"title": "Harmonogram & Zeleň", "description": "Podrobné míľniky rozvoja čakajú na schválenie.", "items": ["Príprava a technické dokončenie", "Plánované etapy rozvoja", "Parkové komunitné prostredie"]},
+        "contact": {"title": "Kontakt & Žiadosť o ponuku", "description": "Vyžiadajte si informácie o projekte, plánovaných bytoch a ďalších krokoch predaja.", "cta": "Požiadať o ponuku"}
+      }
     },
     "phases": {
       "kicker": "Etapy výstavby", "title": "V Komárne vzniká nová prémiová obytná štvrť.", "titleEmphasis": "", "description": "V štyroch plánovaných etapách vzniká komunita bývania pri Dunaji – v modernom prostredí s trvácnou kvalitou.", "imageAlt": "Stavenisko so žeriavom a stavebnými strojmi pri západe slnka, ilustračný náladový obrázok", "illustration": "Stavebný náladový obrázok", "selectorLabel": "Vybrať etapu výstavby", "all": "Všetky etapy", "phase": "etapa", "overview": "Prehľad rozvoja", "allTitle": "Celé rozvojové územie", "allDescription": "Štyri plánované etapy tvoria jednotnú dlhodobú koncepciu rozvoja.", "allCta": "Zobraziť byty", "phaseTitle": "{phase}. etapa", "placeholderDescription": "Podrobné technické a predajné údaje tejto etapy čakajú na schválenie.", "handover": "Plánované odovzdanie", "unitCount": "Počet bytov", "availableCount": "Dostupné byty", "progress": "Postup výstavby", "dataPending": "Údaje sa pripravujú", "detailsSoon": "Podrobnosti čoskoro", "details": "Podrobnosti", "plannedCta": "Registrovať sa na predpredaj", "timelineLabel": "Časový plán výstavby", "smartSelection": "Personalizované vyhľadávanie", "moveQuestion": "Kedy sa chcete presťahovať?",
@@ -127,18 +142,18 @@
       "categories": {"transport": "Doprava", "education": "Vzdelávanie", "healthcare": "Zdravotníctvo", "shopping": "Nákupy", "sport": "Šport", "nature": "Príroda", "regional": "Regionálne spojenia"},
       "points": {"location-danube": {"name": "Dunaj", "description": "Rieka a prírodné nábrežie patria k určujúcim krajinným hodnotám Komárna."}, "location-bridge": {"name": "Monostorský most", "description": "Moderné mestské a regionálne spojenie oboch brehov Dunaja."}, "location-promenade": {"name": "Dunajská promenáda", "description": "Parkové pešie prostredie s miestami na oddych a večerným osvetlením."}, "location-residential": {"name": "Prepojenie s obytnou štvrťou", "description": "Priame mestské prepojenie nábrežia s plánovanými domovmi."}, "location-regional": {"name": "Regionálne spojenie", "description": "Cezhraničná a regionálna sieť spojení Komárna."}}
     },
-    "media": {"kicker": "Vizuálny profil bytu", "title": "Všetky pohľady na jednom mieste", "viewLabel": "Vybrať pohľad na byt", "tabs": {"floorPlan": "2D pôdorys", "furnished": "Zariadený pohľad", "interiors": "Interiéry"}, "labels": {"floorPlan": "Pôdorys", "furnished": "Zariadená axonometria", "livingRoom": "Obývacia izba", "bedroom": "Spálňa", "bathroom": "Kúpeľňa"}, "staticView": "Jeden schválený axonometrický pohľad", "floorPlanAlt": "Pôdorys bytu {unit}", "furnishedAlt": "Zariadený axonometrický pohľad bytu {unit}", "interiorAlt": "Byt {unit} – interiérový koncept {room}", "exactTitle": "Dokumentácia priradená k bytu", "exactDescription": "Zobrazený pôdorys a vizuálne materiály sú priradené k tomuto bytu. Zariadenie je len orientačné.", "conceptTitle": "Interiérový koncept · Ilustrácia", "conceptDescription": "Obrázky sú náladové a interiérové ilustrácie; nejde o konečnú ani technicky overenú dokumentáciu tohto bytu. Zariadenie je len orientačné.", "furnishingDisclaimer": "Koncept zariadenia a interiéru. Zariadenie je len orientačné.", "zoom": "Zväčšiť", "closeZoom": "Zavrieť zväčšený pohľad", "previousView": "Predchádzajúci pohľad", "nextView": "Nasledujúci pohľad", "viewNumber": "Pohľad {number}", "mediaUnavailable": "Vizuálny náhľad momentálne nie je dostupný.", "actionsLabel": "Akcie bytu", "share": "Zdieľať", "linkCopied": "Odkaz na byt bol skopírovaný."},
+    "media": {"kicker": "Vizuálny profil bytu", "title": "Všetky pohľady na jednom mieste", "viewLabel": "Vybrať pohľad na byt", "tabs": {"floorPlan": "2D pôdorys", "furnished": "Zariadený pohľad", "interiors": "Interiéry"}, "labels": {"floorPlan": "Pôdorys", "furnished": "Zariadená axonometria", "livingRoom": "Obývacia izba", "bedroom": "Spálňa", "bathroom": "Kúpeľňa"}, "staticView": "Vizualizácia bytu je v príprave", "floorPlanAlt": "Pôdorys bytu {unit}", "furnishedAlt": "Zariadený axonometrický pohľad bytu {unit}", "interiorAlt": "Byt {unit} – interiérový koncept {room}", "exactTitle": "Dokumentácia priradená k bytu", "exactDescription": "Zobrazený pôdorys a vizuálne materiály sú priradené k tomuto bytu. Zariadenie je len orientačné.", "conceptTitle": "Interiérový koncept · Ilustrácia", "conceptDescription": "Obrázky sú náladové a interiérové ilustrácie; nejde o konečnú ani technicky overenú dokumentáciu tohto bytu. Zariadenie je len orientačné.", "furnishingDisclaimer": "Koncept zariadenia a interiéru. Zariadenie je len orientačné.", "zoom": "Zväčšiť", "closeZoom": "Zavrieť zväčšený pohľad", "previousView": "Predchádzajúci pohľad", "nextView": "Nasledujúci pohľad", "viewNumber": "Pohľad {number}", "mediaUnavailable": "Vizualizácia bytu je v príprave", "actionsLabel": "Akcie bytu", "share": "Zdieľať", "linkCopied": "Odkaz na byt bol skopírovaný."},
     "journal": {"kicker": "Stavebný denník", "title": "Postup výstavby", "empty": "Prvá schválená stavebná aktualizácia sa tu čoskoro zobrazí.", "compareLabel": "Porovnať stavy výstavby", "entryPending": "Schválená aktualizácia projektu"}
   },
   "homeExperience": {
     "searchEyebrow": "Rýchle vyhľadávanie", "searchTitle": "Nájdite si domov, ktorý vám vyhovuje", "minimumArea": "Minimálna plocha",
     "entryEyebrow": "Digitálny zážitok z nehnuteľnosti", "entryTitle": "Začnite objavovať.", "entryEmphasis": "Vyberte si vlastnú cestu.", "primary": "Hlavný zážitok",
-    "masterplan": "Preskúmať masterplan", "apartments": "Zobraziť byty", "favorites": "Obľúbené", "project": "Predstavenie projektu",
-    "masterplanAlt": "Náhľad interaktívneho masterplanu obytnej štvrte", "apartmentsAlt": "Prémiový interiér bytu s výhľadom do parku",
+    "masterplan": "Výber bytu", "apartments": "Zobraziť byty", "favorites": "Obľúbené", "project": "Predstavenie projektu",
+    "masterplanAlt": "Náhľad obytnej štvrte vo výbere bytu", "apartmentsAlt": "Koncepčný interiér bytu A-2.01 s výhľadom do parku",
     "featuredEyebrow": "Vybrané domovy", "featuredTitle": "Vybrané byty.", "featuredEmphasis": "Pripravené na objavovanie."
   },
   "earlyChoice": {"title":"Hodnota, ktorá pretrváva","questionBefore":"Prečo si vybrať ","questionHighlight":"teraz","questionAfter":"?","description":"Domovy pri Dunaji prinášajú pohodlie a z dlhodobého hľadiska môžu predstavovať aj stabilnú hodnotu. Spoznajte výhody skorého výberu.","cta":"Zistiť viac","benefits":[{"title":"Väčší výber","description":"Počas predpredaja si môžete vybrať z väčšieho počtu bytov s preferovanou orientáciou a umiestnením."},{"title":"Domov podľa vás","description":"Počas výstavby si vyberte obklady, sanitu a interiérové riešenia v rámci schválených technických možností."},{"title":"Plánovateľné platby","description":"Flexibilná, postupná platobná schéma, ktorá sa môže prispôsobiť technickým míľnikom výstavby."},{"title":"Premyslené rozhodnutie","description":"Spoľahlivý developer, transparentný proces a právne záruky zakotvené v zmluvnej dokumentácii."},{"title":"Dlhodobá príťažlivosť","description":"Poloha pri Dunaji a moderný životný štýl môžu udržať atraktivitu domova aj z dlhodobého hľadiska."}]},
   "sales": {
-    "home":"Domov","masterplan":"Generel","apartments":"Byty","favorites":"Obľúbené","contact":"Kontakt","finderTitle":"Nájdite svoj nový domov","finderLead":"Filtrujte byty alebo začnite v interaktívnom genereli.","filters":"Filtre","clearFilters":"Vymazať","results":"výsledkov","building":"Budova","floor":"Podlažie","rooms":"Izby","area":"Čistá plocha","outdoor":"Balkón / terasa","orientation":"Orientácia","availability":"Stav","all":"Všetky","from":"Minimum","to":"Maximum","openUnit":"Otvoriť byt","addFavorite":"Pridať k obľúbeným","removeFavorite":"Odstrániť z obľúbených","saved":"Uložené","emptyFavorites":"Zatiaľ nemáte uložené byty.","emptyResults":"Žiadny byt nezodpovedá filtrom.","masterplanTitle":"Vyberte si v troch krokoch","masterplanLead":"Budova, podlažie a byt na stabilnom 2D základe.","selectBuilding":"1. Budova","selectFloor":"2. Podlažie","selectUnit":"3. Byt","staticPreview":"Statický axonometrický náhľad · 3D model sa pripravuje","unitDetails":"Detail bytu","interiorArea":"Čistá obytná plocha","terraceArea":"Balkón / terasa","gardenArea":"Súkromná záhrada","totalArea":"Celková plocha","view":"Výhľad","technology":"Technológia","floorPlan":"Pôdorys","axonometric":"Axonometrický pohľad","interiors":"Interiérové vizualizácie","brochure":"Stiahnuť PDF bytu","inquiry":"Mám záujem o byt","pricePending":"Cena sa upresňuje","backToResults":"Späť na výsledky","directLink":"Priamy odkaz na byt","offlineTitle":"Momentálne ste offline","offlineLead":"Predtým otvorené stránky zostávajú dostupné. Po pripojení obnovte stránku.","retry":"Skúsiť znova"
+    "home":"Domov","masterplan":"Generel","apartments":"Byty","favorites":"Obľúbené","contact":"Kontakt","finderTitle":"Nájdite svoj nový domov","finderLead":"Filtrujte byty alebo začnite v interaktívnom genereli.","filters":"Filtre","clearFilters":"Vymazať","results":"výsledkov","building":"Budova","floor":"Podlažie","rooms":"Izby","area":"Čistá plocha","outdoor":"Balkón / terasa","orientation":"Orientácia","availability":"Stav","all":"Všetky","from":"Minimum","to":"Maximum","openUnit":"Otvoriť byt","addFavorite":"Pridať k obľúbeným","removeFavorite":"Odstrániť z obľúbených","saved":"Uložené","emptyFavorites":"Zatiaľ nemáte uložené byty.","emptyResults":"Žiadny byt nezodpovedá filtrom.","masterplanTitle":"Vyberte si v troch krokoch","masterplanLead":"Budova, podlažie a byt na stabilnom 2D základe.","selectBuilding":"1. Budova","selectFloor":"2. Podlažie","selectUnit":"3. Byt","staticPreview":"Koncepčná vizualizácia · Statický 2D výber bytov","dataPending":"Prebieha nahrávanie údajov","precisionPending":"Spresňuje sa","masterplanPreviewAlt":"Koncepčná vizualizácia výberu bytov v plánovanej štvrti","unitDetails":"Detail bytu","interiorArea":"Čistá obytná plocha","terraceArea":"Balkón / terasa","gardenArea":"Súkromná záhrada","totalArea":"Celková plocha","view":"Výhľad","technology":"Technológia","floorPlan":"Pôdorys","axonometric":"Axonometrický pohľad","interiors":"Interiérové vizualizácie","brochure":"Stiahnuť PDF bytu","inquiry":"Mám záujem o byt","pricePending":"Cena sa upresňuje","backToResults":"Späť na výsledky","directLink":"Priamy odkaz na byt","offlineTitle":"Momentálne ste offline","offlineLead":"Predtým otvorené stránky zostávajú dostupné. Po pripojení obnovte stránku.","retry":"Skúsiť znova"
   }
 }

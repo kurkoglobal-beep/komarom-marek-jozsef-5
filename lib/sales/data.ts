@@ -6,7 +6,7 @@ const seed = rawSeed as SalesSeed;
 const statuses: AvailabilityStatus[] = ["coming_soon","available","temporarily_reserved","reserved","sold","not_for_sale"];
 
 const presentation: UnitPresentation = {
-  technologies: ["Smart Home előkészítés", "Energia-monitoring", "Motoros árnyékolás", "Hőszivattyús rendszer"],
+  technologies: ["Tervezett Smart Home-előkészítés", "Javasolt hőszivattyús műszaki irány"],
   floorPlanSrc: "/assets/floorplans/KMJ5_A201_Floorplan_v01.webp",
   axonometricSrc: "/assets/apartments/type-a/KMJ5_A201_Axonometric_v01.webp",
   gallery: [

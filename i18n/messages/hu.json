@@ -26,9 +26,16 @@
     "projectContact": "Projektkapcsolat",
     "privacy": "Adatkezelés",
     "imprint": "Impresszum",
+    "legalPending": "Előkészítés alatt",
     "backToTop": "Vissza az elejére",
     "loading": "Betöltés…",
     "noData": "Nincs elérhető adat."
+  },
+  "visualLabels": {
+    "architecturalVisual": "Építészeti látványterv",
+    "conceptVisual": "Koncepciólátvány",
+    "illustration": "Illusztráció",
+    "projectVision": "Projektvízió · koncepciófilm"
   },
   "cta": {
     "interestProject": "Érdekel a projekt",
@@ -45,7 +52,7 @@
     "contactProject": "Kapcsolatfelvétel"
   },
   "status": {
-    "comingSoon": "Hamarosan",
+    "comingSoon": "Koncepció",
     "available": "Elérhető",
     "temporarilyReserved": "Ideiglenesen foglalt",
     "reserved": "Foglalt",
@@ -58,7 +65,7 @@
     "email": "E-mail-cím",
     "emailPlaceholder": "nev@pelda.hu",
     "phone": "Telefonszám",
-    "phonePlaceholder": "+36 30 123 4567",
+    "phonePlaceholder": "Opcionális telefonszám",
     "subject": "Érdeklődés tárgya",
     "select": "Válasszon",
     "ownHome": "Saját otthon",
@@ -71,7 +78,8 @@
     "other": "Egyéb",
     "consent": "Elfogadom az adatkezelési tájékoztatót.",
     "successTitle": "Köszönjük az érdeklődést!",
-    "successMessage": "Hamarosan felvesszük Önnel a kapcsolatot.",
+    "successMessage": "A kapcsolatfelvételi funkció hamarosan elérhető.",
+    "unavailable": "Az online kapcsolatfelvétel jelenleg előkészítés alatt.",
     "integrationNote": "Az űrlap elkülönített, Supabase-kompatibilis adatmodellt használhat a következő integrációs fázisban."
   },
   "errors": {
@@ -114,11 +122,18 @@
       "description": "A természeti környezet, az épített terek és a közösségi élet egységes fejlesztési szemléletben kapcsolódnak össze.",
       "disclaimer": "Illusztratív hangulatanyag · Nem a projekt helyszínén készült felvétel",
       "videoLabel": "Illusztratív hangulatvideó egy zöld, emberközpontú fejlesztési környezetről",
+      "playLabel": "Projektvideó lejátszása",
       "continue": "Fejlesztési ütemek",
-      "continueLabel": "Tovább az interaktív fejlesztési ütemekhez"
+      "continueLabel": "Tovább az interaktív fejlesztési ütemekhez",
+      "cards": {
+        "concept": {"title": "Projektkoncepció", "description": "Emberléptékű lakóépületek, átgondolt közösségi terek és parkosított környezet alkotnak egységes, hosszú távra tervezett városi életteret."},
+        "specs": {"title": "Főbb műszaki adatok", "items": [{"label": "Épületek", "value": "Háromszintes kialakítás"}, {"label": "Lakások", "value": "Adatfeltöltés alatt"}, {"label": "Energetika", "value": "Műszaki pontosítás alatt"}, {"label": "Smart Home", "value": "Tervezett előkészítés"}]},
+        "schedule": {"title": "Ütemezés & Zöldterületek", "description": "A fejlesztés részletes mérföldkövei jóváhagyás alatt állnak.", "items": ["Előkészítés és műszaki véglegesítés", "Tervezett fejlesztési ütemek", "Parkosított közösségi környezet"]},
+        "contact": {"title": "Kapcsolat & Ajánlatkérés", "description": "Kérjen tájékoztatást a projektről, a tervezett lakásokról és az értékesítés következő lépéseiről.", "cta": "Ajánlatot kérek"}
+      }
     },
     "phases": {
-      "kicker": "Fejlesztési ütemek", "title": "Komárom új prémium lakónegyede épül.", "titleEmphasis": "", "description": "Négy tervezett ütemben formálódik a Duna-parti otthonok közössége – modern környezetben, időtálló minőségben.", "imageAlt": "Darukkal és munkagépekkel ábrázolt építési munkaterület naplementében, illusztratív hangulatkép", "illustration": "Építési hangulatkép", "selectorLabel": "Fejlesztési ütem kiválasztása", "all": "Összes ütem", "phase": "ütem", "overview": "Fejlesztési áttekintés", "allTitle": "A teljes fejlesztési terület", "allDescription": "A négy tervezett ütem egységes, hosszú távú fejlesztési koncepciót alkot.", "allCta": "Lakások megtekintése", "phaseTitle": "{phase}. ütem", "placeholderDescription": "Az ütem részletes műszaki és értékesítési adatai jóváhagyás alatt állnak.", "handover": "Tervezett átadás", "unitCount": "Lakások száma", "availableCount": "Elérhető lakások", "progress": "Fejlesztési készültség", "dataPending": "Adatfeltöltés alatt", "detailsSoon": "Részletek hamarosan", "details": "Részletek", "plannedCta": "Feliratkozom az előértékesítésre", "timelineLabel": "Fejlesztési ütemterv", "smartSelection": "Személyre szabott keresés", "moveQuestion": "Mikor szeretne költözni?",
+      "kicker": "Fejlesztési ütemek", "title": "Komárom új prémium lakónegyede készül.", "titleEmphasis": "", "description": "Négy tervezett ütemben formálódik a Duna-parti otthonok közössége – modern környezetben, időtálló minőségben.", "imageAlt": "Darukkal és munkagépekkel ábrázolt építési munkaterület naplementében, illusztratív hangulatkép", "illustration": "Építészeti látványterv", "selectorLabel": "Fejlesztési ütem kiválasztása", "all": "Összes ütem", "phase": "ütem", "overview": "Fejlesztési áttekintés", "allTitle": "A teljes fejlesztési terület", "allDescription": "A négy tervezett ütem egységes, hosszú távú fejlesztési koncepciót alkot.", "allCta": "Lakások megtekintése", "phaseTitle": "{phase}. ütem", "placeholderDescription": "Az ütem részletes műszaki és értékesítési adatai jóváhagyás alatt állnak.", "handover": "Tervezett átadás", "unitCount": "Lakások száma", "availableCount": "Elérhető lakások", "progress": "Fejlesztési készültség", "dataPending": "Adatfeltöltés alatt", "detailsSoon": "Részletek hamarosan", "details": "Részletek", "plannedCta": "Feliratkozom az előértékesítésre", "timelineLabel": "Fejlesztési ütemterv", "smartSelection": "Személyre szabott keresés", "moveQuestion": "Mikor szeretne költözni?",
       "moveOptions": {"short_term": "Rövid távon", "six_to_twelve_months": "6–12 hónapon belül", "later_phase": "Későbbi ütemben", "all": "Még nem döntöttem el"},
       "status": {"completed": "Elkészült", "selling": "Értékesítés alatt", "under_construction": "Építés alatt", "preparation": "Előkészítés alatt", "planned": "Tervezett ütem"}
     },
@@ -127,21 +142,22 @@
       "categories": {"transport": "Közlekedés", "education": "Oktatás", "healthcare": "Egészségügy", "shopping": "Bevásárlás", "sport": "Sport", "nature": "Természet", "regional": "Regionális kapcsolat"},
       "points": {"location-danube": {"name": "Duna", "description": "A folyó és a természetközeli vízpart Komárom meghatározó táji értéke."}, "location-bridge": {"name": "Monostori híd", "description": "A Duna két partját összekötő modern városi és regionális kapcsolat."}, "location-promenade": {"name": "Duna-parti sétány", "description": "Parkosított gyalogos környezet pihenőhelyekkel és esti világítással."}, "location-residential": {"name": "Lakónegyedi kapcsolat", "description": "A vízpart és a tervezett otthonok közötti közvetlen városi kapcsolat."}, "location-regional": {"name": "Regionális kapcsolat", "description": "Komárom határon átnyúló és térségi kapcsolatrendszere."}}
     },
-    "media": {"kicker": "Vizuális lakásadatlap", "title": "Minden nézet egy helyen", "viewLabel": "Lakásnézet kiválasztása", "tabs": {"floorPlan": "2D alaprajz", "furnished": "Berendezett nézet", "interiors": "Belső terek"}, "labels": {"floorPlan": "Alaprajz", "furnished": "Berendezett axonometria", "livingRoom": "Nappali", "bedroom": "Hálószoba", "bathroom": "Fürdőszoba"}, "staticView": "Egy jóváhagyott axonometrikus nézet", "floorPlanAlt": "{unit} lakás alaprajza", "furnishedAlt": "{unit} lakás berendezett axonometrikus nézete", "interiorAlt": "{unit} lakás – {room} belsőépítészeti látvány", "exactTitle": "Lakáshoz rendelt dokumentáció", "exactDescription": "A megjelenített alaprajz és vizuális anyagok ehhez a lakáshoz vannak rendelve. A berendezés tájékoztató jellegű.", "conceptTitle": "Belsőépítészeti koncepció · Illusztráció", "conceptDescription": "A képek hangulati és belsőépítészeti illusztrációk; nem ennek a lakásnak a végleges vagy műszakilag hiteles dokumentációi. A berendezés tájékoztató jellegű.", "furnishingDisclaimer": "Berendezési és belsőépítészeti koncepció. A berendezés tájékoztató jellegű.", "zoom": "Nagyítás", "closeZoom": "Nagyított nézet bezárása", "previousView": "Előző nézet", "nextView": "Következő nézet", "viewNumber": "{number}. nézet", "mediaUnavailable": "A vizuális előnézet jelenleg nem érhető el.", "actionsLabel": "Lakás műveletek", "share": "Megosztás", "linkCopied": "A lakás linkje a vágólapra került."},
+    "media": {"kicker": "Vizuális lakásadatlap", "title": "Minden nézet egy helyen", "viewLabel": "Lakásnézet kiválasztása", "tabs": {"floorPlan": "Lakáshoz rendelt alaprajz", "furnished": "Lakáshoz rendelt axonometria", "interiors": "Koncepció enteriőrök"}, "labels": {"floorPlan": "Alaprajz", "furnished": "Berendezett axonometria", "livingRoom": "Nappali", "bedroom": "Hálószoba", "bathroom": "Fürdőszoba"}, "staticView": "Lakásvizualizáció előkészítés alatt", "floorPlanAlt": "{unit} lakás alaprajza", "furnishedAlt": "{unit} lakás berendezett axonometrikus nézete", "interiorAlt": "{unit} lakás – {room} belsőépítészeti látvány", "exactTitle": "Lakáshoz rendelt dokumentáció", "exactDescription": "A megjelenített alaprajz és vizuális anyagok ehhez a lakáshoz vannak rendelve. A berendezés tájékoztató jellegű.", "conceptTitle": "Belsőépítészeti koncepció · Illusztráció", "conceptDescription": "A képek hangulati és belsőépítészeti illusztrációk; nem ennek a lakásnak a végleges vagy műszakilag hiteles dokumentációi. A berendezés tájékoztató jellegű.", "furnishingDisclaimer": "Berendezési és belsőépítészeti koncepció. A berendezés tájékoztató jellegű.", "zoom": "Nagyítás", "closeZoom": "Nagyított nézet bezárása", "previousView": "Előző nézet", "nextView": "Következő nézet", "viewNumber": "{number}. nézet", "mediaUnavailable": "Lakásvizualizáció előkészítés alatt", "actionsLabel": "Lakás műveletek", "share": "Megosztás", "linkCopied": "A lakás linkje a vágólapra került."},
     "journal": {"kicker": "Építési napló", "title": "A fejlesztés előrehaladása", "empty": "Az első jóváhagyott építési frissítés hamarosan itt jelenik meg.", "compareLabel": "Építési állapotok összehasonlítása", "entryPending": "Jóváhagyott projektfrissítés"}
   },
   "homeExperience": {
     "searchEyebrow": "Gyorskereső", "searchTitle": "Találja meg az Önhöz illő otthont", "minimumArea": "Minimum alapterület",
     "entryEyebrow": "Digitális ingatlanélmény", "entryTitle": "Induljon el.", "entryEmphasis": "Válasszon saját útvonalat.", "primary": "Elsődleges élmény",
-    "masterplan": "Masterplan felfedezése", "apartments": "Lakások megtekintése", "favorites": "Kedvencek", "project": "Projekt bemutatása",
-    "masterplanAlt": "A lakónegyed interaktív masterplanjének előnézete", "apartmentsAlt": "Prémium lakás parkra néző belső tere",
+    "masterplan": "Lakáskiválasztó", "apartments": "Lakások megtekintése", "favorites": "Kedvencek", "project": "Projekt bemutatása",
+    "masterplanAlt": "A Lakáskiválasztó lakónegyedi előnézete", "apartmentsAlt": "Az A-2.01 lakás koncepcióenteriőrje parkra néző kilátással",
     "featuredEyebrow": "Kiemelt otthonok", "featuredTitle": "Válogatott lakások.", "featuredEmphasis": "Közvetlenül felfedezhetők."
   },
   "earlyChoice": {"title":"Érték, ami idővel csak növekszik","questionBefore":"Miért éri meg ","questionHighlight":"most","questionAfter":" választani?","description":"A Duna-part otthonai nemcsak kényelmet nyújtanak, hanem hosszú távon is értékálló befektetést jelenthetnek. Ismerje meg a korai választás előnyeit.","cta":"Tudjon meg többet","benefits":[{"title":"Nagyobb választék","description":"Az előértékesítés során még több lakás közül választhat, a legjobb tájolással és elhelyezkedéssel."},{"title":"Személyre szabható otthon","description":"Válasszon burkolatot, szanitert és belső megoldásokat még az építkezés során, a jóváhagyott műszaki lehetőségek szerint."},{"title":"Tervezhető fizetés","description":"Rugalmas, ütemezett fizetési konstrukció, amely igazodhat az építkezés műszaki mérföldköveihez."},{"title":"Biztonságos döntés","description":"Megbízható beruházó, átlátható folyamat és a szerződéses dokumentációban rögzített jogi garanciák."},{"title":"Hosszú távú érték","description":"A Duna-parti lokáció és a modern életstílus hosszú távon is vonzóvá teheti az otthont."}]},
   "sales": {
-    "home": "Kezdőlap", "masterplan": "Masterplan", "apartments": "Lakások", "favorites": "Kedvencek", "contact": "Kapcsolat",
-    "finderTitle": "Találja meg az új otthonát", "finderLead": "Szűrje a lakásokat, vagy induljon el az interaktív masterplanből.", "filters": "Szűrők", "clearFilters": "Törlés", "results": "találat", "building": "Épület", "floor": "Emelet", "rooms": "Szobák", "area": "Nettó alapterület", "outdoor": "Erkély / terasz", "orientation": "Tájolás", "availability": "Státusz", "all": "Mind", "from": "Minimum", "to": "Maximum", "openUnit": "Lakás megnyitása", "addFavorite": "Kedvencekhez", "removeFavorite": "Eltávolítás a kedvencekből", "saved": "Mentve", "emptyFavorites": "Még nincs mentett lakása.", "emptyResults": "Nincs a feltételeknek megfelelő lakás.",
-    "masterplanTitle": "Válasszon három lépésben", "masterplanLead": "Épület, emelet, majd lakás. A nézet stabil 2D alapot használ.", "selectBuilding": "1. Épület", "selectFloor": "2. Emelet", "selectUnit": "3. Lakás", "staticPreview": "Statikus axonometrikus előnézet · 3D modell előkészítés alatt",
+    "home": "Kezdőlap", "masterplan": "Lakásválasztó", "apartments": "Lakások", "favorites": "Kedvencek", "contact": "Kapcsolat",
+    "finderTitle": "Találja meg az új otthonát", "finderLead": "Szűrje a lakásokat, vagy induljon el az interaktív lakásválasztóból.", "filters": "Szűrők", "clearFilters": "Törlés", "results": "találat", "building": "Épület", "floor": "Emelet", "rooms": "Szobák", "area": "Nettó alapterület", "outdoor": "Erkély / terasz", "orientation": "Tájolás", "availability": "Státusz", "all": "Mind", "from": "Minimum", "to": "Maximum", "openUnit": "Lakás megnyitása", "addFavorite": "Kedvencekhez", "removeFavorite": "Eltávolítás a kedvencekből", "saved": "Mentve", "emptyFavorites": "Még nincs mentett lakása.", "emptyResults": "Nincs a feltételeknek megfelelő lakás.",
+    "masterplanTitle": "Válasszon három lépésben", "masterplanLead": "Épület, emelet, majd lakás. A nézet stabil 2D alapot használ.", "selectBuilding": "1. Épület", "selectFloor": "2. Emelet", "selectUnit": "3. Lakás", "staticPreview": "Koncepciólátvány · Statikus 2D lakásválasztó",
+    "dataPending": "Adatfeltöltés alatt", "precisionPending": "Pontosítás alatt", "masterplanPreviewAlt": "A tervezett lakónegyed lakásválasztójának koncepciólátványa",
     "unitDetails": "Lakásadatlap", "interiorArea": "Nettó lakótér", "terraceArea": "Erkély / terasz", "gardenArea": "Saját kert", "totalArea": "Összesített terület", "view": "Kilátás", "technology": "Technológia", "floorPlan": "Alaprajz", "axonometric": "Axonometrikus nézet", "interiors": "Belső látványképek", "brochure": "Lakás PDF letöltése", "inquiry": "Érdeklődöm a lakásról", "pricePending": "Ár pontosítás alatt", "backToResults": "Vissza a találatokhoz", "directLink": "Közvetlen lakáslink",
     "offlineTitle": "Jelenleg nincs internetkapcsolat", "offlineLead": "A már megnyitott oldalakat továbbra is elérheti. Csatlakozás után frissítse az oldalt.", "retry": "Újrapróbálom"
   }

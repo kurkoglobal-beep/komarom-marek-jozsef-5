@@ -31,11 +31,11 @@ export function EarlyChoiceSection({ messages }: { messages: Messages }) {
   }, []);
 
   return <section ref={ref} id="early-choice" className={`early-choice ${visible ? "is-visible" : ""}`} aria-labelledby="early-choice-title">
-    <picture className="early-choice__media early-choice__media--desktop"><Image src={earlyChoiceMedia.desktop} alt="" fill sizes="100vw" loading="lazy"/></picture>
     <div className="early-choice__shade" aria-hidden="true"/>
     <div className="early-choice__content">
       <header><h2 id="early-choice-title">{copy.title}<br/>{copy.questionBefore}<em>{copy.questionHighlight}</em>{copy.questionAfter}</h2><p>{copy.description}</p></header>
-      <picture className="early-choice__media early-choice__media--mobile"><Image src={earlyChoiceMedia.mobile} alt="" fill sizes="100vw" loading="lazy"/></picture>
+      <picture className="early-choice__media early-choice__media--desktop"><Image src={earlyChoiceMedia.desktop} alt={earlyChoiceMedia.alt} fill sizes="(min-width: 761px) 54vw, 100vw" loading="lazy"/><span className="visual-status visual-status--overlay">{messages.visualLabels.conceptVisual}</span></picture>
+      <picture className="early-choice__media early-choice__media--mobile"><Image src={earlyChoiceMedia.mobile} alt={earlyChoiceMedia.alt} fill sizes="(max-width: 760px) 100vw, 1px" loading="lazy"/><span className="visual-status visual-status--overlay">{messages.visualLabels.conceptVisual}</span></picture>
       <div className="early-choice__benefits">{copy.benefits.map((benefit, index) => <article key={benefit.title} tabIndex={0}><BenefitIcon index={index}/><h3>{benefit.title}</h3><p>{benefit.description}</p></article>)}</div>
       <Link className="button gold early-choice__cta" href="/kapcsolat?interest=residential-interest&sourceUrl=%2F%23early-choice">{copy.cta}<span aria-hidden="true">→</span></Link>
     </div>

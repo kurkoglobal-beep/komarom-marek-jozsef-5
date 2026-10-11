@@ -26,9 +26,16 @@
     "projectContact": "Projektkontakt",
     "privacy": "Datenschutz",
     "imprint": "Impressum",
+    "legalPending": "In Vorbereitung",
     "backToTop": "Nach oben",
     "loading": "Wird geladen…",
     "noData": "Keine Daten verfügbar."
+  },
+  "visualLabels": {
+    "architecturalVisual": "Architekturvisualisierung",
+    "conceptVisual": "Konzeptvisualisierung",
+    "illustration": "Illustration",
+    "projectVision": "Projektvision · Konzeptfilm"
   },
   "cta": {
     "interestProject": "Ich bin interessiert",
@@ -45,7 +52,7 @@
     "contactProject": "Kontakt aufnehmen"
   },
   "status": {
-    "comingSoon": "Demnächst",
+    "comingSoon": "Konzept",
     "available": "Verfügbar",
     "temporarilyReserved": "Vorübergehend reserviert",
     "reserved": "Reserviert",
@@ -58,7 +65,7 @@
     "email": "E-Mail-Adresse",
     "emailPlaceholder": "name@beispiel.de",
     "phone": "Telefonnummer",
-    "phonePlaceholder": "+36 30 123 4567",
+    "phonePlaceholder": "Optionale Telefonnummer",
     "subject": "Thema der Anfrage",
     "select": "Auswählen",
     "ownHome": "Eigenes Zuhause",
@@ -71,7 +78,8 @@
     "other": "Sonstiges",
     "consent": "Ich akzeptiere die Datenschutzhinweise.",
     "successTitle": "Vielen Dank für Ihr Interesse!",
-    "successMessage": "Wir werden Sie in Kürze kontaktieren.",
+    "successMessage": "Die Kontaktfunktion ist bald verfügbar.",
+    "unavailable": "Die Online-Kontaktaufnahme wird derzeit vorbereitet.",
     "integrationNote": "Das Formular kann in der nächsten Integrationsphase ein separates, Supabase-kompatibles Datenmodell verwenden."
   },
   "errors": {
@@ -114,8 +122,15 @@
       "description": "Natur, Architektur und gemeinschaftliches Leben verbinden sich in einem einheitlichen Entwicklungsansatz.",
       "disclaimer": "Illustrativer Stimmungsfilm · Nicht am Projektstandort aufgenommen",
       "videoLabel": "Illustrativer Stimmungsfilm eines grünen, menschenorientierten Entwicklungsumfelds",
+      "playLabel": "Projektfilm abspielen",
       "continue": "Entwicklungsphasen",
-      "continueLabel": "Weiter zu den interaktiven Entwicklungsphasen"
+      "continueLabel": "Weiter zu den interaktiven Entwicklungsphasen",
+      "cards": {
+        "concept": {"title": "Projektkonzept", "description": "Wohngebäude in menschlichem Maßstab, durchdachte Gemeinschaftsbereiche und eine begrünte Umgebung schaffen einen einheitlichen, langfristig geplanten Stadtraum."},
+        "specs": {"title": "Wichtige technische Daten", "items": [{"label": "Gebäude", "value": "Dreigeschossige Ausführung"}, {"label": "Wohnungen", "value": "Daten in Vorbereitung"}, {"label": "Energie", "value": "Technische Angaben in Klärung"}, {"label": "Smart Home", "value": "Geplante Vorbereitung"}]},
+        "schedule": {"title": "Zeitplan & Grünflächen", "description": "Die detaillierten Entwicklungsmeilensteine warten auf Freigabe.", "items": ["Vorbereitung und technische Finalisierung", "Geplante Entwicklungsphasen", "Begrüntes gemeinschaftliches Umfeld"]},
+        "contact": {"title": "Kontakt & Angebotsanfrage", "description": "Fordern Sie Informationen zum Projekt, zu den geplanten Wohnungen und zu den nächsten Schritten im Vertrieb an.", "cta": "Angebot anfordern"}
+      }
     },
     "phases": {
       "kicker": "Entwicklungsphasen", "title": "Komároms neues Premium-Wohnquartier entsteht.", "titleEmphasis": "", "description": "In vier geplanten Phasen entsteht eine Gemeinschaft von Wohnungen an der Donau – in einem modernen Umfeld mit dauerhafter Qualität.", "imageAlt": "Baustelle mit Kran und Baumaschinen bei Sonnenuntergang, illustratives Stimmungsbild", "illustration": "Baustellen-Stimmungsbild", "selectorLabel": "Entwicklungsphase auswählen", "all": "Alle Phasen", "phase": "Phase", "overview": "Entwicklungsübersicht", "allTitle": "Das gesamte Entwicklungsgebiet", "allDescription": "Die vier geplanten Phasen bilden ein einheitliches, langfristiges Entwicklungskonzept.", "allCta": "Wohnungen ansehen", "phaseTitle": "Phase {phase}", "placeholderDescription": "Detaillierte technische und vertriebliche Angaben zu dieser Phase warten auf Freigabe.", "handover": "Geplante Übergabe", "unitCount": "Anzahl Wohnungen", "availableCount": "Verfügbare Wohnungen", "progress": "Entwicklungsfortschritt", "dataPending": "Daten in Vorbereitung", "detailsSoon": "Details folgen", "details": "Details", "plannedCta": "Für den Vorverkauf vormerken", "timelineLabel": "Entwicklungszeitplan", "smartSelection": "Personalisierte Suche", "moveQuestion": "Wann möchten Sie einziehen?",
@@ -127,18 +142,18 @@
       "categories": {"transport": "Verkehr", "education": "Bildung", "healthcare": "Gesundheit", "shopping": "Einkaufen", "sport": "Sport", "nature": "Natur", "regional": "Regionale Verbindungen"},
       "points": {"location-danube": {"name": "Donau", "description": "Der Fluss und das naturnahe Ufer prägen die Landschaft von Komárom."}, "location-bridge": {"name": "Monostori-Brücke", "description": "Eine moderne städtische und regionale Verbindung zwischen den Donauufern."}, "location-promenade": {"name": "Donaupromenade", "description": "Eine begrünte Fußgängerzone mit Sitzplätzen und Abendbeleuchtung."}, "location-residential": {"name": "Verbindung zum Wohnquartier", "description": "Eine direkte städtische Verbindung zwischen Ufer und geplanten Wohnungen."}, "location-regional": {"name": "Regionale Verbindung", "description": "Komároms grenzüberschreitendes und regionales Verbindungsnetz."}}
     },
-    "media": {"kicker": "Visuelles Wohnungsprofil", "title": "Alle Ansichten an einem Ort", "viewLabel": "Wohnungsansicht auswählen", "tabs": {"floorPlan": "2D-Grundriss", "furnished": "Möblierte Ansicht", "interiors": "Innenräume"}, "labels": {"floorPlan": "Grundriss", "furnished": "Möblierte Axonometrie", "livingRoom": "Wohnzimmer", "bedroom": "Schlafzimmer", "bathroom": "Badezimmer"}, "staticView": "Eine freigegebene axonometrische Ansicht", "floorPlanAlt": "Grundriss der Wohnung {unit}", "furnishedAlt": "Möblierte axonometrische Ansicht der Wohnung {unit}", "interiorAlt": "Wohnung {unit} – Innenraumkonzept {room}", "exactTitle": "Der Wohnung zugeordnete Unterlagen", "exactDescription": "Der dargestellte Grundriss und die visuellen Medien sind dieser Wohnung zugeordnet. Die Möblierung ist unverbindlich.", "conceptTitle": "Innenraumkonzept · Illustration", "conceptDescription": "Die Bilder sind Stimmungs- und Innenraumillustrationen; sie sind keine endgültige oder technisch geprüfte Dokumentation dieser Wohnung. Die Möblierung ist unverbindlich.", "furnishingDisclaimer": "Einrichtungs- und Innenraumkonzept. Die Möblierung ist unverbindlich.", "zoom": "Vergrößern", "closeZoom": "Vergrößerte Ansicht schließen", "previousView": "Vorherige Ansicht", "nextView": "Nächste Ansicht", "viewNumber": "Ansicht {number}", "mediaUnavailable": "Die visuelle Vorschau ist derzeit nicht verfügbar.", "actionsLabel": "Wohnungsaktionen", "share": "Teilen", "linkCopied": "Wohnungslink wurde kopiert."},
+    "media": {"kicker": "Visuelles Wohnungsprofil", "title": "Alle Ansichten an einem Ort", "viewLabel": "Wohnungsansicht auswählen", "tabs": {"floorPlan": "2D-Grundriss", "furnished": "Möblierte Ansicht", "interiors": "Innenräume"}, "labels": {"floorPlan": "Grundriss", "furnished": "Möblierte Axonometrie", "livingRoom": "Wohnzimmer", "bedroom": "Schlafzimmer", "bathroom": "Badezimmer"}, "staticView": "Wohnungsvisualisierung in Vorbereitung", "floorPlanAlt": "Grundriss der Wohnung {unit}", "furnishedAlt": "Möblierte axonometrische Ansicht der Wohnung {unit}", "interiorAlt": "Wohnung {unit} – Innenraumkonzept {room}", "exactTitle": "Der Wohnung zugeordnete Unterlagen", "exactDescription": "Der dargestellte Grundriss und die visuellen Medien sind dieser Wohnung zugeordnet. Die Möblierung ist unverbindlich.", "conceptTitle": "Innenraumkonzept · Illustration", "conceptDescription": "Die Bilder sind Stimmungs- und Innenraumillustrationen; sie sind keine endgültige oder technisch geprüfte Dokumentation dieser Wohnung. Die Möblierung ist unverbindlich.", "furnishingDisclaimer": "Einrichtungs- und Innenraumkonzept. Die Möblierung ist unverbindlich.", "zoom": "Vergrößern", "closeZoom": "Vergrößerte Ansicht schließen", "previousView": "Vorherige Ansicht", "nextView": "Nächste Ansicht", "viewNumber": "Ansicht {number}", "mediaUnavailable": "Wohnungsvisualisierung in Vorbereitung", "actionsLabel": "Wohnungsaktionen", "share": "Teilen", "linkCopied": "Wohnungslink wurde kopiert."},
     "journal": {"kicker": "Bautagebuch", "title": "Fortschritt der Entwicklung", "empty": "Das erste freigegebene Bau-Update erscheint demnächst hier.", "compareLabel": "Bauzustände vergleichen", "entryPending": "Freigegebenes Projekt-Update"}
   },
   "homeExperience": {
     "searchEyebrow": "Schnellsuche", "searchTitle": "Finden Sie Ihr passendes Zuhause", "minimumArea": "Mindestwohnfläche",
     "entryEyebrow": "Digitales Immobilienerlebnis", "entryTitle": "Entdecken Sie.", "entryEmphasis": "Wählen Sie Ihren eigenen Weg.", "primary": "Primäres Erlebnis",
-    "masterplan": "Masterplan entdecken", "apartments": "Wohnungen ansehen", "favorites": "Favoriten", "project": "Projekt kennenlernen",
-    "masterplanAlt": "Vorschau des interaktiven Masterplans des Wohnquartiers", "apartmentsAlt": "Premium-Wohnungsinterieur mit Parkblick",
+    "masterplan": "Wohnungsauswahl", "apartments": "Wohnungen ansehen", "favorites": "Favoriten", "project": "Projekt kennenlernen",
+    "masterplanAlt": "Wohnquartier-Vorschau der Wohnungsauswahl", "apartmentsAlt": "Konzeptinterieur der Wohnung A-2.01 mit Parkblick",
     "featuredEyebrow": "Ausgewählte Wohnungen", "featuredTitle": "Kuratiertes Angebot.", "featuredEmphasis": "Direkt zu entdecken."
   },
   "earlyChoice": {"title":"Wert, der Bestand haben kann","questionBefore":"Warum ","questionHighlight":"jetzt","questionAfter":" wählen?","description":"Die Wohnungen an der Donau bieten Komfort und können langfristig auch einen beständigen Wert darstellen. Entdecken Sie die Vorteile einer frühen Auswahl.","cta":"Mehr erfahren","benefits":[{"title":"Größere Auswahl","description":"Im Vorverkauf können Sie aus mehr Wohnungen mit bevorzugter Ausrichtung und Lage wählen."},{"title":"Individuelles Zuhause","description":"Wählen Sie während der Bauphase Beläge, Sanitärausstattung und Innenraumlösungen im Rahmen der freigegebenen technischen Möglichkeiten."},{"title":"Planbare Zahlung","description":"Eine flexible, gestaffelte Zahlungsstruktur, die sich an technischen Baufortschritten orientieren kann."},{"title":"Fundierte Entscheidung","description":"Ein verlässlicher Bauträger, transparente Abläufe und vertraglich dokumentierte rechtliche Sicherheiten."},{"title":"Langfristige Attraktivität","description":"Die Lage an der Donau und der moderne Lebensstil können das Zuhause langfristig attraktiv halten."}]},
   "sales": {
-    "home":"Start","masterplan":"Masterplan","apartments":"Wohnungen","favorites":"Favoriten","contact":"Kontakt","finderTitle":"Finden Sie Ihr neues Zuhause","finderLead":"Filtern Sie Wohnungen oder starten Sie im interaktiven Masterplan.","filters":"Filter","clearFilters":"Löschen","results":"Treffer","building":"Gebäude","floor":"Etage","rooms":"Zimmer","area":"Nettofläche","outdoor":"Balkon / Terrasse","orientation":"Ausrichtung","availability":"Status","all":"Alle","from":"Minimum","to":"Maximum","openUnit":"Wohnung öffnen","addFavorite":"Zu Favoriten","removeFavorite":"Aus Favoriten entfernen","saved":"Gespeichert","emptyFavorites":"Noch keine gespeicherten Wohnungen.","emptyResults":"Keine Wohnung entspricht den Filtern.","masterplanTitle":"In drei Schritten wählen","masterplanLead":"Gebäude, Etage und Wohnung auf stabiler 2D-Basis.","selectBuilding":"1. Gebäude","selectFloor":"2. Etage","selectUnit":"3. Wohnung","staticPreview":"Statische axonometrische Vorschau · 3D-Modell in Vorbereitung","unitDetails":"Wohnungsdaten","interiorArea":"Netto-Wohnfläche","terraceArea":"Balkon / Terrasse","gardenArea":"Privatgarten","totalArea":"Gesamtfläche","view":"Ausblick","technology":"Technologie","floorPlan":"Grundriss","axonometric":"Axonometrische Ansicht","interiors":"Innenraumvisualisierungen","brochure":"Wohnungs-PDF herunterladen","inquiry":"Wohnung anfragen","pricePending":"Preis in Abstimmung","backToResults":"Zurück zu Ergebnissen","directLink":"Direkter Wohnungslink","offlineTitle":"Sie sind offline","offlineLead":"Bereits geöffnete Seiten bleiben verfügbar. Nach der Verbindung aktualisieren.","retry":"Erneut versuchen"
+    "home":"Start","masterplan":"Masterplan","apartments":"Wohnungen","favorites":"Favoriten","contact":"Kontakt","finderTitle":"Finden Sie Ihr neues Zuhause","finderLead":"Filtern Sie Wohnungen oder starten Sie im interaktiven Masterplan.","filters":"Filter","clearFilters":"Löschen","results":"Treffer","building":"Gebäude","floor":"Etage","rooms":"Zimmer","area":"Nettofläche","outdoor":"Balkon / Terrasse","orientation":"Ausrichtung","availability":"Status","all":"Alle","from":"Minimum","to":"Maximum","openUnit":"Wohnung öffnen","addFavorite":"Zu Favoriten","removeFavorite":"Aus Favoriten entfernen","saved":"Gespeichert","emptyFavorites":"Noch keine gespeicherten Wohnungen.","emptyResults":"Keine Wohnung entspricht den Filtern.","masterplanTitle":"In drei Schritten wählen","masterplanLead":"Gebäude, Etage und Wohnung auf stabiler 2D-Basis.","selectBuilding":"1. Gebäude","selectFloor":"2. Etage","selectUnit":"3. Wohnung","staticPreview":"Konzeptvisualisierung · Statische 2D-Wohnungsauswahl","dataPending":"Datenupload läuft","precisionPending":"In Abstimmung","masterplanPreviewAlt":"Konzeptdarstellung der Wohnungsauswahl im geplanten Wohnquartier","unitDetails":"Wohnungsdaten","interiorArea":"Netto-Wohnfläche","terraceArea":"Balkon / Terrasse","gardenArea":"Privatgarten","totalArea":"Gesamtfläche","view":"Ausblick","technology":"Technologie","floorPlan":"Grundriss","axonometric":"Axonometrische Ansicht","interiors":"Innenraumvisualisierungen","brochure":"Wohnungs-PDF herunterladen","inquiry":"Wohnung anfragen","pricePending":"Preis in Abstimmung","backToResults":"Zurück zu Ergebnissen","directLink":"Direkter Wohnungslink","offlineTitle":"Sie sind offline","offlineLead":"Bereits geöffnete Seiten bleiben verfügbar. Nach der Verbindung aktualisieren.","retry":"Erneut versuchen"
   }
 }

@@ -19,15 +19,15 @@ export function UnitInteractivePreview({ items, unitNumber, messages, priority =
   const move = (direction: number) => { if (interactive) { setLoaded(false); setFailed(false); setIndex((current) => (current + direction + views.length) % views.length); } };
   const alt = copy.furnishedAlt.replace("{unit}", unitNumber);
 
-  return <div className={`unit-preview ${interactive ? "is-interactive" : "is-static"}`}>
+  return <div className={`unit-preview ${interactive ? "is-interactive" : "is-static"} ${active ? "has-media" : "has-no-media"}`}>
     <div className="unit-preview__stage" tabIndex={interactive ? 0 : undefined} onKeyDown={(event) => { if (event.key === "ArrowLeft") move(-1); if (event.key === "ArrowRight") move(1); }} onPointerDown={(event) => { pointerX.current = event.clientX; }} onPointerUp={(event) => { if (pointerX.current === null) return; const delta = event.clientX - pointerX.current; pointerX.current = null; if (Math.abs(delta) > 42) move(delta < 0 ? 1 : -1); }}>
-      {!loaded && !failed ? <span className="unit-preview__skeleton" aria-hidden="true"/> : null}
+      {active && !loaded && !failed ? <span className="unit-preview__skeleton" aria-hidden="true"/> : null}
       {active && !failed ? <Image key={active.id} src={active.src} alt={alt} fill sizes="(max-width:760px) 94vw, 55vw" priority={priority} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} className={loaded ? "is-loaded" : ""}/> : <div className="unit-preview__fallback"><span aria-hidden="true">⌑</span><p>{copy.mediaUnavailable}</p></div>}
       <button type="button" className="unit-preview__zoom" onClick={() => setZoomed(true)} disabled={!active || failed} aria-label={copy.zoom}>＋<span>{copy.zoom}</span></button>
       {interactive ? <><button type="button" className="unit-preview__arrow previous" onClick={() => move(-1)} aria-label={copy.previousView}>←</button><button type="button" className="unit-preview__arrow next" onClick={() => move(1)} aria-label={copy.nextView}>→</button></> : null}
     </div>
-    {interactive ? <div className="unit-preview__thumbs" aria-label={copy.viewLabel}>{views.map((view, viewIndex) => <button type="button" key={view.id} className={index === viewIndex ? "active" : ""} aria-pressed={index === viewIndex} onClick={() => { setLoaded(false); setFailed(false); setIndex(viewIndex); }}><Image src={view.src} alt="" fill sizes="84px"/><span>{copy.viewNumber.replace("{number}", `${viewIndex + 1}`)}</span></button>)}</div> : <p className="unit-preview__static-label">{copy.staticView}</p>}
-    <p className="unit-preview__disclaimer">{copy.furnishingDisclaimer}</p>
+    {interactive ? <div className="unit-preview__thumbs" aria-label={copy.viewLabel}>{views.map((view, viewIndex) => <button type="button" key={view.id} className={index === viewIndex ? "active" : ""} aria-pressed={index === viewIndex} onClick={() => { setLoaded(false); setFailed(false); setIndex(viewIndex); }}><Image src={view.src} alt="" fill sizes="84px"/><span>{copy.viewNumber.replace("{number}", `${viewIndex + 1}`)}</span></button>)}</div> : active ? <p className="unit-preview__static-label">{copy.staticView}</p> : null}
+    {active ? <p className="unit-preview__disclaimer">{copy.furnishingDisclaimer}</p> : null}
     <MediaZoomModal item={zoomed ? active : null} alt={alt} closeLabel={copy.closeZoom} onClose={() => setZoomed(false)}/>
   </div>;
 }

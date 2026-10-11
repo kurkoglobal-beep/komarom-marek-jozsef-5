@@ -8,7 +8,8 @@ export const moveIntents = rawExperience.moveIntents as MoveIntent[];
 
 const exactMediaUnitId = "unit-a-201";
 export function getUnitMedia(unit: UnitView): { items: UnitMedia[]; roomLinks: RoomMediaLink[] } {
-  const relationship = unit.id === exactMediaUnitId ? "exact" : "concept";
+  if (unit.id !== exactMediaUnitId) return { items: [], roomLinks: [] };
+  const relationship = "exact";
   const sources = [
     ["floor-plan", "floorPlan2D", "asset-floorplan-a201", unit.presentation.floorPlanSrc, null, "floorPlan"],
     ["axonometry", "furnishedAxonometry", "asset-axonometric-a201", unit.presentation.axonometricSrc, null, "furnished"],

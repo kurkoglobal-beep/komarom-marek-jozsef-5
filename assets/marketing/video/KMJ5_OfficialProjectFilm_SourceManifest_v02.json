@@ -1,0 +1,19 @@
+{
+  "asset": "KMJ5_OfficialProjectFilm",
+  "version": "v02",
+  "originalFilename": "Marek J 5.MOV",
+  "sourceFormat": "QuickTime MOV",
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "width": 3840,
+  "height": 2160,
+  "frameRate": 30,
+  "durationSeconds": 68,
+  "sizeBytes": 212532210,
+  "sha256": "05dc290396ed644e5dd70441b36b675ab74c49f9e6cb29f8b6fb53fceea7215a",
+  "sourceStorage": {
+    "status": "managed-object-storage-pending",
+    "uri": null
+  },
+  "repositoryPolicy": "The source exceeds the 5 MB repository threshold and is not copied into Git. Only optimized delivery renditions and this checksum manifest are stored in the repository."
+}

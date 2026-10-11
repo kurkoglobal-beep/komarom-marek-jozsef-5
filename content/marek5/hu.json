@@ -19,24 +19,25 @@
     ],
     "slides": [
       {
-        "src": "/assets/hero/KMJ5_Hero_DevelopmentMaster_v01.webp",
-        "label": "Integrált fejlesztési terület",
-        "alt": "A Komárom Fejlesztési Terület integrált víziója központi parkkal, tóval és háromszintes épületekkel"
+        "src": "/assets/hero/KMJ5_Hero_AerialMasterplan_Desktop_v04.webp",
+        "focus": "aerial-masterplan",
+        "objectPosition": "56% center",
+        "label": "A lakópark madártávlatból",
+        "alt": "A Komárom Marek József utca 5. tervezett lakónegyedének madártávlati építészeti látványterve"
       },
       {
-        "src": "/assets/hero/KMJ5_Hero_Residential_v01.webp",
-        "label": "Lakónegyed",
-        "alt": "Prémium lakónegyed háromszintes épületekkel, családokkal, központi parkkal és tóval"
+        "src": "/assets/hero/KMJ5_Hero_CommunityGardenEvening_Desktop_v03.webp",
+        "focus": "community-garden",
+        "objectPosition": "54% center",
+        "label": "Kertkapcsolatos otthonok esti fényben",
+        "alt": "Háromszintes, kertkapcsolatos lakóépületek esti építészeti látványterve"
       },
       {
-        "src": "/assets/hero/KMJ5_Hero_EducationCampus_v01.webp",
-        "label": "Oktatási Campus",
-        "alt": "Nemzetközi színvonalú, háromszintes Oktatási Campus parkosított környezetben"
-      },
-      {
-        "src": "/assets/hero/KMJ5_Hero_SeniorLiving_v01.webp",
-        "label": "Senior Living",
-        "alt": "Prémium Senior Living környezet wellness pavilonnal, parkkal és vízfelülettel"
+        "src": "/assets/hero/KMJ5_Hero_CourtyardEvening_Desktop_v02.webp",
+        "focus": "courtyard-evening",
+        "objectPosition": "48% center",
+        "label": "Belső kert esti hangulatban",
+        "alt": "Erkélyes lakóépületek és parkosított belső kert esti építészeti látványterve"
       }
     ]
   },
@@ -68,7 +69,7 @@
       }
     ],
     "imageSrc": "/assets/renders/exterior/KMJ5_Exterior_IntegratedDevelopment_v01.webp",
-    "imageAlt": "A Komárom Fejlesztési Terület interaktív látványtérképe központi tóval, parkkal és háromszintes épületekkel",
+    "imageAlt": "A fejlesztési terület koncepciólátványa központi tóval, parkkal és háromszintes épületekkel",
     "mapLabel": "A fejlesztési terület interaktív zónatérképe",
     "mapCardLabel": "Fejlesztési zóna",
     "hotspots": [
@@ -149,8 +150,8 @@
     "footerLine": "Négy funkció. Egy egységes, emberléptékű fejlesztési vízió.",
     "residentialFeatures": [
       { "icon": "⌂", "title": "Átgondolt alaprajzok", "description": "Élhető terek, jó benapozás és kényelmes tárolás." },
-      { "icon": "⌁", "title": "Smart Home", "description": "A világítás, árnyékolás és hőmérséklet jövőálló vezérlése." },
-      { "icon": "◇", "title": "Smart Park", "description": "Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható." },
+      { "icon": "⌁", "title": "Smart Home koncepció", "description": "Tervezett Smart Home-előkészítés lehetősége." },
+      { "icon": "◇", "title": "Smart Park koncepció", "description": "Napelemes ülőpadok USB- és vezeték nélküli töltéssel, energiatakarékos LED parkvilágítás és automata öntözés. A közösségi Wi-Fi és az e-bike-töltés opcionálisan kialakítható." },
       { "icon": "✦", "title": "Prémium anyaghasználat", "description": "Időtálló burkolatok és gondosan összeválogatott részletek." }
     ]
   },
@@ -163,7 +164,7 @@
     "buildingLabel": "épület",
     "floorLabel": "3 emelet",
     "pendingLabel": "Pontosítás alatt",
-    "features": ["Smart Home", "EV-töltés", "Napenergia", "Tóparti kapcsolat"],
+    "features": ["Smart Home koncepció", "Tervezett EV-lehetőség", "Vizsgált napenergia-lehetőség", "Tóparti kapcsolat"],
     "phaseFilter": "Fázis szűrő",
     "allPhases": "Összes",
     "phaseOne": "I. ütem",
@@ -379,9 +380,9 @@
     "titleEmphasis": "már az első pillanatban.",
     "description": "A képek a projekt tervezett hangulatát és anyaghasználatát szemléltetik.",
     "items": [
-      { "alt": "Prémium lakás enteriőrjei", "caption": "Világos, természetes enteriőrök" },
-      { "alt": "Okosotthon-megoldásokkal felszerelt modern nappali, kilátással a belső parkra és a központi tóra", "caption": "Smart Home · természetközeli kilátás" },
-      { "alt": "Smart Park központi tóval, napelemes ülőpadokkal és energiatakarékos parkvilágítással", "caption": "Smart Park · intelligens zöld környezet" }
+      { "alt": "Világos, természetes anyaghasználatú koncepcióenteriőrök", "caption": "Koncepció enteriőrök · tervezett hangulat" },
+      { "alt": "Smart Home koncepciót illusztráló modern nappali, kilátással a belső parkra és a központi tóra", "caption": "Smart Home koncepció · tervezett hangulat" },
+      { "alt": "Smart Park koncepciót szemléltető központi tó és tervezett park-infrastruktúra", "caption": "Smart Park koncepció · intelligens zöld környezet" }
     ]
   },
   "apartments": {
@@ -453,8 +454,8 @@
   },
   "contact": {
     "email": "hello@marek5.hu",
-    "phoneDisplay": "+36 30 123 4567",
-    "phoneHref": "+36301234567",
+    "phoneDisplay": "",
+    "phoneHref": "",
     "postalCode": "2900",
     "city": "Komárom",
     "street": "Marek József utca 5.",
