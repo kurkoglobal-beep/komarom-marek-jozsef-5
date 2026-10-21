@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "project": "KMJ5",
   "projectName": "Komárom, Marek József utca 5.",
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-10-21",
   "assets": [
     {
       "id": "KMJ5-HERO-AERIAL-MASTERPLAN-001",
@@ -1005,7 +1005,19 @@
           "purpose": "web"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "conceptReuse": {
+        "unitTypeIds": [
+          "type-compact"
+        ],
+        "labelKey": "livingRoom",
+        "relationship": "concept",
+        "scope": [
+          "apartment-finder",
+          "apartment-detail"
+        ],
+        "note": "Lakáskiválasztó 2.2: kizárólag hangulati illusztráció; nem a hozzárendelt mintalakás tényleges elrendezése. Az A-2.01 eredeti dokumentációját nem helyettesíti."
+      }
     },
     {
       "id": "KMJ5-APARTMENT-A201-BEDROOM-001",
@@ -1166,7 +1178,19 @@
           "purpose": "web"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "conceptReuse": {
+        "unitTypeIds": [
+          "type-family"
+        ],
+        "labelKey": "interiorCollection",
+        "relationship": "concept",
+        "scope": [
+          "apartment-finder",
+          "apartment-detail"
+        ],
+        "note": "Lakáskiválasztó 2.2: kizárólag hangulati illusztráció; nem a hozzárendelt mintalakás tényleges elrendezése. Az A-2.01 eredeti dokumentációját nem helyettesíti."
+      }
     },
     {
       "id": "KMJ5-SMART-HOME-LIVINGROOM-001",

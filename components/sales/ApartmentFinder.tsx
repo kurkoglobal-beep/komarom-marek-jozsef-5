@@ -89,7 +89,7 @@ export function ApartmentFinder({ units }: { units: UnitView[] }) {
     </aside>
     <section className="finder-results">
       <header><strong>{results.length} {messages.sales.results}</strong></header>
-      {results.length ? <div className="unit-grid">{results.map((unit) => <UnitCard key={unit.id} unit={unit}/>)}</div> : <p className="sales-empty">{messages.sales.emptyResults}</p>}
+      {results.length ? <div className="unit-grid">{results.map((unit) => <UnitCard key={unit.id} unit={unit} conceptImages/>)}</div> : <p className="sales-empty">{messages.sales.emptyResults}</p>}
     </section>
   </div>;
 }

@@ -269,7 +269,8 @@
         "furnished": "Möblierte Axonometrie",
         "livingRoom": "Wohnzimmer",
         "bedroom": "Schlafzimmer",
-        "bathroom": "Badezimmer"
+        "bathroom": "Badezimmer",
+        "interiorCollection": "Innenraumkollektion"
       },
       "staticView": "Wohnungsvisualisierung in Vorbereitung",
       "floorPlanAlt": "Grundriss der Wohnung {unit}",
@@ -288,7 +289,10 @@
       "mediaUnavailable": "Wohnungsvisualisierung in Vorbereitung",
       "actionsLabel": "Wohnungsaktionen",
       "share": "Teilen",
-      "linkCopied": "Wohnungslink wurde kopiert."
+      "linkCopied": "Wohnungslink wurde kopiert.",
+      "illustrationLabel": "Innenraumkonzept – Illustration",
+      "illustrationDisclaimer": "Die gezeigten Bilder veranschaulichen die Atmosphäre des geplanten Wohnquartiers und sind keine endgültige Architekturdokumentation der jeweiligen Wohnung.",
+      "illustrationAlt": "{room} – Innenraumillustration, kein wohnungsspezifischer Grundriss."
     },
     "journal": {
       "kicker": "Bautagebuch",

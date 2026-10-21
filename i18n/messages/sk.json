@@ -269,7 +269,8 @@
         "furnished": "Zariadená axonometria",
         "livingRoom": "Obývacia izba",
         "bedroom": "Spálňa",
-        "bathroom": "Kúpeľňa"
+        "bathroom": "Kúpeľňa",
+        "interiorCollection": "Kolekcia interiérov"
       },
       "staticView": "Vizualizácia bytu je v príprave",
       "floorPlanAlt": "Pôdorys bytu {unit}",
@@ -288,7 +289,10 @@
       "mediaUnavailable": "Vizualizácia bytu je v príprave",
       "actionsLabel": "Akcie bytu",
       "share": "Zdieľať",
-      "linkCopied": "Odkaz na byt bol skopírovaný."
+      "linkCopied": "Odkaz na byt bol skopírovaný.",
+      "illustrationLabel": "Interiérový koncept – ilustrácia",
+      "illustrationDisclaimer": "Zobrazené obrázky ilustrujú atmosféru plánovanej obytnej štvrte, nie konečnú architektonickú dokumentáciu konkrétneho bytu.",
+      "illustrationAlt": "{room} – ilustračný interiérový obrázok, nie dispozícia konkrétneho bytu."
     },
     "journal": {
       "kicker": "Stavebný denník",

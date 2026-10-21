@@ -44,7 +44,8 @@ test("server-renders apartment finder and direct unit URL", async () => {
   const conceptDetail = await renderPath("/lakasok/unit-a-101");
   assert.equal(conceptDetail.status, 200);
   const conceptHtml = (await conceptDetail.text()).replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
-  assert.match(conceptHtml, /Lakásvizualizáció előkészítés alatt/);
+  assert.match(conceptHtml, /Belsőépítészeti koncepció – illusztráció/);
+  assert.match(conceptHtml, /nem az adott lakás végleges építészeti dokumentációját/);
   assert.doesNotMatch(conceptHtml, /KMJ5_A201_Floorplan_v01/);
   assert.match(html, /Adatfeltöltés alatt/);
 });

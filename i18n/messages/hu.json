@@ -269,7 +269,8 @@
         "furnished": "Berendezett axonometria",
         "livingRoom": "Nappali",
         "bedroom": "Hálószoba",
-        "bathroom": "Fürdőszoba"
+        "bathroom": "Fürdőszoba",
+        "interiorCollection": "Enteriőr-összeállítás"
       },
       "staticView": "Lakásvizualizáció előkészítés alatt",
       "floorPlanAlt": "{unit} lakás alaprajza",
@@ -288,7 +289,10 @@
       "mediaUnavailable": "Lakásvizualizáció előkészítés alatt",
       "actionsLabel": "Lakás műveletek",
       "share": "Megosztás",
-      "linkCopied": "A lakás linkje a vágólapra került."
+      "linkCopied": "A lakás linkje a vágólapra került.",
+      "illustrationLabel": "Belsőépítészeti koncepció – illusztráció",
+      "illustrationDisclaimer": "A megjelenített képek a tervezett lakónegyed hangulatát szemléltetik, nem az adott lakás végleges építészeti dokumentációját.",
+      "illustrationAlt": "{room} – belsőépítészeti hangulatkép, nem lakásspecifikus elrendezés."
     },
     "journal": {
       "kicker": "Építési napló",

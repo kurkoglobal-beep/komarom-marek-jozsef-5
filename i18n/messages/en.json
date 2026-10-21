@@ -269,7 +269,8 @@
         "furnished": "Furnished axonometry",
         "livingRoom": "Living room",
         "bedroom": "Bedroom",
-        "bathroom": "Bathroom"
+        "bathroom": "Bathroom",
+        "interiorCollection": "Interior collection"
       },
       "staticView": "Apartment visualization in preparation",
       "floorPlanAlt": "Floor plan of apartment {unit}",
@@ -288,7 +289,10 @@
       "mediaUnavailable": "Apartment visualization in preparation",
       "actionsLabel": "Apartment actions",
       "share": "Share",
-      "linkCopied": "Apartment link copied to the clipboard."
+      "linkCopied": "Apartment link copied to the clipboard.",
+      "illustrationLabel": "Interior design concept – illustration",
+      "illustrationDisclaimer": "The images illustrate the atmosphere of the planned residential neighbourhood, not the final architectural documentation of the individual apartment.",
+      "illustrationAlt": "{room} – interior mood illustration, not an apartment-specific layout."
     },
     "journal": {
       "kicker": "Construction journal",
