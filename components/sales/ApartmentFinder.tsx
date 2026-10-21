@@ -22,11 +22,9 @@ function readFilters(search: string): Filters {
 export function ApartmentFinder({ units }: { units: UnitView[] }) {
   const [filters, setFilters] = useState<Filters>(empty);
   const [ready, setReady] = useState(false);
-  const [queryLabel, setQueryLabel] = useState("");
 
   useEffect(() => {
     setFilters(readFilters(window.location.search));
-    setQueryLabel(window.location.search);
     setReady(true);
   }, []);
 
@@ -40,7 +38,6 @@ export function ApartmentFinder({ units }: { units: UnitView[] }) {
     const next = params.toString();
     const search = next ? `?${next}` : "";
     window.history.replaceState(window.history.state, "", `${window.location.pathname}${search}${window.location.hash}`);
-    setQueryLabel(search);
   }, [filters, ready]);
 
   const update = (key: keyof Filters, value: string) =>
@@ -91,7 +88,7 @@ export function ApartmentFinder({ units }: { units: UnitView[] }) {
       <p className="sales-empty">{messages.sales.dataPending}</p>
     </aside>
     <section className="finder-results">
-      <header><strong>{results.length} {messages.sales.results}</strong><span>{queryLabel}</span></header>
+      <header><strong>{results.length} {messages.sales.results}</strong></header>
       {results.length ? <div className="unit-grid">{results.map((unit) => <UnitCard key={unit.id} unit={unit}/>)}</div> : <p className="sales-empty">{messages.sales.emptyResults}</p>}
     </section>
   </div>;
