@@ -1,5 +1,8 @@
 {
-  "_meta": { "locale": "en", "translationStatus": "ready" },
+  "_meta": {
+    "locale": "en",
+    "translationStatus": "ready"
+  },
   "navigation": {
     "project": "Project",
     "city": "Komárom",
@@ -126,34 +129,277 @@
       "continue": "Development phases",
       "continueLabel": "Continue to the interactive development phases",
       "cards": {
-        "concept": {"title": "Project concept", "description": "Human-scale residential buildings, considered shared spaces and landscaped surroundings create a coherent urban environment designed for the long term."},
-        "specs": {"title": "Key technical details", "items": [{"label": "Buildings", "value": "Three-storey design"}, {"label": "Apartments", "value": "Data pending"}, {"label": "Energy", "value": "Technical details pending"}, {"label": "Smart Home", "value": "Planned preparation"}]},
-        "schedule": {"title": "Schedule & Green Spaces", "description": "Detailed development milestones are awaiting approval.", "items": ["Preparation and technical finalisation", "Planned development phases", "Landscaped community environment"]},
-        "contact": {"title": "Contact & Request an Offer", "description": "Request information about the project, the planned apartments and the next steps in the sales process.", "cta": "Request an offer"}
+        "concept": {
+          "title": "Project concept",
+          "description": "Human-scale residential buildings, considered shared spaces and landscaped surroundings create a coherent urban environment designed for the long term."
+        },
+        "specs": {
+          "title": "Key technical details",
+          "items": [
+            {
+              "label": "Buildings",
+              "value": "Three-storey design"
+            },
+            {
+              "label": "Apartments",
+              "value": "Data pending"
+            },
+            {
+              "label": "Energy",
+              "value": "Technical details pending"
+            },
+            {
+              "label": "Smart Home",
+              "value": "Planned preparation"
+            }
+          ]
+        },
+        "schedule": {
+          "title": "Schedule & Green Spaces",
+          "description": "Detailed development milestones are awaiting approval.",
+          "items": [
+            "Preparation and technical finalisation",
+            "Planned development phases",
+            "Landscaped community environment"
+          ]
+        },
+        "contact": {
+          "title": "Contact & Request an Offer",
+          "description": "Request information about the project, the planned apartments and the next steps in the sales process.",
+          "cta": "Request an offer"
+        }
       }
     },
     "phases": {
-      "kicker": "Development phases", "title": "Komárom’s new premium residential district is taking shape.", "titleEmphasis": "", "description": "A Danube-side community of homes is taking shape across four planned phases – in a modern setting designed for lasting quality.", "imageAlt": "Sunset construction site with cranes and machinery, illustrative mood image", "illustration": "Architectural visual", "selectorLabel": "Select a development phase", "all": "All phases", "phase": "phase", "overview": "Development overview", "allTitle": "The complete development area", "allDescription": "The four planned phases form one coherent, long-term development concept.", "allCta": "View apartments", "phaseTitle": "Phase {phase}", "placeholderDescription": "Detailed technical and sales information for this phase is awaiting approval.", "handover": "Planned handover", "unitCount": "Number of apartments", "availableCount": "Available apartments", "progress": "Development progress", "dataPending": "Data pending", "detailsSoon": "Details coming soon", "details": "Details", "plannedCta": "Register for pre-sales", "timelineLabel": "Development timeline", "smartSelection": "Personalised search", "moveQuestion": "When would you like to move?",
-      "moveOptions": {"short_term": "In the short term", "six_to_twelve_months": "Within 6–12 months", "later_phase": "In a later phase", "all": "I have not decided yet"},
-      "status": {"completed": "Completed", "selling": "Now selling", "under_construction": "Under construction", "preparation": "In preparation", "planned": "Planned phase"}
+      "kicker": "Development phases",
+      "title": "Komárom’s new premium residential district is taking shape.",
+      "titleEmphasis": "",
+      "description": "A Danube-side community of homes is taking shape across four planned phases – in a modern setting designed for lasting quality.",
+      "imageAlt": "Sunset construction site with cranes and machinery, illustrative mood image",
+      "illustration": "Architectural visual",
+      "selectorLabel": "Select a development phase",
+      "all": "All phases",
+      "phase": "phase",
+      "overview": "Development overview",
+      "allTitle": "The complete development area",
+      "allDescription": "The four planned phases form one coherent, long-term development concept.",
+      "allCta": "View apartments",
+      "phaseTitle": "Phase {phase}",
+      "placeholderDescription": "Detailed technical and sales information for this phase is awaiting approval.",
+      "handover": "Planned handover",
+      "unitCount": "Number of apartments",
+      "availableCount": "Available apartments",
+      "progress": "Development progress",
+      "dataPending": "Data pending",
+      "detailsSoon": "Details coming soon",
+      "details": "Details",
+      "plannedCta": "Register for pre-sales",
+      "timelineLabel": "Development timeline",
+      "smartSelection": "Personalised search",
+      "moveQuestion": "When would you like to move?",
+      "moveOptions": {
+        "short_term": "In the short term",
+        "six_to_twelve_months": "Within 6–12 months",
+        "later_phase": "In a later phase",
+        "all": "I have not decided yet"
+      },
+      "status": {
+        "completed": "Completed",
+        "selling": "Now selling",
+        "under_construction": "Under construction",
+        "preparation": "In preparation",
+        "planned": "Planned phase"
+      }
     },
     "location": {
-      "kicker": "Location and surroundings", "title": "In Komárom.", "titleEmphasis": "Connected to the region.", "description": "Explore the wider surroundings of the development by category. Distances and journey times are only shown when supported by verified sources.", "imageAlt": "Illustrative view of the development area and its green surroundings", "origin": "Komárom Development Area", "filterLabel": "Location categories", "allCategories": "All", "verificationPending": "Distance and journey time under verification", "emptyTitle": "More locations in preparation", "emptyDescription": "There is no approved location data in this category yet.",
-      "categories": {"transport": "Transport", "education": "Education", "healthcare": "Healthcare", "shopping": "Shopping", "sport": "Sport", "nature": "Nature", "regional": "Regional connections"},
-      "points": {"location-danube": {"name": "Danube", "description": "The river and natural waterfront are defining landscape assets of Komárom."}, "location-bridge": {"name": "Monostori Bridge", "description": "A modern urban and regional connection linking the two banks of the Danube."}, "location-promenade": {"name": "Danube promenade", "description": "A landscaped pedestrian environment with seating and evening lighting."}, "location-residential": {"name": "Residential connection", "description": "A direct urban connection between the waterfront and the planned homes."}, "location-regional": {"name": "Regional connection", "description": "Komárom’s cross-border and wider regional network of connections."}}
+      "kicker": "Location and surroundings",
+      "title": "In Komárom.",
+      "titleEmphasis": "Connected to the region.",
+      "description": "Explore the wider surroundings of the development by category. Distances and journey times are only shown when supported by verified sources.",
+      "imageAlt": "Illustrative view of the development area and its green surroundings",
+      "origin": "Komárom Development Area",
+      "filterLabel": "Location categories",
+      "allCategories": "All",
+      "verificationPending": "Distance and journey time under verification",
+      "emptyTitle": "More locations in preparation",
+      "emptyDescription": "There is no approved location data in this category yet.",
+      "categories": {
+        "transport": "Transport",
+        "education": "Education",
+        "healthcare": "Healthcare",
+        "shopping": "Shopping",
+        "sport": "Sport",
+        "nature": "Nature",
+        "regional": "Regional connections"
+      },
+      "points": {
+        "location-danube": {
+          "name": "Danube",
+          "description": "The river and natural waterfront are defining landscape assets of Komárom."
+        },
+        "location-bridge": {
+          "name": "Monostori Bridge",
+          "description": "A modern urban and regional connection linking the two banks of the Danube."
+        },
+        "location-promenade": {
+          "name": "Danube promenade",
+          "description": "A landscaped pedestrian environment with seating and evening lighting."
+        },
+        "location-residential": {
+          "name": "Residential connection",
+          "description": "A direct urban connection between the waterfront and the planned homes."
+        },
+        "location-regional": {
+          "name": "Regional connection",
+          "description": "Komárom’s cross-border and wider regional network of connections."
+        }
+      }
     },
-    "media": {"kicker": "Visual apartment profile", "title": "Every view in one place", "viewLabel": "Select apartment view", "tabs": {"floorPlan": "Assigned floor plan", "furnished": "Assigned axonometry", "interiors": "Concept interiors"}, "labels": {"floorPlan": "Floor plan", "furnished": "Furnished axonometry", "livingRoom": "Living room", "bedroom": "Bedroom", "bathroom": "Bathroom"}, "staticView": "Apartment visualization in preparation", "floorPlanAlt": "Floor plan of apartment {unit}", "furnishedAlt": "Furnished axonometric view of apartment {unit}", "interiorAlt": "Apartment {unit} – {room} interior concept", "exactTitle": "Media assigned to this apartment", "exactDescription": "The displayed floor plan and visual media are assigned to this apartment. Furnishings are for guidance only.", "conceptTitle": "Interior concept · Illustration", "conceptDescription": "These images are mood and interior-design illustrations; they are not the final or technically verified documentation of this apartment. Furnishings are for guidance only.", "furnishingDisclaimer": "Furnishing and interior design concept. Furnishings are for guidance only.", "zoom": "Zoom", "closeZoom": "Close enlarged view", "previousView": "Previous view", "nextView": "Next view", "viewNumber": "View {number}", "mediaUnavailable": "Apartment visualization in preparation", "actionsLabel": "Apartment actions", "share": "Share", "linkCopied": "Apartment link copied to the clipboard."},
-    "journal": {"kicker": "Construction journal", "title": "Development progress", "empty": "The first approved construction update will appear here soon.", "compareLabel": "Compare construction states", "entryPending": "Approved project update"}
+    "media": {
+      "kicker": "Visual apartment profile",
+      "title": "Every view in one place",
+      "viewLabel": "Select apartment view",
+      "tabs": {
+        "floorPlan": "Assigned floor plan",
+        "furnished": "Assigned axonometry",
+        "interiors": "Concept interiors"
+      },
+      "labels": {
+        "floorPlan": "Floor plan",
+        "furnished": "Furnished axonometry",
+        "livingRoom": "Living room",
+        "bedroom": "Bedroom",
+        "bathroom": "Bathroom"
+      },
+      "staticView": "Apartment visualization in preparation",
+      "floorPlanAlt": "Floor plan of apartment {unit}",
+      "furnishedAlt": "Furnished axonometric view of apartment {unit}",
+      "interiorAlt": "Apartment {unit} – {room} interior concept",
+      "exactTitle": "Media assigned to this apartment",
+      "exactDescription": "The displayed floor plan and visual media are assigned to this apartment. Furnishings are for guidance only.",
+      "conceptTitle": "Interior concept · Illustration",
+      "conceptDescription": "These images are mood and interior-design illustrations; they are not the final or technically verified documentation of this apartment. Furnishings are for guidance only.",
+      "furnishingDisclaimer": "Furnishing and interior design concept. Furnishings are for guidance only.",
+      "zoom": "Zoom",
+      "closeZoom": "Close enlarged view",
+      "previousView": "Previous view",
+      "nextView": "Next view",
+      "viewNumber": "View {number}",
+      "mediaUnavailable": "Apartment visualization in preparation",
+      "actionsLabel": "Apartment actions",
+      "share": "Share",
+      "linkCopied": "Apartment link copied to the clipboard."
+    },
+    "journal": {
+      "kicker": "Construction journal",
+      "title": "Development progress",
+      "empty": "The first approved construction update will appear here soon.",
+      "compareLabel": "Compare construction states",
+      "entryPending": "Approved project update"
+    }
   },
   "homeExperience": {
-    "searchEyebrow": "Quick search", "searchTitle": "Find the home that fits you", "minimumArea": "Minimum floor area",
-    "entryEyebrow": "Digital property experience", "entryTitle": "Start exploring.", "entryEmphasis": "Choose your own path.", "primary": "Primary experience",
-    "masterplan": "Apartment selector", "apartments": "View apartments", "favorites": "Favorites", "project": "Discover the project",
-    "masterplanAlt": "Residential preview of the apartment selector", "apartmentsAlt": "Concept interior of apartment A-2.01 overlooking the park",
-    "featuredEyebrow": "Featured homes", "featuredTitle": "Curated apartments.", "featuredEmphasis": "Ready to explore."
+    "searchEyebrow": "Quick search",
+    "searchTitle": "Find the home that fits you",
+    "minimumArea": "Minimum floor area",
+    "entryEyebrow": "Digital property experience",
+    "entryTitle": "Start exploring.",
+    "entryEmphasis": "Choose your own path.",
+    "primary": "Primary experience",
+    "masterplan": "Apartment selector",
+    "apartments": "View apartments",
+    "favorites": "Favorites",
+    "project": "Discover the project",
+    "masterplanAlt": "Residential preview of the apartment selector",
+    "apartmentsAlt": "Concept interior of apartment A-2.01 overlooking the park",
+    "featuredEyebrow": "Featured homes",
+    "featuredTitle": "Curated apartments.",
+    "featuredEmphasis": "Ready to explore."
   },
-  "earlyChoice": {"title":"Value designed to endure","questionBefore":"Why choose ","questionHighlight":"now","questionAfter":"?","description":"Homes by the Danube offer comfort and may also represent lasting value over the long term. Discover the advantages of choosing early.","cta":"Learn more","benefits":[{"title":"More choice","description":"During pre-sales, you can choose from a wider range of homes, including preferred orientations and locations."},{"title":"A home tailored to you","description":"Select finishes, sanitary ware and interior solutions during construction, within the approved technical options."},{"title":"Predictable payments","description":"A flexible, scheduled payment structure that may align with the technical milestones of construction."},{"title":"A considered decision","description":"A reliable developer, transparent process and legal safeguards recorded in the contractual documentation."},{"title":"Long-term appeal","description":"The Danube-side location and modern lifestyle may help the home remain attractive over the long term."}]},
+  "earlyChoice": {
+    "title": "Value designed to endure",
+    "questionBefore": "Why choose ",
+    "questionHighlight": "now",
+    "questionAfter": "?",
+    "description": "Homes by the Danube offer comfort and may also represent lasting value over the long term. Discover the advantages of choosing early.",
+    "cta": "Learn more",
+    "benefits": [
+      {
+        "title": "More choice",
+        "description": "During pre-sales, you can choose from a wider range of homes, including preferred orientations and locations."
+      },
+      {
+        "title": "A home tailored to you",
+        "description": "Select finishes, sanitary ware and interior solutions during construction, within the approved technical options."
+      },
+      {
+        "title": "Predictable payments",
+        "description": "A flexible, scheduled payment structure that may align with the technical milestones of construction."
+      },
+      {
+        "title": "A considered decision",
+        "description": "A reliable developer, transparent process and legal safeguards recorded in the contractual documentation."
+      },
+      {
+        "title": "Long-term appeal",
+        "description": "The Danube-side location and modern lifestyle may help the home remain attractive over the long term."
+      }
+    ]
+  },
   "sales": {
-    "home":"Home","masterplan":"Masterplan","apartments":"Apartments","favorites":"Favorites","contact":"Contact","finderTitle":"Find your new home","finderLead":"Filter apartments or start from the interactive masterplan.","filters":"Filters","clearFilters":"Clear","results":"results","building":"Building","floor":"Floor","rooms":"Rooms","area":"Net area","outdoor":"Balcony / terrace","orientation":"Orientation","availability":"Status","all":"All","from":"Minimum","to":"Maximum","openUnit":"Open apartment","addFavorite":"Add to favorites","removeFavorite":"Remove from favorites","saved":"Saved","emptyFavorites":"No saved apartments yet.","emptyResults":"No apartments match these filters.","masterplanTitle":"Choose in three steps","masterplanLead":"Building, floor, then apartment. The view uses a stable 2D foundation.","selectBuilding":"1. Building","selectFloor":"2. Floor","selectUnit":"3. Apartment","staticPreview":"Static axonometric preview · 3D model in preparation","dataPending":"Data upload in progress","precisionPending":"Being finalized","masterplanPreviewAlt":"Concept visual of the planned residential apartment selector","unitDetails":"Apartment details","interiorArea":"Net living area","terraceArea":"Balcony / terrace","gardenArea":"Private garden","totalArea":"Total area","view":"View","technology":"Technology","floorPlan":"Floor plan","axonometric":"Axonometric view","interiors":"Interior visuals","brochure":"Download apartment PDF","inquiry":"Enquire about this apartment","pricePending":"Price being finalized","backToResults":"Back to results","directLink":"Direct apartment link","offlineTitle":"You are currently offline","offlineLead":"Previously opened pages remain available. Refresh after reconnecting.","retry":"Try again"
+    "home": "Home",
+    "masterplan": "Masterplan",
+    "apartments": "Apartments",
+    "favorites": "Favorites",
+    "contact": "Contact",
+    "finderTitle": "Find your new home",
+    "finderLead": "Filter apartments or start from the interactive masterplan.",
+    "filters": "Filters",
+    "clearFilters": "Clear",
+    "results": "results",
+    "building": "Building",
+    "floor": "Floor",
+    "rooms": "Rooms",
+    "area": "Net area",
+    "outdoor": "Balcony / terrace",
+    "orientation": "Orientation",
+    "availability": "Status",
+    "all": "All",
+    "from": "Minimum",
+    "to": "Maximum",
+    "openUnit": "Open apartment",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "saved": "Saved",
+    "emptyFavorites": "No saved apartments yet.",
+    "emptyResults": "No apartments match these filters.",
+    "masterplanTitle": "Choose in three steps",
+    "masterplanLead": "Building, floor, then apartment. The view uses a stable 2D foundation.",
+    "selectBuilding": "1. Building",
+    "selectFloor": "2. Floor",
+    "selectUnit": "3. Apartment",
+    "staticPreview": "Static axonometric preview · 3D model in preparation",
+    "dataPending": "Data upload in progress",
+    "precisionPending": "Being finalized",
+    "masterplanPreviewAlt": "Concept visual of the planned residential apartment selector",
+    "unitDetails": "Apartment details",
+    "interiorArea": "Net living area",
+    "terraceArea": "Balcony / terrace",
+    "gardenArea": "Private garden",
+    "totalArea": "Total area",
+    "view": "View",
+    "technology": "Technology",
+    "floorPlan": "Floor plan",
+    "axonometric": "Axonometric view",
+    "interiors": "Interior visuals",
+    "brochure": "Download apartment PDF",
+    "inquiry": "Enquire about this apartment",
+    "pricePending": "Price being finalized",
+    "backToResults": "Back to results",
+    "directLink": "Direct apartment link",
+    "offlineTitle": "You are currently offline",
+    "offlineLead": "Previously opened pages remain available. Refresh after reconnecting.",
+    "retry": "Try again",
+    "unitType": "Apartment type"
   }
 }
