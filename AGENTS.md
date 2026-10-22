@@ -120,3 +120,19 @@ At the end of every development cycle, report:
 - commit status;
 - push status;
 - deployment status.
+
+## Efficient development rules
+- Only inspect files directly relevant to the requested task.
+- Never scan the entire repository by default.
+- Reuse information already established in the current session.
+- Do not repeat repository discovery unless necessary.
+- Preserve existing functionality, design, assets and localization.
+- Make the smallest safe changes.
+- Prefer targeted lint, type checks and tests.
+- Do not run full builds unless required for deployment or explicitly requested.
+- Do not stop, restart or modify the existing development server without permission.
+- Do not install dependencies without approval.
+- Do not commit, push or deploy without approval.
+- Never overwrite unrelated or uncommitted changes.
+- Ask before large refactors.
+- Report only changed files, checks performed and outstanding issues.
